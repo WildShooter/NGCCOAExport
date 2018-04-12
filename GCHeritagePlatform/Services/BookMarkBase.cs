@@ -1002,15 +1002,15 @@ namespace GCHeritagePlatform.Services
                     try
                     {
                         //JAVA
-                        //HproseHttpClient client = new HproseHttpClient("http://ngccoa.geo-compass.com/HproseServer");
-                        HproseHttpClient client = new HproseHttpClient("http://192.9.100.100/HproseServer");
+                        HproseHttpClient client = new HproseHttpClient("http://ngccoa.geo-compass.com/HproseServer");
+                        //HproseHttpClient client = new HproseHttpClient("http://192.9.100.100/HproseServer");
                         result = client.Invoke<string>(dic[docModelName].MethodName, obj);
                     }
                     catch (Exception ex)
                     {
                         //PHP
-                        //HproseHttpClient client = new HproseHttpClient("http://ngccoaphp.geo-compass.com/public/admin.php/demo/");
-                        HproseHttpClient client = new HproseHttpClient("http://192.9.100.100:82/public/admin.php/demo");
+                        HproseHttpClient client = new HproseHttpClient("http://ngccoaphp.geo-compass.com/public/admin.php/demo/");
+                        //HproseHttpClient client = new HproseHttpClient("http://192.9.100.100:82/public/admin.php/demo");
                         result = client.Invoke<string>(dic[docModelName].MethodName, obj);
                     }
                 }
