@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<BaseSearchConfig>
+  <Node Title="保护区划图">
+    <Fun ID ="20" configId ="FE89A685-0C23-46ED-82E6-E6B2A8609DEE"     Title="保护区划图" LXMC ="1" METADATA="0" TableName ="HPF_JSKZ_BHQHT"    Where =" and ID = '@dataId'">
+    <DataGrid HeadColumns="数据ID" DataColumns="ID"></DataGrid>
+    <DataGrid HeadColumns="图纸名称" DataColumns="TZMC"   ></DataGrid>
+    <DataGrid HeadColumns="图纸内容类型" DataColumns="TZNRLX"></DataGrid>
+    <DataGrid HeadColumns="图纸格式" DataColumns="TZGS"  Format="dateTime" ></DataGrid>
+     <DataGrid HeadColumns="比例尺" DataColumns="BLC"></DataGrid>
+    <DataGrid HeadColumns="测绘人" DataColumns="CHR" ></DataGrid>
+    <DataGrid HeadColumns="成图时间" DataColumns="CTSJ"  Format="dateTime"></DataGrid>
+    <DataGrid HeadColumns="审核人" DataColumns="SHRID"  ></DataGrid>
+    <DataGrid HeadColumns="审核时间" DataColumns="SHSJ"  Format="dateTime" ></DataGrid>
+    <DataGrid HeadColumns="测绘责任单位" DataColumns="CHZRDW"  ></DataGrid>
+    <DataGrid HeadColumns="数据密级" DataColumns="SJMJ"></DataGrid>
+    <DataGrid HeadColumns="发布范围" DataColumns="FBFW"  ></DataGrid>
+     <DataGrid HeadColumns="数据抓取时间" DataColumns="RKSJ"  Format="dateTime" ></DataGrid>
+    <DataGrid HeadColumns="下载次数" DataColumns="XZCS"    ></DataGrid>
+  </Fun>
+  </Node>
+  <Node Title="病害分布图">
+    <Fun ID ="11" configId ="E22B949B-1465-48B8-AA3E-EF59B82F6D4D" Title="病害分布图" LXMC ="1" METADATA="0" TableName ="HPF_BTYZTBH_BHFBT"    Where =" and ID = '@dataId'">
+     <DataGrid HeadColumns="数据ID" DataColumns="ID"></DataGrid>
+      <DataGrid HeadColumns="图纸名称" DataColumns="TZMC"   ></DataGrid>
+    <DataGrid HeadColumns="图纸内容类型" DataColumns="TZNRLX"></DataGrid>
+    <DataGrid HeadColumns="图纸格式" DataColumns="TZGS"  ></DataGrid>
+    <DataGrid HeadColumns="比例尺" DataColumns="BLC"></DataGrid>
+    <DataGrid HeadColumns="测绘人" DataColumns="CHR"   ></DataGrid>
+    <DataGrid HeadColumns="成图时间" DataColumns="CTSJ" Format="dateTime" ></DataGrid>
+    <DataGrid HeadColumns="审核人" DataColumns="SHRID"   ></DataGrid>
+    <DataGrid HeadColumns="审核时间" DataColumns="SHSJ" Format="dateTime"></DataGrid>
+    <DataGrid HeadColumns="测绘责任单位" DataColumns="CHZRDW"   ></DataGrid>
+    <DataGrid HeadColumns="数据密级" DataColumns="SJMJ"></DataGrid>
+    <DataGrid HeadColumns="发布范围" DataColumns="FBFW"   ></DataGrid>
+     <DataGrid HeadColumns="数据抓取时间" DataColumns="RKSJ" Format="dateTime"></DataGrid>
+    <DataGrid HeadColumns="下载次数" DataColumns="XZCS"  ></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="遗产使用功能图">
+    <Fun ID ="10" configId ="BABEF554-543D-403B-B2E2-32297A73867C"  Title="遗产使用功能图" LXMC ="1" METADATA="0" TableName ="HPF_YCJCXX_SYGNJZT"    Where =" and ID = '@dataId'">
+        <DataGrid HeadColumns="数据ID" DataColumns="ID"></DataGrid>
+        <DataGrid HeadColumns="图纸名称" DataColumns="TZNRLX"  ></DataGrid>
+        <DataGrid HeadColumns="图纸内容类型" DataColumns="CJRID"></DataGrid>
+        <DataGrid HeadColumns="图纸格式" DataColumns="TZGS"  ></DataGrid>
+        <DataGrid HeadColumns="比例尺" DataColumns="BLC"></DataGrid>
+        <DataGrid HeadColumns="测绘人" DataColumns="CHR" ></DataGrid>
+        <DataGrid HeadColumns="成图时间" DataColumns="CTSJ" Format="dateTime" ></DataGrid>
+        <DataGrid HeadColumns="审核人" DataColumns="SHRID"  ></DataGrid>
+        <DataGrid HeadColumns="审核时间" DataColumns="SHSJ" Format="dateTime" ></DataGrid>
+        <DataGrid HeadColumns="测绘责任单位" DataColumns="CHZRDW"  ></DataGrid>
+        <DataGrid HeadColumns="数据密级" DataColumns="SJMJ"></DataGrid>
+        <DataGrid HeadColumns="发布范围" DataColumns="FBFW"   ></DataGrid>
+        <DataGrid HeadColumns="数据抓取时间" DataColumns="RKSJ" Format="dateTime"></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="遗产要素单体或局部的测绘图">
+    <Fun ID ="13" configId="25B255F2-2E39-4AE9-ACC6-1FEFA715BAD4"  Title="遗产要素单体或局部的测绘图" LXMC ="1" METADATA="1" TableName ="HPF_YCJCXX_YCYSDTHJBCHJZT"    Where =" and ID = '@dataId'">
+        <DataGrid HeadColumns="数据ID" DataColumns="ID"></DataGrid>
+        <DataGrid HeadColumns="图纸名称" DataColumns="TZMC"  ></DataGrid>
+        <DataGrid HeadColumns="图纸内容类型" DataColumns="TZLX"></DataGrid>
+        <DataGrid HeadColumns="图纸格式" DataColumns="TZGS"   ></DataGrid>
+        <DataGrid HeadColumns="比例尺" DataColumns="BLC"></DataGrid>
+        <DataGrid HeadColumns="测绘人" DataColumns="CHR" ></DataGrid>
+        <DataGrid HeadColumns="审核人" DataColumns="SHRID"   ></DataGrid>
+        <DataGrid HeadColumns="审核时间" DataColumns="SHSJ" Format="dateTime"></DataGrid>
+        <DataGrid HeadColumns="测绘责任单位" DataColumns="GLZRDW"   ></DataGrid>
+        <DataGrid HeadColumns="数据密级" DataColumns="MJ" ></DataGrid>
+        <DataGrid HeadColumns="发布范围" DataColumns="FBFW"  ></DataGrid>
+        <DataGrid HeadColumns="数据抓取时间" DataColumns="RKSJ" Format="dateTime" ></DataGrid>
+        <DataGrid HeadColumns="下载次数" DataColumns="XZCS"  ></DataGrid>
+        <DataGrid HeadColumns="成图时间" DataColumns="CTSJ" Format="dateTime" ></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="遗产要素分布图">
+    <Fun ID ="6" configId="3AD04A01-F905-43C9-80A2-BEFE52F38930"  Title="遗产要素分布图" LXMC ="1" METADATA="0" TableName ="HPF_YCJCXX_YCYSFBT"    Where =" and ID = '@dataId'">
+        <DataGrid HeadColumns="数据ID" DataColumns="ID"></DataGrid>
+        <DataGrid HeadColumns="图纸名称" DataColumns="TZMC"  ></DataGrid>
+        <DataGrid HeadColumns="图纸内容类型" DataColumns="TZNRLX"></DataGrid>
+        <DataGrid HeadColumns="图纸格式" DataColumns="TZGS"  Format="dateTime" ></DataGrid>
+        <DataGrid HeadColumns="比例尺" DataColumns="BLC"></DataGrid>
+        <DataGrid HeadColumns="测绘人" DataColumns="CHR"  ></DataGrid>
+        <DataGrid HeadColumns="成图时间" DataColumns="CTSJ" Format="dateTime" ></DataGrid>
+        <DataGrid HeadColumns="审核人" DataColumns="SHRID"   ></DataGrid>
+        <DataGrid HeadColumns="审核时间" DataColumns="SHSJ" Format="dateTime"></DataGrid>
+        <DataGrid HeadColumns="测绘责任单位" DataColumns="CHZRDW"   ></DataGrid>
+        <DataGrid HeadColumns="数据密级" DataColumns="SJMJ"></DataGrid>
+        <DataGrid HeadColumns="发布范围" DataColumns="FBFW"  ></DataGrid>
+        <DataGrid HeadColumns="数据抓取时间" DataColumns="RKSJ" Format="dateTime" ></DataGrid>
+        <DataGrid HeadColumns="下载次数" DataColumns="XZCS"  ></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="遗产总图">
+    <Fun ID ="5" configId="48FC6570-7EBB-4F50-BBDB-83FCC0724022"   Title="遗产总图" LXMC ="1" METADATA="0" TableName ="HPF_YCJCXX_YCZT"    Where =" and ID = '@dataId'">
+        <DataGrid HeadColumns="数据ID" DataColumns="ID"></DataGrid>
+        <DataGrid HeadColumns="图纸名称" DataColumns="TZMC"   ></DataGrid>
+        <DataGrid HeadColumns="图纸内容类型" DataColumns="TZNRLX"></DataGrid>
+        <DataGrid HeadColumns="图纸格式" DataColumns="TZGS" ></DataGrid>
+        <DataGrid HeadColumns="比例尺" DataColumns="BLC"></DataGrid>
+        <DataGrid HeadColumns="测绘人" DataColumns="CHR"  ></DataGrid>
+        <DataGrid HeadColumns="成图时间" DataColumns="CTSJ" Format="dateTime" ></DataGrid>
+        <DataGrid HeadColumns="审核人" DataColumns="SHRID"   ></DataGrid>
+        <DataGrid HeadColumns="审核时间" DataColumns="SHSJ" Format="dateTime"></DataGrid>
+        <DataGrid HeadColumns="测绘责任单位" DataColumns="CHZRDW"   ></DataGrid>
+        <DataGrid HeadColumns="数据密级" DataColumns="SJMJ"></DataGrid>
+        <DataGrid HeadColumns="发布范围" DataColumns="FBFW"  ></DataGrid>
+        <DataGrid HeadColumns="数据抓取时间" DataColumns="RKSJ" Format="dateTime"></DataGrid>
+        <DataGrid HeadColumns="下载次数" DataColumns="XZCS"  ></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="其他照片">
+    <Fun ID ="16" configId="C2A5E72B-91F8-478D-ADE7-2551F8D7969C"  Title="其他照片" LXMC ="3" METADATA="1" TableName ="HPF_YCJCXX_QTZP"    Where =" and ID = '@dataId'">
+        <DataGrid HeadColumns="数据ID" DataColumns="ID"></DataGrid>
+        <DataGrid HeadColumns="图片名称" DataColumns="TPMC" ></DataGrid>
+        <DataGrid HeadColumns="图片数据量" DataColumns="TPSJL"></DataGrid>
+        <DataGrid HeadColumns="拍摄设备" DataColumns="PSSB"  ></DataGrid>
+        <DataGrid HeadColumns="图片格式" DataColumns="TPGS"></DataGrid>
+        <DataGrid HeadColumns="图片生成时间" DataColumns="PZSJ"  Format="dateTime" ></DataGrid>
+        <DataGrid HeadColumns="图片采集负责人" DataColumns="PZRID"></DataGrid>
+        <DataGrid HeadColumns="数据采集点编号" DataColumns="SJCJBH"  ></DataGrid>
+        <DataGrid HeadColumns="采集点坐标信息" DataColumns="CJDZBXX"></DataGrid>
+        <DataGrid HeadColumns="数据密级" DataColumns="SJMJ"></DataGrid>
+        <DataGrid HeadColumns="发布范围" DataColumns="FBFW"  ></DataGrid>
+        <DataGrid HeadColumns="下载次数" DataColumns="XZCS" ></DataGrid>
+        <DataGrid HeadColumns="填写人" DataColumns="TXRID"></DataGrid>
+        <DataGrid HeadColumns="填写时间" DataColumns="TXSJ"  Format="dateTime" ></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="遗产要素单体或局部照片">
+    <Fun ID ="14" configId="A2ABD521-2810-46DA-A10E-EE0FBED46238"   Title="遗产要素单体或局部照片" LXMC ="3" METADATA="1" TableName ="v_HPF_YCYSDT_YCYSDTHJBTP"    Where =" and ID = '@dataId'">
+        <DataGrid HeadColumns="数据ID" DataColumns="ID"></DataGrid>
+        <DataGrid HeadColumns="图片名称" DataColumns="TPMC" ></DataGrid>
+        <DataGrid HeadColumns="图片数据量" DataColumns="TPSJL"></DataGrid>
+        <DataGrid HeadColumns="拍摄设备" DataColumns="PSSB"  ></DataGrid>
+        <DataGrid HeadColumns="图片格式" DataColumns="TPLX"></DataGrid>
+        <DataGrid HeadColumns="图片生成时间" DataColumns="TPCJSJ"  Format="dateTime" ></DataGrid>
+        <DataGrid HeadColumns="图片采集负责人" DataColumns="CJR"></DataGrid>
+        <DataGrid HeadColumns="数据采集点编号" DataColumns="SJCJBH"  ></DataGrid>
+        <DataGrid HeadColumns="采集点坐标信息" DataColumns="CJDZBXX"></DataGrid>
+        <DataGrid HeadColumns="数据密级" DataColumns="MJ"></DataGrid>
+        <DataGrid HeadColumns="发布范围" DataColumns="FBFW"   ></DataGrid>
+        <DataGrid HeadColumns="下载次数" DataColumns="XZCS"  ></DataGrid>
+        
+     </Fun>
+  </Node>
+  <Node Title="舆图">
+    <Fun ID ="29" configId="31672B01-B288-4A42-8F7E-1CC889FDF0FE"  Title="舆图" LXMC ="3" METADATA="0" TableName ="HPF_YCJCXX_YTTP"    Where =" and ID = '@dataId'">
+        <DataGrid HeadColumns="数据ID" DataColumns="ID"></DataGrid>
+        <DataGrid HeadColumns="图片名称" DataColumns="TPMC" ></DataGrid>
+        <DataGrid HeadColumns="图片数据量" DataColumns="TPSJL"></DataGrid>
+        <DataGrid HeadColumns="拍摄设备" DataColumns="PSSB" ></DataGrid>
+        <DataGrid HeadColumns="图片格式" DataColumns="TPGS"></DataGrid>
+        <DataGrid HeadColumns="图片生成时间" DataColumns="PZSJ"  Format="dateTime" ></DataGrid>
+        <DataGrid HeadColumns="图片采集负责人" DataColumns="PZRID"></DataGrid>
+        <DataGrid HeadColumns="数据采集点编号" DataColumns="SJCJBH" ></DataGrid>
+        <DataGrid HeadColumns="采集点坐标信息" DataColumns="CJDZBXX"></DataGrid>
+        <DataGrid HeadColumns="数据密级" DataColumns="SJMJ"></DataGrid>
+        <DataGrid HeadColumns="发布范围" DataColumns="FBFW"  ></DataGrid>
+        <DataGrid HeadColumns="下载次数" DataColumns="XZCS"></DataGrid>
+        <DataGrid HeadColumns="填写人" DataColumns="TXRID"></DataGrid>
+        <DataGrid HeadColumns="填写时间" DataColumns="TXSJ" Format="dateTime"  ></DataGrid>
+
+    </Fun>
+  </Node>
+  <Node Title="卫星影像或航摄影像">
+    <Fun ID ="15" configId="10B8A2DD-0FBF-497B-B0CD-310055E2F284"  Title="卫星影像或航摄影像" LXMC ="4" METADATA="0" TableName ="HPF_YCJCXX_WXYXHHSYX"    Where =" and ID = '@dataId'">
+        <DataGrid HeadColumns="数据ID" DataColumns="ID"></DataGrid>
+        <DataGrid HeadColumns="影像名称" DataColumns="YXMC" ></DataGrid>
+        <DataGrid HeadColumns="影像分辨率" DataColumns="YXFBL"></DataGrid>
+        <DataGrid HeadColumns="影像范围" DataColumns="YXFW"  ></DataGrid>
+        <DataGrid HeadColumns="影像数据量" DataColumns="YXSJL"></DataGrid>
+        <DataGrid HeadColumns="影像类型" DataColumns="YXLX"  ></DataGrid>
+        <DataGrid HeadColumns="影像生成时间" DataColumns="YXSCSJ" Format="dateTime"  ></DataGrid>
+        <DataGrid HeadColumns="影像来源" DataColumns="YXLY " ></DataGrid>
+        <DataGrid HeadColumns="原始影像采集单位" DataColumns="YXCJDW"></DataGrid>
+        <DataGrid HeadColumns="影像处理单位" DataColumns="YXCLDW"  ></DataGrid>
+        <DataGrid HeadColumns="影像坐标信息" DataColumns="YXZB"></DataGrid>
+        <DataGrid HeadColumns="数据密级" DataColumns="SJMJ"   ></DataGrid>
+        <DataGrid HeadColumns="数据抓取时间" DataColumns="RKSJ"  Format="dateTime"></DataGrid>
+        <DataGrid HeadColumns="利用次数" DataColumns="LYCS"  ></DataGrid>
+        <DataGrid HeadColumns="填写人" DataColumns="TXRID"></DataGrid>
+        <DataGrid HeadColumns="填写时间" DataColumns="TXSJ"  Format="dateTime" ></DataGrid>
+        <DataGrid HeadColumns="审核人" DataColumns="SHRID"></DataGrid>
+        <DataGrid HeadColumns="审核时间" DataColumns="SHSJ"  Format="dateTime" ></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="文档">
+    <Fun ID ="1" configId="1"  >
+      <DataGrid HeadColumns="数据ID" DataColumns="ID"></DataGrid>
+      <DataGrid HeadColumns="文档名称" DataColumns="WDMC" ></DataGrid>
+      <DataGrid HeadColumns="文档类型" DataColumns="WDLX"></DataGrid>
+      <DataGrid HeadColumns="文档版本" DataColumns="WDBB"  ></DataGrid>
+      <DataGrid HeadColumns="文档上传时间" DataColumns="WDSCSJ"></DataGrid>
+      <DataGrid HeadColumns="文档创建时间" DataColumns="WDCJSJ"  ></DataGrid>
+      <DataGrid HeadColumns="文档作者" DataColumns="WDZZ"   ></DataGrid>
+      <DataGrid HeadColumns="文档编制单位" DataColumns="WDBZDW " ></DataGrid>
+      <DataGrid HeadColumns="数据密级" DataColumns="SJMJ"></DataGrid>
+      <DataGrid HeadColumns="发布范围" DataColumns="FBFW"  ></DataGrid>
+      <DataGrid HeadColumns="利用次数" DataColumns="LYCS"></DataGrid>
+    </Fun>
+  </Node>
+</BaseSearchConfig>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <Handlers>
+      <IHandler  name="Hprose" address="http://localhost:17952/Hprose">
+        <Services>
+        <Service name = "bool login(string user,string pwd)"  module="LoginService"  aliasname="用户登录"/>
+	      <Service name = "string GetRoleName(Guid userID)"  module="LoginService"  aliasname="获得角色"/>
+        </Services>
+     </IHandler>
+  
+  </Handlers>
+</config>

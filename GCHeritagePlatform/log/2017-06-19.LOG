@@ -1,0 +1,9 @@
+2017-06-19 10:30:23 ERROR  GeoCompass FrameworkCore.Utils.SystemLogger.Error(:0) System.IO.IOException: 文件“附件9-低值易耗品购置申请表20170616163429.doc”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileInfo.Delete()
+   在 GCHeritagePlatform.JCBG.WordCode.BaseWord.Save(String saveName) 位置 G:\中心OA\Code\Service\GCHeritagePlatform\GCHeritagePlatform\JCBG\WordCode\BusinessWord.cs:行号 116 
+2017-06-19 11:01:22 ERROR  GeoCompass FrameworkCore.Utils.SystemLogger.Error(:0) 未能找到对应的模板文件，文件名为附件9-低值易耗品购置申请表 
+2017-06-19 14:13:31 ERROR  GeoCompass FrameworkCore.Utils.SystemLogger.Error(:0) System.IO.IOException: 文件“附件9-低值易耗品购置申请表20170619140748.doc”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileInfo.Delete()
+   在 GCHeritagePlatform.JCBG.WordCode.BaseWord.Save(String saveName) 位置 G:\中心OA\Code\Service\GCHeritagePlatform\GCHeritagePlatform\JCBG\WordCode\BusinessWord.cs:行号 116 

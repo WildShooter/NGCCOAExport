@@ -1,0 +1,1176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--刘晓宇8月26日改-->
+<XFunConfig>
+  <Node Title="申遗承诺服务类" >
+    <Fun ID="101"  TableName="V_HPF_SYCN_CNSXJZ"  TableDetailName="V_HPF_SYCN_CNSXJZ" Prefix="cnsxjz" PID="ID" HproseAttribute="申遗承诺服务类"
+         KeywordFields="CNSXNR_ZW"  DateField="CJSJ"   Remark="申遗承诺服务类-申遗承诺履行情况"  >
+      <DataGrid HeadColumns="序号" DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="承诺事项来源" DataColumns="CNSXLY"   ></DataGrid>
+      <DataGrid HeadColumns="承诺事项内容_中文" DataColumns="CNSXNR_ZW" ></DataGrid>
+      <DataGrid HeadColumns="承诺完成时间" DataColumns="CNWCSJ" ></DataGrid>
+      <DataGrid HeadColumns="目前进展" DataColumns="MQJZ_BM"  ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ"  ></DataGrid>
+      <DataGrid HeadColumns="进度百分比" DataColumns="JDBFB" ></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="ID"  ></DataDetail>
+      <DataDetail InfoItems="承诺事项来源" DataColumns="CNSXLY"  ></DataDetail>
+      <DataDetail InfoItems="承诺事项内容_英文" DataColumns="CNSXNR_YW"  ></DataDetail>
+      <DataDetail InfoItems="承诺事项内容_中文" DataColumns="CNSXNR_ZW"  ></DataDetail>
+      <DataDetail InfoItems="承诺完成时间" DataColumns="CNWCSJ"  ></DataDetail>
+      <DataDetail InfoItems="目前进展" DataColumns="MQJZ_BM"  ></DataDetail>
+      <DataDetail InfoItems="创建时间" DataColumns="CJSJ"  ></DataDetail>
+      <DataDetail InfoItems="进度百分比" DataColumns="JDBFB"  ></DataDetail>
+      <DataDetail InfoItems="对完成情况的必要说明" DataColumns="DWCQKDBYSM"  ></DataDetail>
+    </Fun>
+  </Node>
+  <Node Title="机构与能力建设服务类" >
+    <Fun ID="20101"  TableName="V_HPF_JGJS_BHGLJG"   TableDetailName="V_HPF_JGJS_BHGLJG" PID="ID" HproseAttribute="保护管理机构" KeywordFields="JGMC,SZXZQ"  DateField="JGCLSJ"   Remark="机构与能力建设-机构信息-保护管理机构">
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" ></DataGrid>
+      <DataGrid HeadColumns="机构名称" DataColumns="JGMC"    ></DataGrid>
+      <DataGrid HeadColumns="所在行政区" DataColumns="SZXZQ"    ></DataGrid>
+      <DataGrid HeadColumns="管理区域" DataColumns="GLQYSM"    ></DataGrid>
+      <DataGrid HeadColumns="承担责任" DataColumns="CDDZR"    ></DataGrid>
+      <DataGrid HeadColumns="法定代表人" DataColumns="FDDBR"    ></DataGrid>
+      <DataGrid HeadColumns="联系人姓名" DataColumns="LXRXM"    ></DataGrid>
+      <DataGrid HeadColumns="联系电话" DataColumns="LXDH"    ></DataGrid>
+      <DataGrid HeadColumns="电子邮箱" DataColumns="DZYX"    ></DataGrid>
+      <DataGrid HeadColumns="官方网站" DataColumns="GFWZ"    ></DataGrid>
+      <DataGrid HeadColumns="上级管理单位" DataColumns="SJGLDW"    ></DataGrid>
+      <DataGrid HeadColumns="机构成立时间" DataColumns="JGCLSJ"    ></DataGrid>
+      <DataGrid HeadColumns="机构级别" DataColumns="JGJB"    ></DataGrid>
+      <DataGrid HeadColumns="编制人数" DataColumns="BZRS"    ></DataGrid>
+      <DataGrid HeadColumns="工作人员总数" DataColumns="GZRYZS"    ></DataGrid>
+      <DataGrid HeadColumns="主要经费来源" DataColumns="ZYJFLY_BM"    ></DataGrid>
+      <DataGrid HeadColumns="机构撤销日期" DataColumns="JGCXSJ"    ></DataGrid>
+    </Fun>
+    <Fun ID="20102"  TableName="HPF_JGJS_JCJGXX"  TableDetailName="HPF_JGJS_JCJGXX" KeywordFields="JCJGMC"  DateField="RKSJ"  PID="ID" HproseAttribute="监测机构" Remark="机构与能力建设-机构信息-监测机构">
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" ></DataGrid>
+      <DataGrid HeadColumns="监测机构名称" DataColumns="JCJGMC"    ></DataGrid>
+      <DataGrid HeadColumns="负责人" DataColumns="FZR"    ></DataGrid>
+      <DataGrid HeadColumns="负责人联系电话" DataColumns="FZRLXDH"    ></DataGrid>
+      <DataGrid HeadColumns="承担的责任" DataColumns="CDDZR"    ></DataGrid>
+      <DataGrid HeadColumns="联系人姓名" DataColumns="LXRXM"    ></DataGrid>
+      <DataGrid HeadColumns="联系电话" DataColumns="LXDH"    ></DataGrid>
+      <DataGrid HeadColumns="电子邮箱" DataColumns="DZYX"    ></DataGrid>
+      <DataGrid HeadColumns="监测工作网站" DataColumns="JCGZWZ"    ></DataGrid>
+      <DataGrid HeadColumns="上级管理单位" DataColumns="SJGLDW"    ></DataGrid>
+    </Fun>
+    <Fun ID="202" TableName=" (SELECT
+	d.YCMC,
+	g.`NAME` AS ZT_BM,
+		h.`NAME` AS LX_BM,
+    a.ID AS GZID ,
+	a.LB,
+  a.WJNR,
+	a.MC,
+	a.GBSJ,
+	a.GBWH,
+	a.SSSJ,
+	a.ZT,
+	i.*
+FROM
+	HPF_JGJS_ZXBHGLFGGZ a
+LEFT JOIN (
+	SELECT
+		b.BM,
+		b.YCMC
+	FROM
+		HPF_YCJCXX_SJWHYC b
+	
+) d ON SUBSTRING(a.GLYCBTID, 1, 5) = d.BM
+LEFT JOIN (
+	SELECT
+		f.`NAME`,
+		f.`CODE`,
+		'1' AS type
+	FROM
+		ysj_domain_enumitem f
+	WHERE
+		f.ENUMID = '1E46BA82-6955-4497-A9F0-10399AEAE2F5'
+) g ON a.ZT = g.`CODE`
+LEFT JOIN (
+	SELECT
+		f.`NAME`,
+		f.`CODE`,
+		'2' AS type
+	FROM
+		ysj_domain_enumitem f
+	WHERE
+		f.ENUMID = 'EA248F9B-D2E0-47CC-9CDB-E211AAA674E2'
+) h ON a.LB = h.`CODE`
+LEFT JOIN HPF_JGJS_ZXFGXGWD i ON a.ID = i.FGID )z"    KeywordFields="MC"  DateField="RKSJ"     PID="GZID"   HproseAttribute="专项保护管理法规规章" Remark="机构与能力建设-专项保护管理法规规章">
+      <DataGrid HeadColumns="序号" DataColumns="GZID"   ></DataGrid>
+      <DataGrid HeadColumns="类别" DataColumns="LX_BM"></DataGrid>
+      <DataGrid HeadColumns="名称" DataColumns="MC"></DataGrid>
+      <DataGrid HeadColumns="公布时间" DataColumns="GBSJ"></DataGrid>
+      <DataGrid HeadColumns="公布文号" DataColumns="GBWH"></DataGrid>
+      <DataGrid HeadColumns="实施时间" DataColumns="SSSJ"></DataGrid>
+      <DataGrid HeadColumns="状态" DataColumns="ZT_BM"></DataGrid>
+      <DataGrid HeadColumns="文件内容" DataColumns="WJNR"></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="GZID"    ></DataDetail>
+      <DataDetail InfoItems="名称" DataColumns="MC"    ></DataDetail>
+      <DataDetail InfoItems="公布时间" DataColumns="GBSJ"    ></DataDetail>
+      <DataDetail InfoItems="公布文号" DataColumns="GBWH"    ></DataDetail>
+      <DataDetail InfoItems="实施时间" DataColumns="SSSJ"    ></DataDetail>
+      <DataDetail InfoItems="状态" DataColumns="ZT_BM"    ></DataDetail>
+      <DataDetail InfoItems="类别" DataColumns="LX_BM"    ></DataDetail>
+      <DataDetail InfoItems="遗产名称" DataColumns="YCMC"    ></DataDetail>
+      <DataDetail InfoItems="文档名称" DataColumns="WDMC"    ></DataDetail>
+      <DataDetail InfoItems="文件内容" DataColumns="WJNR"    ></DataDetail>
+    </Fun>
+    <Fun ID="203"  TableName="HPF_JGJS_BHGLXGPXJL"  TableDetailName="HPF_JGJS_BHGLXGPXJL"   KeywordFields="ZZPXDW"  DateField="RKSJ"   PID="ID" HproseAttribute="保护管理相关培训记录" Remark="机构与能力建设-保护管理相关培训记录">
+      <DataGrid HeadColumns="序号" DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="组织培训单位" DataColumns="ZZPXDW"></DataGrid>
+      <DataGrid HeadColumns="培训项目名称" DataColumns="PXXMMC"></DataGrid>
+      <DataGrid HeadColumns="培训项目说明" DataColumns="PXXMSM"></DataGrid>
+      <DataGrid HeadColumns="培训开始时间" DataColumns="PXKSSJ"></DataGrid>
+      <DataGrid HeadColumns="培训截止时间" DataColumns="PXJZSJ"></DataGrid>
+      <DataGrid HeadColumns="培训时长"     DataColumns="PXSC"></DataGrid>
+      <DataGrid HeadColumns="受训人员数量" DataColumns="SXRYSL"></DataGrid>
+      <DataGrid HeadColumns="培训地点"     DataColumns="PXDD"></DataGrid>
+      <DataGrid HeadColumns="培训支出经费" DataColumns="PXZCJF"></DataGrid>
+      <DataGrid HeadColumns="备注说明"     DataColumns="BZSM"></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="ID"    ></DataDetail>
+      <DataDetail InfoItems="组织培训单位"     DataColumns="ZZPXDW"      ></DataDetail>
+      <DataDetail InfoItems="培训项目说明" DataColumns="PXXMMC"    ></DataDetail>
+      <DataDetail InfoItems="培训开始时间" DataColumns="PXKSSJ"    ></DataDetail>
+      <DataDetail InfoItems="培训截止时间" DataColumns="PXJZSJ"    ></DataDetail>
+      <DataDetail InfoItems="培训地点"     DataColumns="PXDD"      ></DataDetail>
+      <DataDetail InfoItems="备注说明" DataColumns="BZSM"    ></DataDetail>
+      <DataDetail InfoItems="培训项目名称" DataColumns="PXXMMC"    ></DataDetail>
+      <DataDetail InfoItems="培训时长"     DataColumns="PXSC"      ></DataDetail>
+      <DataDetail InfoItems="受训人员数量" DataColumns="SXRYSL"    ></DataDetail>
+      <DataDetail InfoItems="培训支出经费" DataColumns="PXZCJF"    ></DataDetail>
+    </Fun>
+    <Fun ID="204"  TableName="V_HPF_JGJS_BHGLJF"   TableDetailName="V_HPF_JGJS_BHGLJF"  KeywordFields="BHGLDW"  DateField="JFHQSJ"  PID="ID" HproseAttribute="保护管理经费" Remark="机构与能力建设-保护管理经费">
+      <DataGrid HeadColumns="保护管理单位" DataColumns="BHGLDW"    ></DataGrid>
+      <DataGrid HeadColumns="年份" DataColumns="NF"    ></DataGrid>
+      <DataGrid HeadColumns="保护管理经费" DataColumns="BHGLJF"    ></DataGrid>
+      <DataGrid HeadColumns="经费获取时间" DataColumns="JFHQSJ"    ></DataGrid>
+      <DataGrid HeadColumns="经费来源说明" DataColumns="JFLYSM"    ></DataGrid>
+      <DataGrid HeadColumns="保护管理经费类型" DataColumns="BHGLJFLX_BM"    ></DataGrid>
+      <DataDetail InfoItems="保护管理单位" DataColumns="BHGLDW"    ></DataDetail>
+      <DataDetail InfoItems="年份" DataColumns="NF"    ></DataDetail>
+      <DataDetail InfoItems="保护管理经费"     DataColumns="BHGLJF"      ></DataDetail>
+      <DataDetail InfoItems="经费获取时间" DataColumns="JFHQSJ"    ></DataDetail>
+      <DataDetail InfoItems="经费来源说明" DataColumns="JFLYSM"    ></DataDetail>
+      <DataDetail InfoItems="保护管理经费类型" DataColumns="BHGLJFLX_BM"    ></DataDetail>
+
+    </Fun>
+  </Node>
+  <Node Title="遗产基础信息服务类" >
+    <Fun ID="301" TableName="V_HPF_YCJCXX_YCZT"   Prefix="jcxxzt" TableDetailName="V_HPF_YCJCXX_YCZT" PID="ID" HproseAttribute="遗产总图"  KeywordFields="JCXXWSCD_BM"  DateField="CJSJ"  Remark="遗产基础信息服务类-遗产总图"  >
+      <DataGrid HeadColumns="遗产总图URL" DataColumns="YCZTURL"  ></DataGrid>
+      <DataGrid HeadColumns="基础信息完善程度" DataColumns="JCXXWSCD_BM"  ></DataGrid>
+      <DataGrid HeadColumns="创建人ID" DataColumns="CJRID"  ></DataGrid>
+      <DataGrid HeadColumns="版本" DataColumns="BB"  ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ"  ></DataGrid>
+    </Fun>
+
+    <Fun ID="302"  TableName="HPF_YCJCXX_YCYSFBT"  Prefix="jcxxfbt" TableDetailName="HPF_YCJCXX_YCYSFBT" PID="ID" HproseAttribute="遗产要素分布图"  KeywordFields="YCYSFBTURL"  DateField="CJSJ"  Remark="遗产基础信息服务类-遗产要素分布图"  >
+      <DataGrid HeadColumns="遗产要素分布图URL" DataColumns="YCYSFBTURL"  ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" ></DataGrid>
+    </Fun>
+
+    <Fun ID="303"  TableName="HPF_YCJCXX_SYGNJZT"  Prefix="jcxxgnjzt" TableDetailName="HPF_YCJCXX_SYGNJZT" PID="ID" HproseAttribute="使用功能基准图" KeywordFields="ID,ZWMC"  DateField="CJSJ"  Remark="遗产基础信息服务类-使用功能基准图"  >
+      <DataGrid HeadColumns="遗产要素分布图URL" DataColumns="SYGNJZTURL"  ></DataGrid>
+      <DataGrid HeadColumns="中文名称" DataColumns="ZWMC" ></DataGrid>
+      <DataGrid HeadColumns="功能类型" DataColumns="GNLX"  ></DataGrid>
+    </Fun>
+    <Fun ID="304"  TableName="B_HPF_YCJCXX_YCYSDTHJBCHJZT"  Prefix="jcxxdyjztyx" TableDetailName="B_HPF_YCJCXX_YCYSDTHJBCHJZT" PID="ID" HproseAttribute="遗产要素单体或局部测绘基准图和标志性影像" KeywordFields="TZMC,TPMC"  DateField="RKSJ" Remark="遗产基础信息服务类-遗产要素单体或局部测绘基准图和标志性影像"  >
+      <DataGrid HeadColumns="图纸编号" DataColumns="TZBH" ></DataGrid>
+      <DataGrid HeadColumns="图纸路径" DataColumns="TZLJ" Format="Image" ></DataGrid>
+      <DataGrid HeadColumns="图纸名称" DataColumns="TZMC"  ></DataGrid>
+      <DataGrid HeadColumns="图纸类型" DataColumns="TZLX_BM" ></DataGrid>
+      <DataGrid HeadColumns="图纸数据量" DataColumns="TZSJL"  ></DataGrid>
+      <DataGrid HeadColumns="预览图" DataColumns="YLT"  ></DataGrid>
+      <DataGrid HeadColumns="比例尺" DataColumns="BLC" ></DataGrid>
+      <DataGrid HeadColumns="测绘人" DataColumns="CHR"  ></DataGrid>
+      <DataGrid HeadColumns="密级" DataColumns="MJ"  ></DataGrid>
+      <DataGrid HeadColumns="采集人" DataColumns="CJR" ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" ></DataGrid>
+      <DataGrid HeadColumns="图纸采集时间" DataColumns="TZCJSJ"  ></DataGrid>
+      <DataGrid HeadColumns="管理责任单位" DataColumns="GLZRDW"  ></DataGrid>
+      <DataGrid HeadColumns="是否图纸" DataColumns="Type"  ></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="总体格局变化服务类" >
+    <Fun ID="401"  TableName="V_HPF_GJBH_ZTGJBHT"  TableDetailName="V_HPF_GJBH_ZTGJBHT" PID="ID" HproseAttribute="总体格局变化记录图"  KeywordFields="PG_BM"  DateField="CTSJ" Remark="遗产要素服务类-总体格局变化记录图">
+      <DataGrid HeadColumns="序号" DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="名称" DataColumns="MC" ></DataGrid>
+      <DataGrid HeadColumns="是否立面图" DataColumns="SFLMT" ></DataGrid>
+      <DataGrid HeadColumns="图纸格式" DataColumns="TZGS_BM"  ></DataGrid>
+      <DataGrid HeadColumns="比例尺" DataColumns="BLC" ></DataGrid>
+      <DataGrid HeadColumns="成图时间" DataColumns="CTSJ"  ></DataGrid>
+      <DataGrid HeadColumns="图纸路径" DataColumns="TZLJ" ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" ></DataGrid>
+      <DataDetail InfoItems="比例尺" DataColumns="BLC"    ></DataDetail>
+      <DataDetail InfoItems="名称" DataColumns="MC"    ></DataDetail>
+      <DataDetail InfoItems="是否立面图" DataColumns="SFLMT"    ></DataDetail>
+      <DataDetail InfoItems="图纸格式" DataColumns="TZGS_BM"    ></DataDetail>
+      <DataDetail InfoItems="图纸路径" DataColumns="TZLJ"    ></DataDetail>
+    </Fun>
+    <Fun ID="402"  TableName="V_HPF_GJBH_ZTGJBHJL"  TableDetailName="V_HPF_GJBH_ZTGJBHJL" PID="ID" HproseAttribute="总体格局变变化记录"  KeywordFields="PG_BM"  DateField="CJSJ" Remark="遗产要素服务类-总体格局变化记录图及变化记录">
+      <DataGrid HeadColumns="序号" DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="名称" DataColumns="MC" ></DataGrid>
+      <DataGrid HeadColumns="情况说明" DataColumns="QKSM" ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" ></DataGrid>
+      <DataGrid HeadColumns="评估" DataColumns="PG_BM"  ></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="ID"    ></DataDetail>
+      <DataDetail InfoItems="评估" DataColumns="PG_BM"    ></DataDetail>
+      <DataDetail InfoItems="情况说明" DataColumns="QKSM"    ></DataDetail>
+    </Fun>
+  </Node>
+  <Node Title="遗产使用功能变化服务类" >
+    <Fun ID="501" TableName="V_HPF_SYGN_SYGNBHT"  TableDetailName="V_HPF_SYGN_SYGNBHT" PID="ID" HproseAttribute="功能分区变化记录图"  KeywordFields="TZGS_BM"  DateField="CJSJ"  Remark="遗产使用功能变化服务类-功能分区变化记录图">
+      <DataGrid HeadColumns="序号" DataColumns="ID" ></DataGrid>
+      <DataGrid HeadColumns="图纸编号" DataColumns="TZBH" ></DataGrid>
+      <DataGrid HeadColumns="是否立面图" DataColumns="SFLMT" ></DataGrid>
+      <DataGrid HeadColumns="图纸格式" DataColumns="TZGS_BM" ></DataGrid>
+      <DataGrid HeadColumns="比例尺" DataColumns="BLC" ></DataGrid>
+      <DataGrid HeadColumns="成图时间" DataColumns="CTSJ" ></DataGrid>
+      <DataGrid HeadColumns="图纸路径" DataColumns="TZLJ" ></DataGrid>
+      <DataGrid HeadColumns="总体格局变化图URL" DataColumns="ZTGJBHTURL" ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" ></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="ID"    ></DataDetail>
+      <DataDetail InfoItems="图纸编号" DataColumns="TZBH"    ></DataDetail>
+      <DataDetail InfoItems="是否立面图" DataColumns="SFLMT"    ></DataDetail>
+      <DataDetail InfoItems="图纸格式" DataColumns="TZGS_BM"    ></DataDetail>
+      <DataDetail InfoItems="比例尺" DataColumns="BLC"    ></DataDetail>
+      <DataDetail InfoItems="成图时间" DataColumns="CTSJ"    ></DataDetail>
+      <DataDetail InfoItems="图纸路径" DataColumns="TZLJ"    ></DataDetail>
+      <DataDetail InfoItems="创建时间" DataColumns="CJSJ"    ></DataDetail>
+    </Fun>
+    <Fun ID="502" TableName="V_HPF_SYGN_SYGNBHJL"  TableDetailName="V_HPF_SYGN_SYGNBHJL" PID="ID" HproseAttribute="功能分区变化记录"  KeywordFields="MC"  DateField="CJSJ"  Remark="遗产使用功能变化服务类-功能分区变化记录">
+      <DataGrid HeadColumns="序号" DataColumns="ID" ></DataGrid>
+      <DataGrid HeadColumns="名称" DataColumns="MC" ></DataGrid>
+      <DataGrid HeadColumns="评估" DataColumns="PG_BM" ></DataGrid>
+      <DataGrid HeadColumns="情况说明" DataColumns="QKSM" ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" ></DataGrid>
+      <DataDetail InfoItems="名称" DataColumns="MC"    ></DataDetail>
+      <DataDetail InfoItems="管理责任单位" DataColumns="GLZRDW"    ></DataDetail>
+      <DataDetail InfoItems="数据密级" DataColumns="SJMJ"    ></DataDetail>
+      <DataDetail InfoItems="评估" DataColumns="PG_BM"    ></DataDetail>
+      <DataDetail InfoItem="情况说明" DataColumns="QKSM" ></DataDetail>
+    </Fun>
+  </Node>
+  <Node Title="遗产要素单体服务类" >
+    <Fun ID="601" TableName="V_HPF_YCYSDT_YCYSDTHJBXZT_HPF_YCYSDT_YCYSDTHJBTP" TableDetailName="V_HPF_YCYSDT_YCYSDTHJBXZT_HPF_YCYSDT_YCYSDTHJBTP"  PID="ID" HproseAttribute="遗产要素单体或局部测绘图及遗产要素现状记录" KeywordFields="TZMC"  DateField="RKSJ"  Remark="遗产要素单体或局部测绘图及遗产要素现状图/影像图">
+      <DataGrid HeadColumns="图纸路径" DataColumns="TZLJ"  Format="Image"></DataGrid>
+      <DataGrid HeadColumns="图纸名称" DataColumns="TZMC"  ></DataGrid>
+      <DataGrid HeadColumns="图纸类型" DataColumns="TZLX"  ></DataGrid>
+      <DataGrid HeadColumns="图纸采集时间" DataColumns="TZCJSJ" ></DataGrid>
+      <DataGrid HeadColumns="图纸数据量" DataColumns="TZSJL" ></DataGrid>
+      <DataGrid HeadColumns="预览图" DataColumns="YLT" ></DataGrid>
+      <DataGrid HeadColumns="预览图路径" DataColumns="YLTLJ" Format="Image"></DataGrid>
+      <DataGrid HeadColumns="评估" DataColumns="PG" ></DataGrid>
+      <DataGrid HeadColumns="情况说明" DataColumns="QKSM" ></DataGrid>
+      <DataGrid HeadColumns="遗产要素保存状态" DataColumns="YCYSBCZT_BM" ></DataGrid>
+      <DataGrid HeadColumns="类型" DataColumns="TYPE" ></DataGrid>
+    </Fun>
+    <Fun ID="602" TableName="V_HPF_YCYSDT_YCYSDTHJBTPJLB_HPF_YCYSDT_YCYSDTHJBXZTJLB" TableDetailName="V_HPF_YCYSDT_YCYSDTHJBTPJLB_HPF_YCYSDT_YCYSDTHJBXZTJLB"  PID="ID" HproseAttribute="遗产要素单体或局部影像及遗产要素现状记录"  KeywordFields="XZR"  DateField="RKSJ"  Remark="遗产要素单体或局部测绘图及遗产要素现状记录">
+      <DataGrid HeadColumns="序号" DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="图片ID" DataColumns="TPID"  ></DataGrid>
+      <DataGrid HeadColumns="查看人" DataColumns="CKR"  ></DataGrid>
+      <DataGrid HeadColumns="查看时间" DataColumns="CKSJ" ></DataGrid>
+      <DataGrid HeadColumns="下载人" DataColumns="XZR" ></DataGrid>
+      <DataGrid HeadColumns="下载时间" DataColumns="XZSJ" ></DataGrid>
+      <DataGrid HeadColumns="下载次数" DataColumns="XZCS" ></DataGrid>
+      <DataGrid HeadColumns="入库时间" DataColumns="RKSJ" ></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="本体与载体病害服务类" >
+    <Fun ID="70201" TableName="HPF_BTYZTBH_BHFBT" TableDetailName="HPF_BTYZTBH_BHFBT" PID="ID"  KeywordFields="TZBH,ID"
+        DateField="CTSJ"  HproseAttribute="病害分布图" Remark="本体与载体病害服务类-病害分布图">
+      <DataGrid HeadColumns="序号" DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="图纸编号"      DataColumns="TZBH"></DataGrid>
+      <DataGrid HeadColumns="名称"          DataColumns="MC" ></DataGrid>
+      <DataGrid HeadColumns="是否立面图"      DataColumns="SFLMT"></DataGrid>
+      <DataGrid HeadColumns="图纸数据量"      DataColumns="TZSJL"></DataGrid>
+      <DataGrid HeadColumns="图纸格式"      DataColumns="TZGS"></DataGrid>
+      <DataGrid HeadColumns="成图时间"      DataColumns="CTSJ"></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="ID"    ></DataDetail>
+      <DataDetail InfoItems="图纸编号" DataColumns="TZBH"    ></DataDetail>
+      <DataDetail InfoItems="名称" DataColumns="MC"    ></DataDetail>
+      <DataDetail InfoItems="是否立面图" DataColumns="SFLMT"></DataDetail>
+      <DataDetail InfoItems="图纸数据量" DataColumns="TZSJL"></DataDetail>
+      <DataDetail InfoItems="图纸格式" DataColumns="TZGS"></DataDetail>
+      <DataDetail InfoItems="成图时间" DataColumns="CTSJ"></DataDetail>
+    </Fun>
+    <Fun ID="701" TableName="HPF_BTYZTBH_BHDCJCGZQKJLB" TableDetailName="HPF_BTYZTBH_BHDCJCGZQKJLB" PID="ID"  KeywordFields="BHBH,JCFF"
+         DateField="JCKSSJ"  HproseAttribute="病害调查监测工作情况记录" Remark="本体与载体病害服务类-病害调查监测工作情况记录">
+      <DataGrid HeadColumns="序号" DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="病害编号"          DataColumns="BHBH" ></DataGrid>
+      <DataGrid HeadColumns="病害位置"      DataColumns="BHWZ"></DataGrid>
+      <DataGrid HeadColumns="病害类型"      DataColumns="BHLX"></DataGrid>
+      <DataGrid HeadColumns="监测起始时间"      DataColumns="JCKSSJ"></DataGrid>
+      <DataGrid HeadColumns="监测结束时间"      DataColumns="JCJSSJ"></DataGrid>
+      <DataGrid HeadColumns="监测方法"      DataColumns="JCFF"></DataGrid>
+      <DataGrid HeadColumns="监测周期"      DataColumns="JCZQ"></DataGrid>
+      <DataGrid HeadColumns="实施机构"          DataColumns="SSJG" ></DataGrid>
+      <DataDetail InfoItems="病害编号" DataColumns="BHBH"    ></DataDetail>
+      <DataDetail InfoItems="病害位置" DataColumns="BHWZ"    ></DataDetail>
+      <DataDetail InfoItems="病害类型" DataColumns="BHLX"    ></DataDetail>
+      <DataDetail InfoItems="监测起始时间" DataColumns="JCKSSJ"    ></DataDetail>
+      <DataDetail InfoItems="监测结束时间" DataColumns="JCJSSJ"    ></DataDetail>
+      <DataDetail InfoItems="监测方法" DataColumns="JCFF"    ></DataDetail>
+      <DataDetail InfoItems="监测周期" DataColumns="JCZQ"    ></DataDetail>
+      <DataDetail InfoItems="实施机构" DataColumns="SSJG"    ></DataDetail>
+    </Fun>
+    <Fun ID="702" TableName="v_HPF_BTYZTBH_BHDCJCGZQKJLB" TableDetailName="V_HPF_BTYZTBH_BHDCJCGZQKJLB" PID="ID"  KeywordFields="BHBH,JCFF"
+      DateField="JCKSSJ"  HproseAttribute="病害调查监测工作情况记录" Remark="单独提供误删">
+      <DataGrid HeadColumns="序号"          DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="病害编号"          DataColumns="BHBH" ></DataGrid>
+      <DataGrid HeadColumns="病害位置"      DataColumns="BHWZ"></DataGrid>
+      <DataGrid HeadColumns="病害类型"      DataColumns="BHLX_BM"></DataGrid>
+      <DataGrid HeadColumns="病害经度"      DataColumns="BHJD" ></DataGrid>
+      <DataGrid HeadColumns="病害纬度"      DataColumns="BHWD"></DataGrid>
+      <DataGrid HeadColumns="监测周期"      DataColumns="JCZQ"></DataGrid>
+      <DataGrid HeadColumns="监测方法"      DataColumns="JCFF"></DataGrid>
+      <DataGrid HeadColumns="实施机构"          DataColumns="SSJG" ></DataGrid>
+      <DataGrid HeadColumns="监测起始时间"      DataColumns="JCKSSJ"></DataGrid>
+      <DataGrid HeadColumns="监测结束时间"      DataColumns="JCJSSJ"></DataGrid>
+      <DataGrid HeadColumns="监测数据可使用范围"  DataColumns="JCSJKSYFW"></DataGrid>
+      <DataGrid HeadColumns="监测记录保存地点"      DataColumns="JCJLBCDD"></DataGrid>
+      <DataGrid HeadColumns="监测记录保存时间"  DataColumns="JCJLBCSJ"></DataGrid>
+      <DataGrid HeadColumns="病害状态图"      DataColumns="BHSYT" DataFormat="Image"></DataGrid>
+
+      <DataDetail InfoItems="序号" DataColumns="ID"    ></DataDetail>
+      <DataDetail InfoItems="病害编号" DataColumns="BHBH"    ></DataDetail>
+       <DataDetail HeadColumns="病害类型"      DataColumns="BHLX_BM"></DataDetail>
+      <DataDetail InfoItems="病害经度" DataColumns="BHJD"    ></DataDetail>
+      <DataDetail InfoItems="病害纬度" DataColumns="BHWD"    ></DataDetail>
+      <DataDetail InfoItems="监测周期" DataColumns="JCZQ"    ></DataDetail>
+      <DataDetail InfoItems="病害位置" DataColumns="BHWZ"    ></DataDetail>
+      <DataDetail InfoItems="监测方法" DataColumns="JCFF"    ></DataDetail>
+      <DataDetail InfoItems="实施机构" DataColumns="SSJG"    ></DataDetail>
+      <DataDetail InfoItems="监测起始时间" DataColumns="JCKSSJ"    ></DataDetail>
+      <DataDetail InfoItems="监测结束时间" DataColumns="JCJSSJ"    ></DataDetail>
+      <DataDetail InfoItems="监测数据可使用范围" DataColumns="JCSJKSYFW"    ></DataDetail>
+      <DataDetail InfoItems="监测记录保存地点" DataColumns="JCJLBCDD"    ></DataDetail>
+      <DataDetail InfoItems="监测记录保存时间" DataColumns="JCJLBCSJ"    ></DataDetail>
+      <DataDetail InfoItems="预览图" DataColumns="BHSYT"    ></DataDetail>
+    </Fun>
+    <Fun ID="70301"  TableName="v_HPF_BTYZTBH_LFJL"   Prefix="lf_wdl" TableDetailName="v_HPF_BTYZTBH_LFJL"  PID="ID" HproseAttribute="裂缝" KeywordFields="LFKKFW"
+         DateField="DCSJ"  Remark="本体与载体病害服务类-病害监测数据-裂缝(文档类)">
+      <DataGrid HeadColumns="序号"          DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="病害编号" DataColumns="BHBH"  ></DataGrid>
+      <DataGrid HeadColumns="裂缝面状态" DataColumns="LFMXT"  ></DataGrid>
+      <DataGrid HeadColumns="裂缝长度" DataColumns="LFCD"  ></DataGrid>
+      <DataGrid HeadColumns="裂缝深度" DataColumns="LFSD"  ></DataGrid>
+      <DataGrid HeadColumns="裂缝开口方位" DataColumns="LFKKFW"  ></DataGrid>
+      <DataGrid HeadColumns="裂缝充填情况" DataColumns="LFCTQK"  ></DataGrid>
+      <DataGrid HeadColumns="评估" DataColumns="PG"  ></DataGrid>
+      <DataGrid HeadColumns="评估说明" DataColumns="PGSM" ></DataGrid>
+      <DataGrid HeadColumns="审核状态" DataColumns="SHZT" ></DataGrid>
+      <DataGrid HeadColumns="调查时间" DataColumns="DCSJ" ></DataGrid>
+
+    </Fun>
+    <Fun ID="70302"  TableName="v_HPF_BTYZTBH_LFKD"   Prefix="lf_szl" TableDetailName="v_HPF_BTYZTBH_LFKD"  PID="ID" HproseAttribute="裂缝(数值类)" KeywordFields="LFKD" DateField="JCSJ" Remark="本体与载体病害服务类-病害监测数据-裂缝(数值类)">
+      <DataGrid HeadColumns="裂缝宽度" DataColumns="LFKD" ></DataGrid>
+      <DataGrid HeadColumns="监测时间" DataColumns="JCSJ"  ></DataGrid>
+      <DataGrid HeadColumns="评估" DataColumns="PG" ></DataGrid>
+    </Fun>
+    <Fun ID="70303"  TableName="v_HPF_BTYZTBH_CJJL"   Prefix="cj" TableDetailName="v_HPF_BTYZTBH_CJJL"  PID="ID" HproseAttribute="沉降" KeywordFields="BHBH" DateField="CJJCSJ" Remark="本体与载体病害服务类-病害监测数据-沉降">
+
+      <DataGrid HeadColumns="序号"          DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="病害编号" DataColumns="BHBH"  ></DataGrid>
+      <DataGrid HeadColumns="沉降值" DataColumns="CJZ" ></DataGrid>
+      <DataGrid HeadColumns="评估" DataColumns="PG"></DataGrid>
+      <DataGrid HeadColumns="沉降监测时间" DataColumns="CJJCSJ"></DataGrid>
+      <DataGrid HeadColumns="备注" DataColumns="PGSM"></DataGrid>
+    </Fun>
+    <Fun ID="70304"  TableName="HPF_BTYZTBH_CJSZ"   Prefix="cj" TableDetailName="v_HPF_BTYZTBH_CJJL"  PID="ID" HproseAttribute="沉降数值" KeywordFields="BHBH" DateField="CJJCSJ" Remark="本体与载体病害服务类-病害监测数据-沉降数值">
+    </Fun>
+    <Fun ID="70307"  TableName="v_HPF_BTYZTBH_ZXJL"  TableDetailName="v_HPF_BTYZTBH_ZXJL" PID="ID"  KeywordFields="GJZXMJ"
+       DateField="DCRQ"  HproseAttribute="槽朽" Remark="槽朽">
+      <DataGrid HeadColumns="序号"          DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="病害编号" DataColumns="BHBH"  ></DataGrid>
+      <DataGrid HeadColumns="上次降雨时间"      DataColumns="SCJYSJ"></DataGrid>
+      <DataGrid HeadColumns="构件受潮面积"      DataColumns="GJSCMJ"></DataGrid>
+      <DataGrid HeadColumns="构件糟朽面积"  DataColumns="GJZXMJ"></DataGrid>
+      <DataGrid HeadColumns="评估"      DataColumns="PG"></DataGrid>
+      <DataGrid HeadColumns="评估说明"  DataColumns="PGSM"></DataGrid>
+      <DataGrid HeadColumns="调查日期"  DataColumns="DCRQ"></DataGrid>
+
+    </Fun>
+    <Fun ID="70308" TableName="HPF_BTYZTBH_BY" PID="ID"  KeywordFields="MC"
+         DateField="CJSJ"  HproseAttribute="白蚁" Remark="白蚁">
+      <DataGrid HeadColumns="序号"          DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="病害编号" DataColumns="BHBH"  ></DataGrid>
+      <DataGrid HeadColumns="位置说明"      DataColumns="WZSM"></DataGrid>
+      <DataGrid HeadColumns="名称"      DataColumns="MC"></DataGrid>
+      <DataGrid HeadColumns="创建时间"      DataColumns="CJSJ"></DataGrid>
+
+
+    </Fun>
+    <Fun ID="70309"  TableName="v_HPF_BTYZTBH_GJXSJL"  TableDetailName="v_HPF_BTYZTBH_GJXSJL" PID="ID"  KeywordFields="GJSCMJ,GJFSMJ,PGSM"
+         DateField="DCSJ"  HproseAttribute="钢筋锈蚀" Remark="钢筋锈蚀">
+      <DataGrid HeadColumns="序号"          DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="病害编号" DataColumns="BHBH"  ></DataGrid>
+      <DataGrid HeadColumns="上次降雨时间"      DataColumns="SCJYSJ"></DataGrid>
+      <DataGrid HeadColumns="构件受潮面积"      DataColumns="GJSCMJ"></DataGrid>
+      <DataGrid HeadColumns="构件腐蚀面积"  DataColumns="GJFSMJ"></DataGrid>
+      <DataGrid HeadColumns="评估"      DataColumns="PG"></DataGrid>
+      <DataGrid HeadColumns="评估说明"  DataColumns="PGSM"></DataGrid>
+      <DataGrid HeadColumns="调查日期"  DataColumns="DCSJ"></DataGrid>
+
+    </Fun>
+
+    <Fun ID="70310"  TableName="v_HPF_BTYZTBH_ZWJL"  TableDetailName="v_HPF_BTYZTBH_ZWJL" PID="ID"  KeywordFields="PGSM"
+         DateField="DCRQ"  HproseAttribute="植物根系" Remark="植物根系">
+      <DataGrid HeadColumns="序号"          DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="影响面积"      DataColumns="YXMJ"></DataGrid>
+      <DataGrid HeadColumns="病害编号" DataColumns="BHBH"  ></DataGrid>
+      <DataGrid HeadColumns="病害类型"      DataColumns="BHLX"></DataGrid>
+      <DataGrid HeadColumns="受害程度"  DataColumns="SHCD"></DataGrid>
+      <DataGrid HeadColumns="评估"      DataColumns="PG"></DataGrid>
+      <DataGrid HeadColumns="评估说明"  DataColumns="PGSM"></DataGrid>
+      <DataGrid HeadColumns="调查日期"  DataColumns="DCRQ"></DataGrid>
+
+
+    </Fun>
+
+    <Fun ID="70311" TableName="v_HPF_BTYZTBH_SLJL"   TableDetailName="v_HPF_BTYZTBH_SLJL" PID="ID"  KeywordFields="SLMJ,PG"
+         DateField="SCJYSJ"  HproseAttribute="渗漏水" Remark="渗漏水">
+      <DataGrid HeadColumns="序号"          DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="上次降雨时间"      DataColumns="SCJYSJ"></DataGrid>
+      <DataGrid HeadColumns="病害编号"      DataColumns="BHBH"></DataGrid>
+      <DataGrid HeadColumns="渗漏面积"      DataColumns="SLMJ"></DataGrid>
+      <DataGrid HeadColumns="评估"      DataColumns="PG"></DataGrid>
+      <DataGrid HeadColumns="评估说明"  DataColumns="PGSM"></DataGrid>
+      <DataGrid HeadColumns="调查日期"  DataColumns="DCSJ"></DataGrid>
+    </Fun>
+    <Fun ID="70312" TableName="v_HPF_BTYZTBH_TLJL " TableDetailName="v_HPF_BTYZTBH_TLJL" PID="ID"  KeywordFields="TLCD,TLKD,TLMJ,PGSM"
+         DateField="DCRQ"  HproseAttribute="脱落" Remark="脱落">
+      <DataGrid HeadColumns="序号"          DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="脱落长度"      DataColumns="TLCD"></DataGrid>
+      <DataGrid HeadColumns="病害编号"      DataColumns="BHBH"></DataGrid>
+      <DataGrid HeadColumns="脱落宽度"      DataColumns="TLKD"></DataGrid>
+      <DataGrid HeadColumns="脱落面积"      DataColumns="TLMJ"></DataGrid>
+      <DataGrid HeadColumns="评估"      DataColumns="PG"></DataGrid>
+      <DataGrid HeadColumns="评估说明"  DataColumns="PGSM"></DataGrid>
+      <DataGrid HeadColumns="调查日期"  DataColumns="DCRQ"></DataGrid>
+    </Fun>
+    <Fun ID="704" TableName="HPF_BTYZTBH_BHKZZTPG" TableDetailName="HPF_BTYZTBH_BHKZZTPG"  PID="ID" HproseAttribute="病害控制状态评估" KeywordFields="BHKZZTPG" DateField="CJSJ"    Remark="本体与载体病害服务类-病害控制状态评估">
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ"  ></DataGrid>
+      <DataGrid HeadColumns="病害控制状态评估" DataColumns="BHKZZTPG" ></DataGrid>
+    </Fun>
+    <Fun ID="70501"  TableName="HPF_BTYZTBH_WDLBHTYB"   Prefix="" TableDetailName=""  PID="ID" HproseAttribute="文档类病害通用表" KeywordFields="" DateField="" Remark="本体与载体病害服务类-病害通用服务类-文档类病害通用表">
+    </Fun>
+    <Fun ID="70502"  TableName="HPF_BTYZTBH_BHTYZP"   Prefix="" TableDetailName=""  PID="ID" HproseAttribute="病害通用照片" KeywordFields="" DateField="" Remark="本体与载体病害服务类-病害通用服务类-病害通用照片">
+    </Fun>
+    <Fun ID="70503"  TableName="HPF_BTYZTBH_BHCXB"   Prefix="" TableDetailName=""  PID="ID" HproseAttribute="病害测项表" KeywordFields="" DateField="" Remark="本体与载体病害服务类-病害通用服务类-病害测项表">
+    </Fun>
+    <Fun ID="70504"  TableName="HPF_BTYZTBH_TYJL"   Prefix="" TableDetailName=""  PID="ID" HproseAttribute="病害记录表" KeywordFields="" DateField="" Remark="本体与载体病害服务类-病害通用服务类-病害记录表">
+    </Fun>
+  </Node>
+  <Node Title="自然环境服务类">
+    <Fun ID="801" TableName="HPF_ZRHJ_ZRHJJCGZQKJL" PID="ID"  HproseAttribute="自然环境监测工作情况记录" KeywordFields="ZRHJJCXMNR"  DateField="JCQSSJ"  Remark="自然环境服务类-自然环境监测工作情况记录">
+      <DataGrid HeadColumns="自然环境监测项目内容" DataColumns="ZRHJJCXMNR"  ></DataGrid>
+      <DataGrid HeadColumns="监测对象类型" DataColumns="JCDXLX" ></DataGrid>
+      <DataGrid HeadColumns="监测起始时间" DataColumns="JCQSSJ" ></DataGrid>
+      <DataGrid HeadColumns="监测结束时间" DataColumns="JCJSSJ"  ></DataGrid>
+      <DataGrid HeadColumns="监测方法" DataColumns="JCFF" ></DataGrid>
+      <DataGrid HeadColumns="数据采集点编号" DataColumns="SJCJDBH" ></DataGrid>
+      <DataGrid HeadColumns="监测周期" DataColumns="JCZQ" ></DataGrid>
+      <DataGrid HeadColumns="实施机构" DataColumns="SSJG" ></DataGrid>
+      <DataGrid HeadColumns="监测数据可使用范围" DataColumns="JCSJKSYFW" ></DataGrid>
+      <DataGrid HeadColumns="监测记录保存地点" DataColumns="JCJLBCDD"  ></DataGrid>
+      <DataGrid HeadColumns="监测记录保存时间" DataColumns="JCJLBCSJ"  ></DataGrid>
+    </Fun>
+    <Fun ID="8020101" TableName="HPF_ZRHJ_SSTQ" PID="ID" HproseAttribute="实时天气" KeywordFields="DQQW,DQSD,JYL_1H,FS,FX"  DateField="FBSJ"  Remark="自然环境服务类-气象类-实时天气">
+      <DataGrid HeadColumns="气温" DataColumns="DQQW" ></DataGrid>
+      <!--由于前台特殊服务自然环境按时间分类获取,故将HeadColumn的注释值当前气温更改为气温-->
+      <DataGrid HeadColumns="湿度" DataColumns="DQSD" ></DataGrid>
+      <!--由于前台特殊服务自然环境按时间分类获取,故将HeadColumn的注释值当前湿度更改为湿度-->
+      <DataGrid HeadColumns="降雨量" DataColumns="JYL_1H" ></DataGrid>
+      <!--由于前台特殊服务自然环境按时间分类获取,故将HeadColumn的注释值一小时内的降雨量更改为降雨量-->
+      <DataGrid HeadColumns="风速" DataColumns="FS" ></DataGrid>
+      <DataGrid HeadColumns="风向" DataColumns="FX" ></DataGrid>
+      <DataGrid HeadColumns="风向描述" DataColumns="FXMS" ></DataGrid>
+      <DataGrid HeadColumns="能见度" DataColumns="NJD" ></DataGrid>
+      <DataGrid HeadColumns="监测时间" DataColumns="FBSJ" ></DataGrid>
+      <DataGrid HeadColumns="气压" DataColumns="QY" ></DataGrid>
+    </Fun>
+    <Fun ID="8020102" TableName="HPF_ZRHJ_TQYJXX" PID="ID" HproseAttribute="天气预警信息" KeywordFields="YJXHM,FBNR"  DateField="FBSJ"    Remark="自然环境服务类-气象类-天气预警信息">
+      <DataGrid HeadColumns="预警信号名" DataColumns="YJXHM"  ></DataGrid>
+      <DataGrid HeadColumns="预警等级" DataColumns="YJDJ" ></DataGrid>
+      <DataGrid HeadColumns="预警类型" DataColumns="YJLX" ></DataGrid>
+      <DataGrid HeadColumns="发布内容" DataColumns="FBNR"  ></DataGrid>
+      <DataGrid HeadColumns="发布日期" DataColumns="FBSJ" ></DataGrid>
+    </Fun>
+    <Fun ID="8020201" TableName="HPF_ZRHJ_DQZLRB"  PID="ID" HproseAttribute="大气质量日报" KeywordFields="KQZLZS(AQI),SYWRW"  DateField="FBSJ"   Remark="自然环境服务类-环保类-大气质量日报">
+      <DataGrid HeadColumns="空气质量指数（AQI）" DataColumns="AQI"  ></DataGrid>
+      <DataGrid HeadColumns="空气质量指数级别" DataColumns="AQI_JB" ></DataGrid>
+      <DataGrid HeadColumns="空气质量指数类别（类别）" DataColumns="AQI_LB" ></DataGrid>
+      <DataGrid HeadColumns="首要污染物" DataColumns="SYWRW"  ></DataGrid>
+      <DataGrid HeadColumns="发布时间" DataColumns="FBSJ"  ></DataGrid>
+      <DataDetail InfoItems="空气质量指数（AQI）" DataColumns="AQI"  ></DataDetail>
+      <DataDetail InfoItems="首要污染物" DataColumns="SYWRW"  ></DataDetail>
+      <DataDetail InfoItems="空气质量指数级别" DataColumns="AQI_JB"  ></DataDetail>
+      <DataDetail InfoItems="空气质量指数类别（类别）" DataColumns="AQI_LB"  ></DataDetail>
+      <DataDetail InfoItems="空气质量指数类别颜色" DataColumns="AQI_LBYS"  ></DataDetail>
+      <DataDetail InfoItems="二氧化硫（SO2）24小时平均浓度" DataColumns="SO2_24H_PJND"  ></DataDetail>
+      <DataDetail InfoItems="二氧化硫（SO2）24小时平均分指数" DataColumns="SO2_24H_PJFZS"  ></DataDetail>
+      <DataDetail InfoItems="二氧化氮（NO2）24小时平均浓度" DataColumns="NO2_24H_PJND"  ></DataDetail>
+      <DataDetail InfoItems="二氧化氮（NO2）24小时平均分指数" DataColumns="NO2_24H_PJFZS"  ></DataDetail>
+      <DataDetail InfoItems="颗粒物（粒径＜=10μm）24小时平均浓度" DataColumns="KLW10_24H_PJND"  ></DataDetail>
+      <DataDetail InfoItems="颗粒物（粒径＜=10μm）24小时平均分指数" DataColumns="KLW10_24H_PJFZS"  ></DataDetail>
+      <DataDetail InfoItems="一氧化碳（CO）24小时平均浓度" DataColumns="CO_24H_PJND"  ></DataDetail>
+      <DataDetail InfoItems="一氧化碳（CO）24小时平均分指数" DataColumns="CO_24H_PJFZS"  ></DataDetail>
+      <DataDetail InfoItems="臭氧（O3）1小时平均浓度" DataColumns="O3_1H_PJND"  ></DataDetail>
+      <DataDetail InfoItems="臭氧（O3）1小时平均分指数" DataColumns="O3_1H_PJFZS"  ></DataDetail>
+      <DataDetail InfoItems="臭氧（O3）8小时滑动平均浓度" DataColumns="O3_8H_HDPJND"  ></DataDetail>
+      <DataDetail InfoItems="臭氧（O3）8小时滑动平均分指数" DataColumns="O3_8H_HDPJFZS"  ></DataDetail>
+      <DataDetail InfoItems="颗粒物（粒径＜=2.5μm）24小时平均浓度" DataColumns="KLW2D5_24H_PJND"  ></DataDetail>
+      <DataDetail InfoItems="颗粒物（粒径＜=2.5μm）24小时平均分指数" DataColumns="KLW2D5_24H_PJFZS"  ></DataDetail>
+      <DataDetail InfoItems="发布时间" DataColumns="FBSJ"  ></DataDetail>
+      <DataDetail InfoItems="创建时间" DataColumns="CJSJ"  ></DataDetail>
+    </Fun>
+    <Fun ID="8020202" TableName="HPF_ZRHJ_DQZLSB" PID="ID" HproseAttribute="大气质量时报" KeywordFields="KQZLZS(AQI),SYWRW" DateField="FBSJ"  Remark="自然环境服务类-环保类-大气质量时报">
+      <DataGrid HeadColumns="空气质量指数（AQI）" DataColumns="AQI"  ></DataGrid>
+      <DataGrid HeadColumns="空气质量指数级别" DataColumns="AQI_JB" ></DataGrid>
+      <DataGrid HeadColumns="空气质量指数类别（类别）" DataColumns="AQI_LB" ></DataGrid>
+      <DataGrid HeadColumns="首要污染物" DataColumns="SYWRW"  ></DataGrid>
+      <DataGrid HeadColumns="发布时间" DataColumns="FBSJ"  ></DataGrid>
+      <DataDetail InfoItems="空气质量指数（AQI）" DataColumns="AQI"  ></DataDetail>
+      <DataDetail InfoItems="首要污染物" DataColumns="SYWRW"  ></DataDetail>
+      <DataDetail InfoItems="空气质量指数级别" DataColumns="AQI_JB"  ></DataDetail>
+      <DataDetail InfoItems="空气质量指数类别（类别）" DataColumns="AQI_LB"  ></DataDetail>
+      <DataDetail InfoItems="空气质量指数类别颜色" DataColumns="AQI_LBYS"  ></DataDetail>
+      <DataDetail InfoItems="二氧化硫（SO2）1小时平均浓度" DataColumns="SO2_1H_PJND"  ></DataDetail>
+      <DataDetail InfoItems="二氧化硫（SO2）1小时平均分指数" DataColumns="SO2_1H_PJFZS"  ></DataDetail>
+      <DataDetail InfoItems="二氧化氮（NO2）1小时平均浓度" DataColumns="NO2_1H_PJND"  ></DataDetail>
+      <DataDetail InfoItems="二氧化氮（NO2）1小时平均分指数" DataColumns="NO2_1H_PJFZS"  ></DataDetail>
+      <DataDetail InfoItems="颗粒物（粒径＜=10μm）1小时平均浓度" DataColumns="KLW10_1H_PJND"  ></DataDetail>
+      <DataDetail InfoItems="颗粒物（粒径＜=10μm）1小时平均分指数" DataColumns="KLW10_1H_PJFZS"  ></DataDetail>
+      <DataDetail InfoItems="一氧化碳（CO）24小时平均浓度" DataColumns="CO_1H_PJND"  ></DataDetail>
+      <DataDetail InfoItems="一氧化碳（CO）24小时平均分指数" DataColumns="CO_1H_PJFZS"  ></DataDetail>
+      <DataDetail InfoItems="臭氧（O3）1小时平均浓度" DataColumns="O3_1H_PJND"  ></DataDetail>
+      <DataDetail InfoItems="臭氧（O3）1小时平均分指数" DataColumns="O3_1H_PJFZS"  ></DataDetail>
+      <DataDetail InfoItems="臭氧（O3）8小时滑动平均浓度" DataColumns="O3_8H_HDPJND"  ></DataDetail>
+      <DataDetail InfoItems="臭氧（O3）8小时滑动平均分指数" DataColumns="O3_8H_HDPJFZS"  ></DataDetail>
+      <DataDetail InfoItems="颗粒物（粒径＜=2.5μm）1小时平均浓度" DataColumns="KLW2D5_1H_PJND"  ></DataDetail>
+      <DataDetail InfoItems="颗粒物（粒径＜=2.5μm）1小时平均分指数" DataColumns="KLW2D5_1H_PJFZS"  ></DataDetail>
+    </Fun>
+    <Fun ID="8020203" TableName="HPF_ZRHJ_SYYSJ"  PID="ID" HproseAttribute="酸雨元数据" KeywordFields="JSLX"  DateField="CYKSSJ"  Remark="自然环境服务类-环保类-酸雨元数据">
+      <DataGrid HeadColumns="采样开始时间" DataColumns="CYKSSJ"  ></DataGrid>
+      <DataGrid HeadColumns="采样终止时间" DataColumns="CYZZSJ" ></DataGrid>
+      <DataGrid HeadColumns="降水类型" DataColumns="JSLX" ></DataGrid>
+      <DataGrid HeadColumns="降雨量(mm)" DataColumns="JYL"  ></DataGrid>
+      <DataGrid HeadColumns="pH" DataColumns="pH" ></DataGrid>
+      <DataGrid HeadColumns="电导率μS/cm" DataColumns="DDL" ></DataGrid>
+      <DataGrid HeadColumns="硫酸盐离子mg/L" DataColumns="LSYLZ" ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" ></DataGrid>
+      <DataDetail InfoItems="降水类型" DataColumns="JSLX"  ></DataDetail>
+      <DataDetail InfoItems="降雨量(mm)" DataColumns="JYL"  ></DataDetail>
+      <DataDetail InfoItems="电导率μS/cm" DataColumns="DDL"  ></DataDetail>
+      <DataDetail InfoItems="硫酸盐离子mg/L" DataColumns="LSYLZ"  ></DataDetail>
+      <DataDetail InfoItems="硝酸根离子mg/L" DataColumns="XSGLZ"  ></DataDetail>
+      <DataDetail InfoItems="氟离子mg/L" DataColumns="FLZ"  ></DataDetail>
+      <DataDetail InfoItems="氯离子mg/L" DataColumns="LLZ"  ></DataDetail>
+      <DataDetail InfoItems="铵离子mg/L" DataColumns="ALZ"  ></DataDetail>
+      <DataDetail InfoItems="钙离子mg/L" DataColumns="GLZ"  ></DataDetail>
+      <DataDetail InfoItems="镁离子mg/L" DataColumns="MLZ"  ></DataDetail>
+      <DataDetail InfoItems="钠离子mg/L" DataColumns="NLZ"  ></DataDetail>
+      <DataDetail InfoItems="钾离子mg/L" DataColumns="JLZ"  ></DataDetail>
+    </Fun>
+    <Fun ID="8020301"  TableName="HPF_ZRHJ_HSZLJC" PID="ID" HproseAttribute="海水质量检测" KeywordFields="JCZW"  DateField="JCSJ"    Remark="自然环境服务类-海洋类-海水质量检测">
+      <DataGrid HeadColumns="监测站位" DataColumns="JCZW"  ></DataGrid>
+      <DataGrid HeadColumns="监测日期" DataColumns="JCSJ" ></DataGrid>
+      <DataGrid HeadColumns="水深m" DataColumns="SS" ></DataGrid>
+      <DataGrid HeadColumns="采样层次" DataColumns="CYCC"  ></DataGrid>
+      <DataGrid HeadColumns="采样深度m" DataColumns="CYSD" ></DataGrid>
+      <DataGrid HeadColumns="PH" DataColumns="PH" ></DataGrid>
+      <DataGrid HeadColumns="盐度" DataColumns="YD" ></DataGrid>
+      <DataGrid HeadColumns="溶解氧mg/L" DataColumns="RJY"  ></DataGrid>
+      <DataGrid HeadColumns="化学需氧量mg/L" DataColumns="HXXYL" ></DataGrid>
+      <DataGrid HeadColumns="磷酸盐mg/L" DataColumns="LSY" ></DataGrid>
+      <DataGrid HeadColumns="硝酸盐-氮mg/L" DataColumns="XSYD"  ></DataGrid>
+    </Fun>
+    <Fun  ID="8020401" TableName="HPF_ZRHJ_DZ" PID="ID" HproseAttribute="地震数据"  KeywordFields="ZJ"  DateField="DZSK"  Remark="自然环境服务类-极端天气-地震数据">
+      <DataGrid HeadColumns="地震时刻" DataColumns="DZSK"  ></DataGrid>
+      <DataGrid HeadColumns="标题描述" DataColumns="BTMS" ></DataGrid>
+      <DataGrid HeadColumns="震级" DataColumns="ZJ" ></DataGrid>
+      <DataGrid HeadColumns="深度" DataColumns="SD"  ></DataGrid>
+      <DataGrid HeadColumns="纬度" DataColumns="WD" ></DataGrid>
+      <DataGrid HeadColumns="经度" DataColumns="JD" ></DataGrid>
+    </Fun>
+    <Fun ID="8020402"  TableName="HPF_ZRHJ_TF"  PID="ID" HproseAttribute="台风信息"  KeywordFields="ZWMC,YWMC"  DateField="FSNF"  Remark="自然环境服务类-极端天气-台风信息">
+      <DataGrid HeadColumns="台风名" DataColumns="ZWMC"  ></DataGrid>
+      <DataGrid HeadColumns="英文名" DataColumns="YWMC" ></DataGrid>
+      <DataGrid HeadColumns="台风代码" DataColumns="TFDM" ></DataGrid>
+      <DataGrid HeadColumns="发生年份" DataColumns="FSNF"  ></DataGrid>
+    </Fun>
+    <Fun ID="8020403" TableName="HPF_ZRHJ_TFLJXX"  PID="ID" HproseAttribute="台风路径信息" KeywordFields="TFLX"  DateField="FSSJ"  Remark="自然环境服务类-极端天气-台风路径信息">
+      <DataGrid HeadColumns="发生年份" DataColumns="FSNF" ></DataGrid>
+      <DataGrid HeadColumns="发生时间" DataColumns="FSSJ" ></DataGrid>
+      <DataGrid HeadColumns="台风类型" DataColumns="TFLX"  ></DataGrid>
+      <DataGrid HeadColumns="经度" DataColumns="JD" ></DataGrid>
+      <DataGrid HeadColumns="纬度" DataColumns="WD"  ></DataGrid>
+      <DataGrid HeadColumns="风力" DataColumns="FL" ></DataGrid>
+      <DataGrid HeadColumns="风速" DataColumns="FS" ></DataGrid>
+      <DataGrid HeadColumns="气压" DataColumns="QY"  ></DataGrid>
+      <DataGrid HeadColumns="移动速度" DataColumns="YDSD" ></DataGrid>
+      <DataGrid HeadColumns="移动风向" DataColumns="YDFX"  ></DataGrid>
+      <DataGrid HeadColumns="7级风圈" DataColumns="FQ_7" ></DataGrid>
+      <DataGrid HeadColumns="10级风圈" DataColumns="FQ_10" ></DataGrid>
+      <DataGrid HeadColumns="12级风圈" DataColumns="FQ_12" ></DataGrid>
+    </Fun>
+    <Fun ID="8020404" TableName="HPF_ZRHJ_TFYGDXX" PID="ID"   HproseAttribute="台风预估点信息"  KeywordFields="TFLX"  DateField="FSSJ"  Remark="自然环境服务类-极端天气-台风预估点信息">
+      <DataGrid HeadColumns="发生年份" DataColumns="FSNF" ></DataGrid>
+      <DataGrid HeadColumns="发生时间" DataColumns="FSSJ" ></DataGrid>
+      <DataGrid HeadColumns="台风类型" DataColumns="TFLX"  ></DataGrid>
+      <DataGrid HeadColumns="经度" DataColumns="JD" ></DataGrid>
+      <DataGrid HeadColumns="纬度" DataColumns="WD"  ></DataGrid>
+      <DataGrid HeadColumns="风力" DataColumns="FL" ></DataGrid>
+      <DataGrid HeadColumns="风速" DataColumns="FS" ></DataGrid>
+      <DataGrid HeadColumns="气压" DataColumns="QY"  ></DataGrid>
+      <DataGrid HeadColumns="移动速度" DataColumns="YDSD" ></DataGrid>
+      <DataGrid HeadColumns="移动风向" DataColumns="YDFX"  ></DataGrid>
+      <DataGrid HeadColumns="7级风圈" DataColumns="FQ_7" ></DataGrid>
+    </Fun>
+    <Fun ID="8020501" TableName="HPF_ZRHJ_LLZLSGLZ" PID="ID" HproseAttribute="Cl 离子、硫酸根离子" KeywordFields="CLLZND,LSGLZND"  DateField="CJSJ"    Remark="自然环境服务类-微环境-Cl 离子、硫酸根离子">
+      <DataGrid HeadColumns="CL离子浓度" DataColumns="CLLZND"  ></DataGrid>
+      <DataGrid HeadColumns="硫酸根离子浓度" DataColumns="LSGLZND" ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ"  ></DataGrid>
+    </Fun>
+    <Fun ID="8020502" TableName="HPF_ZRHJ_WQXHJD" PID="ID" HproseAttribute="基本微环境" KeywordFields="JCD"  DateField="JCSJ"  Remark="自然环境服务类-微环境-基本微环境" >
+      <DataGrid HeadColumns="监测点" DataColumns="JCD"  ></DataGrid>
+      <DataGrid HeadColumns="温度" DataColumns="WD" ></DataGrid>
+      <DataGrid HeadColumns="相对湿度" DataColumns="XDSD" ></DataGrid>
+      <DataGrid HeadColumns="风速" DataColumns="FS"  ></DataGrid>
+      <DataGrid HeadColumns="风向" DataColumns="FX" ></DataGrid>
+      <DataGrid HeadColumns="监测时间" DataColumns="JCSJ"  ></DataGrid>
+    </Fun>
+    <Fun ID="8020509" TableName="HGG_ZRHJ_QXHWHJ" PID="ID" HproseAttribute="气象和微环境"   DateField="CJSJ"  Remark="自然环境服务类-微环境-基本微环境" >
+      <DataGrid HeadColumns="气温" DataColumns="QW" ></DataGrid>
+      <DataGrid HeadColumns="风速（m/s）" DataColumns="FS" ></DataGrid>
+      <DataGrid HeadColumns="雨量" DataColumns="YL" ></DataGrid>
+      <DataGrid HeadColumns="土温" DataColumns="TW" ></DataGrid>
+      <DataGrid HeadColumns="辐射" DataColumns="FUS" ></DataGrid>
+      <DataGrid HeadColumns="风向" DataColumns="FX"  ></DataGrid>
+      <DataGrid HeadColumns="风力" DataColumns="FL"  ></DataGrid>
+      <DataGrid HeadColumns="土湿" DataColumns="TS" ></DataGrid>
+      <DataGrid HeadColumns="温度" DataColumns="WD" ></DataGrid>
+      <DataGrid HeadColumns="蒸发" DataColumns="ZF"  ></DataGrid>
+      <DataGrid HeadColumns="监测时间" DataColumns="JCSJ"  ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" ></DataGrid>
+    </Fun>
+    <Fun ID="8020503" TableName="HPF_ZRHJ_ZSGCD" PID="ID" HproseAttribute="噪声观测点" KeywordFields="JCD"  DateField="JCSJ"  Remark="自然环境服务类-噪声-噪声" >
+
+    </Fun>
+    <Fun ID="8020504" TableName="HGG_ZRHJ_TRSQ" PID="ID" HproseAttribute="土壤墒情" KeywordFields="ZM"  DateField="JCSJ"  Remark="自然环境服务类-土壤墒情" >
+      <DataGrid HeadColumns="站号" DataColumns="ZH" ></DataGrid>
+      <DataGrid HeadColumns="站名" DataColumns="ZM" ></DataGrid>
+      <DataGrid HeadColumns="参数名称" DataColumns="CSMC" ></DataGrid>
+      <DataGrid HeadColumns="气温" DataColumns="QW" ></DataGrid>
+      <DataGrid HeadColumns="垂线平均含水率" DataColumns="CXPJHSL" ></DataGrid>
+      <DataGrid HeadColumns="表层含水率" DataColumns="BCHSL"  ></DataGrid>
+      <DataGrid HeadColumns="10cm深度含水率" DataColumns="HSl10"  ></DataGrid>
+      <DataGrid HeadColumns="20cm深度含水率" DataColumns="HSl20" ></DataGrid>
+      <DataGrid HeadColumns="30cm深度含水率" DataColumns="HSl30" ></DataGrid>
+      <DataGrid HeadColumns="40cm深度含水率" DataColumns="HSl40"  ></DataGrid>
+      <DataGrid HeadColumns="50cm深度含水率" DataColumns="HSl50"  ></DataGrid>
+      <DataGrid HeadColumns="60cm深度含水率" DataColumns="HSl60" ></DataGrid>
+      <DataGrid HeadColumns="100cm深度含水率" DataColumns="HSl100" ></DataGrid>
+      <DataGrid HeadColumns="监测时间" DataColumns="JCSJ"  ></DataGrid>
+    </Fun>
+    <Fun ID="8020505" TableName="HGG_ZRHJ_SHUIWEN" PID="ID" HproseAttribute="水文"   DateField="JCSJ"  Remark="自然环境服务类-水文" >
+      <DataGrid HeadColumns="水位" DataColumns="TJ" ></DataGrid>
+      <DataGrid HeadColumns="备注" DataColumns="BZ" ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" ></DataGrid>
+      <DataGrid HeadColumns="调查人" DataColumns="DCR" ></DataGrid>
+    </Fun>
+    <Fun ID="8020506" TableName="HGG_ZRHJ_STHP" PID="ID" HproseAttribute="山体滑坡"  KeywordFields="DCR"  DateField="JCSJ"  Remark="自然环境服务类-山体滑坡" >
+      <DataGrid HeadColumns="体积" DataColumns="SW" ></DataGrid>
+      <DataGrid HeadColumns="变化量" DataColumns="BHL" ></DataGrid>
+      <DataGrid HeadColumns="趋势" DataColumns="QS" ></DataGrid>
+      <DataGrid HeadColumns="监测时间" DataColumns="JCSJ" ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" ></DataGrid>
+      <DataGrid HeadColumns="调查人" DataColumns="DCR" ></DataGrid>
+    </Fun>
+    <Fun ID="8020507" TableName="HGG_ZRHJ_HSHF" PID="ID" HproseAttribute="洪水洪峰"  KeywordFields="DCR"  DateField="CJSJ"  Remark="自然环境服务类-山体滑坡" >
+      <DataGrid HeadColumns="流量" DataColumns="LL" ></DataGrid>
+      <DataGrid HeadColumns="备注" DataColumns="BZ" ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" ></DataGrid>
+      <DataGrid HeadColumns="调查人" DataColumns="DCR" ></DataGrid>
+    </Fun>
+
+    <Fun ID="8020508" TableName="HGG_ZRHJ_JY" PID="ID" HproseAttribute="降雨"  KeywordFields="JYDJ"  DateField="CJSJ"  Remark="自然环境服务类-降雨" >
+      <DataGrid HeadColumns="降雨等级" DataColumns="JYDJ" ></DataGrid>
+      <DataGrid HeadColumns="雨量" DataColumns="YL" ></DataGrid>
+      <DataGrid HeadColumns="持续时长" DataColumns="CXSC" ></DataGrid>
+      <DataGrid HeadColumns="备注" DataColumns="BZ" ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" ></DataGrid>
+    </Fun>
+    <Fun ID="8020510" TableName="HPF_ZRHJ_SZ" PID="" HproseAttribute="水质" KeywordFields=""  DateField=""  Remark="" >
+
+    </Fun>
+    <Fun ID="803" TableName="V_HPF_ZRHJ_HJYXPG" PID="ID" HproseAttribute="环境影响评估" KeywordFields="PG"  DateField="CJSJ"   Remark="自然环境服务类-环境影响评估">
+      <DataGrid HeadColumns="评估" DataColumns="PG_BM" ></DataGrid>
+      <DataGrid HeadColumns="遗产地ID" DataColumns="GLYCBTID" ></DataGrid>
+      <DataGrid HeadColumns="评估说明" DataColumns="PGSM" ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" ></DataGrid>
+    </Fun>
+    <Fun ID="804" TableName="V_HPF_ZRHJ_ZRZHSZJL" PID="ID" HproseAttribute="受灾记录" KeywordFields="WWZSCD"  DateField="FSSJ"   Remark="自然环境服务类-受灾记录">
+      <DataGrid HeadColumns="发生时间" DataColumns="FSSJ"  ></DataGrid>
+      <DataGrid HeadColumns="受灾类型" DataColumns="SZLX" ></DataGrid>
+      <DataGrid HeadColumns="文物灾损程度" DataColumns="WWZSCD_BM"  ></DataGrid>
+      <DataGrid HeadColumns="受灾情况描述" DataColumns="SZQKMS" ></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="建设控制服务类">
+    <Fun ID="90101"  TableName="HPF_JSKZ_BHQHT"  TableDetailName="HPF_JSKZ_BHQHT"   PID="ID" HproseAttribute="保护区划图"  KeywordFields="BHQHTURL"  DateField="CJSJ"  Remark="建设控制服务类-保护控制要求-保护区划图">
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" ></DataGrid>
+      <DataDetail InfoItems="保护区划图URL" DataColumns="BHQHTURL"  ></DataDetail>
+    </Fun>
+    <Fun ID="90102"  TableName="HPF_JSKZ_BHFWJSKZDD"  TableDetailName="HPF_JSKZ_BHFWJSKZDD"   PID="ID" HproseAttribute="保护范围建设控制地带" KeywordFields="BHFWJX"  DateField="CJSJ" Remark="建设控制服务类-保护控制要求-保护范围建设控制地带">
+      <DataGrid HeadColumns="保护范围界线" DataColumns="BHFWJX"  ></DataGrid>
+      <DataGrid HeadColumns="保护范围面积" DataColumns="BHFWMJ" ></DataGrid>
+      <DataGrid HeadColumns="保护范围管理规定" DataColumns="BHFWGLGD" ></DataGrid>
+      <DataGrid HeadColumns="建设控制地带界线" DataColumns="JSKZDDJX" ></DataGrid>
+      <DataGrid HeadColumns="建设控制地带面积" DataColumns="JSKZDDMJ" ></DataGrid>
+      <DataGrid HeadColumns="建设控制地带管理规定" DataColumns="JSKZDDGLGD" ></DataGrid>
+    </Fun>
+    <Fun ID="90201" TableName="v_HPF_XJXM_XJXMJL"  TableDetailName="v_HPF_XJXM_XJXMJL"  PID="ID" KeywordFields="XMMC"  DateField="CJSJ"
+         HproseAttribute="新建项目记录"  Remark="建设控制服务类-新建项目-新建项目记录">
+      <DataGrid HeadColumns="序号" DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="项目名称" DataColumns="XMMC" ></DataGrid>
+      <DataGrid HeadColumns="建设地点" DataColumns="WZSM" ></DataGrid>
+      <DataGrid HeadColumns="开工时间" DataColumns="KGRQ"  ></DataGrid>
+      <DataGrid HeadColumns="竣工时间" DataColumns="JGSJ" ></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="ID"  ></DataDetail>
+      <DataDetail InfoItems="新建项目编号" DataColumns="XJXMBH"  ></DataDetail>
+      <DataDetail InfoItems="项目名称" DataColumns="XMMC"  ></DataDetail>
+      <DataDetail InfoItems="建设目的" DataColumns="JSMD"  ></DataDetail>
+      <DataDetail InfoItems="建设地点" DataColumns="WZSM"  ></DataDetail>
+      <DataDetail InfoItems="开工时间" DataColumns="KGRQ"  ></DataDetail>
+      <DataDetail InfoItems="竣工时间" DataColumns="JGSJ"  ></DataDetail>
+      <DataDetail InfoItems="经度" DataColumns="JD"  ></DataDetail>
+      <DataDetail InfoItems="纬度" DataColumns="WD"  ></DataDetail>
+      <DataDetail InfoItems="文物部门批准许可文号" DataColumns="WWBMPZXKWH"  ></DataDetail>
+      <DataDetail InfoItems="占地面积" DataColumns="ZDMJ"  ></DataDetail>
+      <DataDetail InfoItems="高度" DataColumns="GD"  ></DataDetail>
+      <DataDetail InfoItems="图片名称" DataColumns="MC"  ></DataDetail>
+      <DataDetail InfoItems="路径" DataColumns="LJ" Format="Image" ></DataDetail>
+      <DataDetail InfoItems="拍照时间" DataColumns="PZSJ"  ></DataDetail>
+      <DataDetail InfoItems="上传时间" DataColumns="SCSJ"  ></DataDetail>
+    </Fun>
+    <Fun ID="90202" TableName="v_HPF_XJXM_WZT"  TableDetailName="v_HPF_XJXM_WZT"  PID="ID" KeywordFields="TZMC,XMMC"  DateField="SCSJ"
+         HproseAttribute="项目建设位置图"  Remark="建设控制服务类-项目建设位置图">
+      <DataGrid HeadColumns="序号" DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="项目名称" DataColumns="XMMC" ></DataGrid>
+      <DataGrid HeadColumns="图纸名称" DataColumns="TZMC" ></DataGrid>
+      <DataGrid HeadColumns="图纸格式" DataColumns="TZGS_BM" ></DataGrid>
+      <DataGrid HeadColumns="比例尺" DataColumns="BLC"  ></DataGrid>
+      <DataGrid HeadColumns="上传时间" DataColumns="SCSJ"  ></DataGrid>
+      <DataGrid HeadColumns="成图时间" DataColumns="CTSJ"  ></DataGrid>
+      <DataGrid HeadColumns="测绘责任单位" DataColumns="CHZRDW" ></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="ID"  ></DataDetail>
+      <DataDetail InfoItems="项目名称" DataColumns="XMMC"  ></DataDetail>
+      <DataDetail InfoItems="图纸名称" DataColumns="TZMC"  ></DataDetail>
+      <DataDetail InfoItems="图纸格式" DataColumns="TZGS_BM"  ></DataDetail>
+      <DataDetail InfoItems="比例尺" DataColumns="BLC"  ></DataDetail>
+      <DataDetail InfoItems="成图时间" DataColumns="CTSJ"  ></DataDetail>
+      <DataDetail InfoItems="测绘责任单位" DataColumns="CHZRDW"  ></DataDetail>
+    </Fun>
+    <Fun ID="90203" TableName="v_HPF_XJXM_SGXCHJZP"  TableDetailName="v_HPF_XJXM_SGXCHJZP"  PID="ID" KeywordFields="MC,XMMC"  DateField="SCSJ"
+        HproseAttribute="新建项目现场环境照片"  Remark="建设控制服务类-新建项目现场环境照片">
+      <DataGrid HeadColumns="序号" DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="项目名称" DataColumns="XMMC" ></DataGrid>
+      <DataGrid HeadColumns="图片名称" DataColumns="MC" ></DataGrid>
+      <DataGrid HeadColumns="说明" DataColumns="SM" ></DataGrid>
+      <DataGrid HeadColumns="路径" DataColumns="LJ" Format="Image" ></DataGrid>
+      <DataGrid HeadColumns="拍照时间" DataColumns="PZSJ" ></DataGrid>
+      <DataGrid HeadColumns="上传时间" DataColumns="SCSJ"  ></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="ID"  ></DataDetail>
+      <DataDetail InfoItems="图片名称" DataColumns="MC"  ></DataDetail>
+      <DataDetail InfoItems="说明" DataColumns="SM"  ></DataDetail>
+      <DataDetail InfoItems="路径" DataColumns="LJ" Format="Image" ></DataDetail>
+      <DataDetail InfoItems="拍照时间" DataColumns="PZSJ"  ></DataDetail>
+      <DataDetail InfoItems="上传时间" DataColumns="SCSJ"  ></DataDetail>
+    </Fun>
+  </Node>
+  <Node Title="社会环境">
+    <Fun ID="1001" TableName="V_HPF_SHHJ_TDLYXZT" TableDetailName="V_HPF_SHHJ_TDLYXZT"    PID="ID" HproseAttribute="土地利用现状图"  KeywordFields="TZMC"  DateField="CJSJ"    Remark="社会环境-土地利用现状图">
+      <DataGrid HeadColumns="土地利用现状图URL" DataColumns="TDLYXZTURL" ></DataGrid>
+      <DataGrid HeadColumns="图纸路径" DataColumns="TZLJ" Format="Image" ></DataGrid>
+      <DataGrid HeadColumns="图纸名称" DataColumns="TZMC" ></DataGrid>
+      <DataGrid HeadColumns="图纸类型" DataColumns="TZLX_BM"  ></DataGrid>
+      <DataGrid HeadColumns="图纸数据量" DataColumns="TZSJL"  ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ"  ></DataGrid>
+    </Fun>
+    <Fun ID="1002" TableName="V_HPF_SHHJ_TDLYGHT" TableDetailName="V_HPF_SHHJ_TDLYGHT"   PID="ID" HproseAttribute="土地利用规划图"  KeywordFields="TZMC"  DateField="CJSJ"   Remark="社会环境-土地利用规划图">
+      <DataGrid HeadColumns="土地利用规划图URL" DataColumns="TDLYGHTURL" ></DataGrid>
+      <DataGrid HeadColumns="图纸路径" DataColumns="TZLJ" Format="Image" ></DataGrid>
+      <DataGrid HeadColumns="图纸名称" DataColumns="TZMC" ></DataGrid>
+      <DataGrid HeadColumns="图纸类型" DataColumns="TZLX_BM"  ></DataGrid>
+      <DataGrid HeadColumns="图纸数据量" DataColumns="TZSJL"  ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ"  ></DataGrid>
+    </Fun >
+    <Fun ID="1003" TableName="HPF_SHHJ_YCQHHCQSHHJNDJCJL" TableDetailName="HPF_SHHJ_YCQHHCQSHHJNDJCJL"   PID="ID" HproseAttribute="遗产区和缓冲区社会环境年度监测记录"  KeywordFields="RKSSXQ"  DateField="CJSJ"   Remark="社会环境-遗产区和缓冲区社会环境年度监测记录">
+      <DataGrid HeadColumns="序号" DataColumns="ID" ></DataGrid>
+      <DataGrid HeadColumns="资源开采点数量" DataColumns="ZYKCDSL" ></DataGrid>
+      <DataGrid HeadColumns="负面影响范围" DataColumns="FMYXFW" ></DataGrid>
+      <DataGrid HeadColumns="人口疏散需求" DataColumns="RKSSXQ" ></DataGrid>
+      <DataGrid HeadColumns="严重污染工业企业数量" DataColumns="YZWRGYQYSL" ></DataGrid>
+      <DataGrid HeadColumns="列入名录时的遗产区人口数量" DataColumns="LRMLSDYCQRKSL"  ></DataGrid>
+      <DataGrid HeadColumns="当前遗产区人口数量" DataColumns="DQYCQRKSL"  ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ"  ></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="ID"  ></DataDetail>
+      <DataDetail InfoItems="创建时间" DataColumns="CJSJ"  ></DataDetail>
+      <DataDetail InfoItems="资源开采点数量" DataColumns="ZYKCDSL"  ></DataDetail>
+      <DataDetail InfoItems="严重污染工业企业数量" DataColumns="YZWRGYQYSL"  ></DataDetail>
+      <DataDetail InfoItems="列入名录时的遗产区人口数量" DataColumns="LRMLSDYCQRKSL"  ></DataDetail>
+      <DataDetail InfoItems="当前遗产区人口数量" DataColumns="DQYCQRKSL"  ></DataDetail>
+      <DataDetail InfoItems="列入名录时的缓冲区人口" DataColumns="LRMLSDHCQRK"  ></DataDetail>
+      <DataDetail InfoItems="当前缓冲区人口数量" DataColumns="DQHCQRKSL"  ></DataDetail>
+      <DataDetail InfoItems="人口疏散需求" DataColumns="RKSSXQ"  ></DataDetail>
+      <DataDetail InfoItems="负面影响范围" DataColumns="FMYXFW"  ></DataDetail>
+    </Fun>
+    <Fun ID="1004" TableName="HPF_SHHJ_YCSZDSHHJNDJCJL" TableDetailName="HPF_SHHJ_YCSZDSHHJNDJCJL"   PID="ID" HproseAttribute="遗产所在地社会环境年度监测记录"
+         KeywordFields="RKMD"  DateField="CJSJ"   Remark="社会环境-遗产所在地社会环境年度监测记录">
+      <DataGrid HeadColumns="序号" DataColumns="ID" ></DataGrid>
+      <DataGrid HeadColumns="人口密度" DataColumns="RKMD" ></DataGrid>
+      <DataGrid HeadColumns="人均GDP" DataColumns="RJGDP" ></DataGrid>
+      <DataGrid HeadColumns="国家保护动植物种类" DataColumns="GJBHDZWZL" ></DataGrid>
+      <DataGrid HeadColumns="植被覆盖率" DataColumns="ZBFGL"  ></DataGrid>
+      <DataGrid HeadColumns="遗产所在地严重污染工业企业数量" DataColumns="YCSZDYZWRGYQYSL"></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ"  ></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="ID"  ></DataDetail>
+      <DataDetail InfoItems="创建时间" DataColumns="CJSJ"  ></DataDetail>
+      <DataDetail InfoItems="人口密度" DataColumns="RKMD"  ></DataDetail>
+      <DataDetail InfoItems="人均GDP" DataColumns="RJGDP"  ></DataDetail>
+      <DataDetail InfoItems="植被覆盖率" DataColumns="ZBFGL"  ></DataDetail>
+      <DataDetail InfoItems="遗产所在地严重污染工业企业数量" DataColumns="YCSZDYZWRGYQYSL"  ></DataDetail>
+      <DataDetail InfoItems="国家保护动植物种类" DataColumns="GJBHDZWZL"  ></DataDetail>
+    </Fun>
+  </Node>
+  <Node Title="旅游与游客管理">
+    <Fun ID="1109" TableName="HPF_LYYYKGL_LYJD"  TableDetailName=""  PID="" HproseAttribute="旅游景点"   KeywordFields=""  DateField=""  Remark="旅游与游客管理-旅游景点">
+
+    </Fun>
+    <Fun ID="1101" TableName="V_HPF_LYYYKGL_RYKLXZZ"  TableDetailName="V_HPF_LYYYKGL_RYKLXZZ"  PID="ID" HproseAttribute="日游客容量限制值"   KeywordFields="LYJDMC"  DateField="CJSJ"  Remark="旅游与游客管理-日游客容量限制值">
+      <DataGrid HeadColumns="监测对象名称" DataColumns="LYJDMC" ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" ></DataGrid>
+      <DataGrid HeadColumns="日游客容量限制值" DataColumns="RYKLXZZ" ></DataGrid>
+    </Fun>
+    <Fun ID="1102" TableName="V_HPF_LYYYKGL_SSYKLXZZ"  TableDetailName="V_HPF_LYYYKGL_SSYKLXZZ"  PID="ID" HproseAttribute="瞬时游客容量限制值" KeywordFields="LYJDMC"  DateField="CJSJ"  Remark="旅游与游客管理-瞬时游客容量限制值">
+      <DataGrid HeadColumns="监测对象名称" DataColumns="LYJDMC" ></DataGrid>
+      <DataGrid HeadColumns="瞬时游客容量限制值" DataColumns="SSYKLXZZ" ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" ></DataGrid>
+    </Fun>
+    <Fun ID="1103" TableName="V_HPF_LYYYKGL_RYKL"  TableDetailName="V_HPF_LYYYKGL_RYKL"  PID="ID" HproseAttribute="日游客量" KeywordFields="LYJDMC"  DateField="JCRQ"  Remark="旅游与游客管理-日游客量">
+      <DataGrid HeadColumns="旅游景点名称" DataColumns="LYJDMC" ></DataGrid>
+      <DataGrid HeadColumns="监测日期" DataColumns="JCRQ" ></DataGrid>
+      <DataGrid HeadColumns="游客量" DataColumns="YKL" ></DataGrid>
+    </Fun>
+    <Fun ID="1104" TableName="V_HPF_LYYYKGL_SSYKL"  TableDetailName="V_HPF_LYYYKGL_SSYKL"  PID="ID" HproseAttribute="瞬时游客量"  KeywordFields="LYJDMC"  DateField="JCSJ"   Remark="旅游与游客管理-瞬时游客量">
+      <DataGrid HeadColumns="旅游景点名称" DataColumns="LYJDMC" ></DataGrid>
+      <DataGrid HeadColumns="监测时间" DataColumns="JCSJ" ></DataGrid>
+      <DataGrid HeadColumns="在园人数（人）" DataColumns="YKL" ></DataGrid>
+    </Fun>
+    <Fun ID="1105" TableName="V_HPF_LYYYKGL_KLGFSDXCZP" KeywordFields="LYJDMC"  DateField="JCSJ" PID="ID"  HproseAttribute="客流高峰时段现场照片" Remark="旅游与游客管理-客流高峰时段现场照片">
+      <DataGrid HeadColumns="旅游景点名称" DataColumns="LYJDMC" ></DataGrid>
+      <DataGrid HeadColumns="监测时间" DataColumns="JCSJ" ></DataGrid>
+      <DataGrid HeadColumns="照片下载" DataColumns="TPLJ" Format="Image" ></DataGrid>
+    </Fun>
+    <Fun ID="1106" TableName="HPF_LYYYKGL_YKGLYDJL" KeywordFields=" YF"  DateField="CJSJ" PID="ID" HproseAttribute="游客管理月度记录" Remark="旅游与游客管理-游客管理月度记录">
+      <DataGrid HeadColumns="月份" DataColumns="YF" ></DataGrid>
+      <DataGrid HeadColumns="游客总人次数（人）" DataColumns="YKZRCS" ></DataGrid>
+      <DataGrid HeadColumns="预约游客人次数（人）" DataColumns="YYYKRCS" ></DataGrid>
+      <DataGrid HeadColumns="国外游客人次数（人）" DataColumns="GWYKRCS" ></DataGrid>
+      <DataGrid HeadColumns="讲解员讲解次数（次）" DataColumns="JJYJJCS" ></DataGrid>
+      <DataGrid HeadColumns="外部导游次数（次）" DataColumns="WBDYCS" ></DataGrid>
+      <DataGrid HeadColumns="受培训的外部导游次数（次）" DataColumns="SPXDWBDYCS" ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" ></DataGrid>
+    </Fun>
+    <Fun ID="1107" TableName="V_HPF_LYYYKGL_YKYXPGJL" KeywordFields="NF"  DateField="CJSJ" PID="ID" HproseAttribute="游客影响评估" Remark="旅游与游客管理-游客影响评估-游客影响评估">
+      <DataGrid HeadColumns="序号" DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="年份" DataColumns="NF" ></DataGrid>
+      <DataGrid HeadColumns="月份" DataColumns="YF" ></DataGrid>
+      <DataGrid HeadColumns="评估" DataColumns="PG_BM" ></DataGrid>
+      <DataGrid HeadColumns="评估说明" DataColumns="PGSM" ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" ></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="ID"  ></DataDetail>
+      <DataDetail InfoItems="年份" DataColumns="NF"  ></DataDetail>
+      <DataDetail InfoItems="月份" DataColumns="YF"  ></DataDetail>
+      <DataDetail InfoItems="评估说明" DataColumns="PGSM"  ></DataDetail>
+      <DataDetail InfoItems="创建时间" DataColumns="CJSJ"  ></DataDetail>
+      <DataDetail InfoItems="评估" DataColumns="PG_BM"  ></DataDetail>
+    </Fun>
+    <Fun ID="1108"  TableName="HPF_LYYYKGL_LYXYNDJL" TableDetailName="HPF_LYYYKGL_LYXYNDJL"  KeywordFields=" ID"  DateField="CJSJ"  PID="ID" HproseAttribute="游客效益年度记录" Remark="旅游与游客管理-游客效益年度记录">
+      <DataGrid HeadColumns="序号" DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="年度" DataColumns="ND" ></DataGrid>
+      <DataGrid HeadColumns="门票收入（元）" DataColumns="MPSR" ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" ></DataGrid>
+      <DataGrid HeadColumns="管理部门经营与服务收入（元）" DataColumns="GLBMJYYFWSR" ></DataGrid>
+      <DataGrid HeadColumns="从事相关工作和经营的居民数量（人）" DataColumns="CSXGGZHJYDJMSL" ></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="ID"  ></DataDetail>
+      <DataDetail InfoItems="年度" DataColumns="ND"  ></DataDetail>
+      <DataDetail InfoItems="创建时间" DataColumns="CJSJ"  ></DataDetail>
+      <DataDetail InfoItems="门票收入（元）" DataColumns="MPSR"  ></DataDetail>
+      <DataDetail InfoItems="管理部门经营与服务收入" DataColumns="GLBMJYYFWSR"  ></DataDetail>
+      <DataDetail InfoItems="从事相关工作和经营的居民数量" DataColumns="CSXGGZHJYDJMSL"  ></DataDetail>
+    </Fun>
+  </Node>
+  <Node Title="日常管理">
+    <Fun ID="1201" TableName="HPF_RCXC_RCXCYCJL" TableDetailName="HPF_RCXC_RCXCYCJL"  KeywordFields="YCSJ"  DateField="XCRQ"  PID="ID" HproseAttribute="日常巡查异常记录" Remark="日常管理服务类-日常巡查异常记录">
+      <DataGrid HeadColumns="序号" DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="巡查日期" DataColumns="XCRQ" ></DataGrid>
+      <DataGrid HeadColumns="异常事件" DataColumns="YCSJ" ></DataGrid>
+      <DataGrid HeadColumns="事件描述" DataColumns="SJMS" ></DataGrid>
+      <DataGrid HeadColumns="发生位置" DataColumns="FSWZ" ></DataGrid>
+      <DataGrid HeadColumns="经度" DataColumns="JD" ></DataGrid>
+      <DataGrid HeadColumns="纬度" DataColumns="WD" ></DataGrid>
+      <DataGrid HeadColumns="巡查员" DataColumns="XCY" ></DataGrid>
+      <DataGrid HeadColumns="评估" DataColumns="PG" ></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="ID"  ></DataDetail>
+      <DataDetail InfoItems="事件描述" DataColumns="SJMS"  ></DataDetail>
+      <DataDetail InfoItems="发生位置" DataColumns="FSWZ"  ></DataDetail>
+      <DataDetail InfoItems="经度" DataColumns="JD"  ></DataDetail>
+      <DataDetail InfoItems="纬度" DataColumns="WD"  ></DataDetail>
+      <DataDetail InfoItems="评估" DataColumns="PG"  ></DataDetail>
+      <DataDetail InfoItems="巡查日期" DataColumns="XCRQ"  ></DataDetail>
+      <DataDetail InfoItems="异常事件" DataColumns="YCSJ"  ></DataDetail>
+      <DataDetail InfoItems="巡查员" DataColumns="XCY"  ></DataDetail>
+      <DataDetail InfoItems="当时采取措施" DataColumns="DSCQCS"  ></DataDetail>
+    </Fun>
+    <Fun ID="1203"  TableName="v_HPF_BHGC_BYWHJL"  TableDetailName="v_HPF_BHGC_BYWHJL"  PID="ID" HproseAttribute="保养和维护工作记录"  KeywordFields="BYYWHDX"  DateField="BYYWHRQ"  Remark="日常管理服务类-保养和维护工作记录">
+      <DataGrid HeadColumns="序号" DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="保养与维护日期" DataColumns="BYYWHRQ" ></DataGrid>
+      <DataGrid HeadColumns="保养与维护对象" DataColumns="BYYWHDX" ></DataGrid>
+      <DataGrid HeadColumns="实施者" DataColumns="SSZ" ></DataGrid>
+      <DataGrid HeadColumns="年份" DataColumns="NF" ></DataGrid>
+      <DataGrid HeadColumns="月份" DataColumns="YF" ></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="ID"  ></DataDetail>
+      <DataDetail InfoItems="年份" DataColumns="NF"  ></DataDetail>
+      <DataDetail InfoItems="月份" DataColumns="YF"  ></DataDetail>
+      <DataDetail InfoItems="保养与维护日期" DataColumns="BYYWHRQ"  ></DataDetail>
+      <DataDetail InfoItems="保养与维护对象" DataColumns="BYYWHDX"  ></DataDetail>
+      <DataDetail InfoItems="实施者" DataColumns="SSZ"  ></DataDetail>
+      <DataDetail InfoItems="保养与维护内容" DataColumns="BYYWHNR"  ></DataDetail>
+    </Fun>
+  </Node>
+  <Node Title="安防消防 ">
+    <Fun ID="1301" TableName="HPF_AFXF_AXFXTYJSS" TableDetailName="HPF_AFXF_AXFXTYJSS" PID="ID" KeywordFields="XFXTMC"  DateField="CJSJ"  HproseAttribute="安防消防" Remark="安防消防服务类-现有安消防系统硬件设施信息">
+      <DataGrid HeadColumns="序号" DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="消防系统名称" DataColumns="XFXTMC" ></DataGrid>
+      <DataGrid HeadColumns="用途分类" DataColumns="YTFL" ></DataGrid>
+      <DataGrid HeadColumns="建成时间" DataColumns="JCSJ" ></DataGrid>
+      <DataGrid HeadColumns="投资金额" DataColumns="TZJE" ></DataGrid>
+      <DataGrid HeadColumns="系统构成描述" DataColumns="XTGCMS" ></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="ID"  ></DataDetail>
+      <DataDetail InfoItems="消防系统名称" DataColumns="XFXTMC"  ></DataDetail>
+      <DataDetail InfoItems="用途分类" DataColumns="YTFL"  ></DataDetail>
+      <DataDetail InfoItems="系统构成描述" DataColumns="XTGCMS"  ></DataDetail>
+      <DataDetail InfoItems="建成时间" DataColumns="JCSJ"  ></DataDetail>
+      <DataDetail InfoItems="投资金额" DataColumns="TZJE"  ></DataDetail>
+      <DataDetail InfoItems="监控探头数量" DataColumns="JKTTSL"  ></DataDetail>
+    </Fun>
+    <Fun ID="1302" TableName="GLZDHYJYA" TableDetailName="GLZDHYJYA" PID="ID" KeywordFields="MC"  DateField="CJSJ"  HproseAttribute="安防消防" Remark="安防消防服务类-管理制度和应急预案记录">
+      <DataGrid HeadColumns="序号" DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="名称" DataColumns="MC" ></DataGrid>
+      <DataGrid HeadColumns="公布时间" DataColumns="GBSJ" ></DataGrid>
+      <DataGrid HeadColumns="公布文号" DataColumns="GBWH" ></DataGrid>
+      <DataGrid HeadColumns="实施时间" DataColumns="SSSJ" ></DataGrid>
+      <DataGrid HeadColumns="状态" DataColumns="ZT" ></DataGrid>
+      <DataGrid HeadColumns="文件内容" DataColumns="WJNR" ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" ></DataGrid>
+      <DataGrid HeadColumns="附件" DataColumns="FJ" ></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="ID"  ></DataDetail>
+      <DataDetail InfoItems="名称" DataColumns="MC"  ></DataDetail>
+      <DataDetail InfoItems="公布时间" DataColumns="GBSJ"  ></DataDetail>
+      <DataDetail InfoItems="公布文号" DataColumns="GBWH"  ></DataDetail>
+      <DataDetail InfoItems="实施时间" DataColumns="SSSJ"  ></DataDetail>
+      <DataDetail InfoItems="文件内容" DataColumns="WJNR"  ></DataDetail>
+      <DataDetail InfoItems="状态" DataColumns="ZT"  ></DataDetail>
+      <DataDetail InfoItems="附件" DataColumns="FJ"  ></DataDetail>
+    </Fun>
+    <Fun ID="1303" TableName="HPF_AFXF_AQSGJL" TableDetailName="HPF_AFXF_AQSGJL"  KeywordFields="SGLX"  DateField="FSSJ"  PID="ID" HproseAttribute="安全事故记录" Remark="日常管理服务类-安全事故记录">
+      <DataGrid HeadColumns="序号" DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="事故发生时间" DataColumns="FSSJ" ></DataGrid>
+      <DataGrid HeadColumns="事故类型" DataColumns="SGLX" ></DataGrid>
+      <DataGrid HeadColumns="级别" DataColumns="JB" ></DataGrid>
+      <DataGrid HeadColumns="损失" DataColumns="SS" ></DataGrid>
+      <DataGrid HeadColumns="处理情况" DataColumns="CLQK" ></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="ID"  ></DataDetail>
+      <DataDetail InfoItems="事故发生时间" DataColumns="FSSJ"  ></DataDetail>
+      <DataDetail InfoItems="事故类型" DataColumns="SGLX"  ></DataDetail>
+      <DataDetail InfoItems="级别" DataColumns="JB"  ></DataDetail>
+      <DataDetail InfoItems="损失" DataColumns="SS"  ></DataDetail>
+      <DataDetail InfoItems="处理情况" DataColumns="CLQK"  ></DataDetail>
+    </Fun>
+  </Node>
+  <Node Title="考古发掘">
+    <Fun ID="1401" TableName="HPF_KGFJ_KGBG"  TableDetailName="HPF_KGFJ_KGBG" PID="ID"  KeywordFields="KGBGMC"  DateField="CBSJ"  HproseAttribute="考古报告信息" Remark="考古发掘服务类-考古报告信息">
+      <DataGrid HeadColumns="序号" DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="考古报告名称" DataColumns="KGBGMC" ></DataGrid>
+      <DataGrid HeadColumns="报告类型" DataColumns="BGLX" ></DataGrid>
+      <DataGrid HeadColumns="编制单位" DataColumns="BZDW" ></DataGrid>
+      <DataGrid HeadColumns="编写人员" DataColumns="BXRY" ></DataGrid>
+      <DataGrid HeadColumns="出版状态" DataColumns="CBZT" ></DataGrid>
+      <DataGrid HeadColumns="出版时间" DataColumns="CBSJ"  ></DataGrid>
+      <DataGrid HeadColumns="出版单位" DataColumns="CBDW"  ></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="ID"  ></DataDetail>
+      <DataDetail InfoItems="考古报告名称" DataColumns="KGBGMC"  ></DataDetail>
+      <DataDetail InfoItems="报告类型" DataColumns="BGLX"  ></DataDetail>
+      <DataDetail InfoItems="编制单位" DataColumns="BZDW"  ></DataDetail>
+      <DataDetail InfoItems="编写人员" DataColumns="BXRY"  ></DataDetail>
+      <DataDetail InfoItems="出版状态" DataColumns="CBZT"  ></DataDetail>
+      <DataDetail InfoItems="出版时间" DataColumns="CBSJ"  ></DataDetail>
+      <DataDetail InfoItems="出版单位" DataColumns="CBDW"  ></DataDetail>
+    </Fun>
+    <Fun ID="1402" TableName="v_HPF_KGFJ_KGFJJL" KeywordFields="XMMC"  DateField="KSSJ"    PID="ID" HproseAttribute="考古发掘记录" Remark="考古发掘_考古发掘记录">
+      <DataGrid HeadColumns="序号" DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="项目名称" DataColumns="XMMC" ></DataGrid>
+      <DataGrid HeadColumns="第几次发掘" DataColumns="DJCFJ" ></DataGrid>
+      <DataGrid HeadColumns="文物部门批准文号" DataColumns="WWBMPZWH" ></DataGrid>
+      <DataGrid HeadColumns="批准发掘面积" DataColumns="PZFJMJ" ></DataGrid>
+      <DataGrid HeadColumns="开始时间" DataColumns="KSSJ" ></DataGrid>
+      <DataGrid HeadColumns="结束时间" DataColumns="JSSJ"  ></DataGrid>
+      <DataGrid HeadColumns="发掘面积" DataColumns="FJMJ"  ></DataGrid>
+      <DataGrid HeadColumns="回填面积" DataColumns="HTMJ"  ></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="ID"  ></DataDetail>
+      <DataDetail InfoItems="项目编号" DataColumns="XMBH"  ></DataDetail>
+      <DataDetail InfoItems="项目名称" DataColumns="XMMC"  ></DataDetail>
+      <DataDetail InfoItems="第几次发掘" DataColumns="DJCFJ"  ></DataDetail>
+      <DataDetail InfoItems="文物部门批准文号" DataColumns="WWBMPZWH"  ></DataDetail>
+      <DataDetail InfoItems="批准发掘面积" DataColumns="PZFJMJ"  ></DataDetail>
+      <DataDetail InfoItems="开始时间" DataColumns="KSSJ"  ></DataDetail>
+      <DataDetail InfoItems="结束时间" DataColumns="JSSJ"  ></DataDetail>
+      <DataDetail InfoItems="发掘面积" DataColumns="FJMJ"  ></DataDetail>
+      <DataDetail InfoItems="回填面积" DataColumns="HTMJ"  ></DataDetail>
+      <DataDetail InfoItems="经费投入总额" DataColumns="JFTRZE"  ></DataDetail>
+      <DataDetail InfoItems="已发表的简报" DataColumns="YFBDJB"  ></DataDetail>
+      <DataDetail InfoItems="图片名称" DataColumns="TPMC" ></DataDetail>
+      <DataDetail InfoItems="图片路径" DataColumns="TPLJ" Format="Image" ></DataDetail>
+    </Fun>
+    <Fun ID="1403" TableName="HPF_KGFJ_XGZP" KeywordFields="TPMC"  DateField="RKSJ"    PID="ID" HproseAttribute="相关照片" Remark="考古发掘服务类-相关照片">
+      <DataGrid HeadColumns="图片名称" DataColumns="TPMC" ></DataGrid>
+      <DataGrid HeadColumns="图片路径" DataColumns="TPLJ" Format="Image" ></DataGrid>
+      <DataGrid HeadColumns="上传时间" DataColumns="SCSJ" ></DataGrid>
+      <DataGrid HeadColumns="入库时间" DataColumns="RKSJ" ></DataGrid>
+      <DataGrid HeadColumns="图片格式" DataColumns="TPGS" ></DataGrid>
+    </Fun>
+    <Fun ID="1404" TableName="v_HPF_KGFJ_KGFJJL" KeywordFields="XMMC"  DateField="KSSJ"    PID="ID" HproseAttribute="发掘面积" Remark="考古发掘服务类-发掘面积">
+      <DataGrid HeadColumns="项目名称" DataColumns="XMMC" ></DataGrid>
+      <DataGrid HeadColumns="开始时间" DataColumns="KSSJ" ></DataGrid>
+      <DataGrid HeadColumns="结束时间" DataColumns="JSSJ" ></DataGrid>
+      <DataGrid HeadColumns="第几次发掘" DataColumns="DJCFJ" ></DataGrid>
+      <DataGrid HeadColumns="发掘面积" DataColumns="FJMJ" ></DataGrid>
+      <DataDetail InfoItems="项目名称" DataColumns="XMMC"  ></DataDetail>
+      <DataDetail InfoItems="开始时间" DataColumns="KSSJ"  ></DataDetail>
+      <DataDetail InfoItems="结束时间" DataColumns="JSSJ"  ></DataDetail>
+      <DataDetail InfoItems="发掘面积" DataColumns="FJMJ"  ></DataDetail>
+      <DataDetail InfoItems="第几次发掘" DataColumns="DJCFJ"  ></DataDetail>
+    </Fun>
+    <Fun ID="1405" TableName="V_SUMFJMJ" KeywordFields="XMMC"  DateField="KSSJ"    PID="ID" HproseAttribute="已发掘面积" Remark="考古发掘服务类-已发掘面积">
+      <DataGrid HeadColumns="已发掘面积" DataColumns="YFJMJ" ></DataGrid>
+      <DataGrid HeadColumns="项目名称" DataColumns="XMMC" ></DataGrid>
+      <DataGrid HeadColumns="开始时间" DataColumns="KSSJ" ></DataGrid>
+      <DataDetail InfoItems="已发掘面积" DataColumns="YFJMJ" ></DataDetail>
+      <DataDetail InfoItems="项目名称" DataColumns="XMMC" ></DataDetail>
+      <DataDetail InfoItems="开始时间" DataColumns="KSSJ" ></DataDetail>
+    </Fun>
+  </Node>
+  <Node Title="保护展示与环境整治工程服务类">
+    <Fun ID="1501"  TableName="v_HPF_BHGC"  TableDetailName="v_HPF_BHGC" PID="ID" HproseAttribute="保护展示与环境整治工程记录" KeywordFields="GCMC"  DateField="JGSJ" Remark="保护展示与环境整治工程服务类-保护展示与环境整治工程记录">
+      <DataGrid HeadColumns="序号" DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="工程名称" DataColumns="GCMC" ></DataGrid>
+      <DataGrid HeadColumns="工程分类" DataColumns="GCFL"  ></DataGrid>
+      <DataGrid HeadColumns="中央财政经费" DataColumns="BHGCGJBZJF"  ></DataGrid>
+      <DataGrid HeadColumns="开工时间" DataColumns="KGSJ" ></DataGrid>
+      <DataGrid HeadColumns="竣工时间" DataColumns="JGSJ" ></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="ID"  ></DataDetail>
+      <DataDetail InfoItems="工程编号" DataColumns="GCBH"  ></DataDetail>
+      <DataDetail InfoItems="工程名称" DataColumns="GCMC"  ></DataDetail>
+      <DataDetail InfoItems="工程分类" DataColumns="GCFL"  ></DataDetail>
+      <DataDetail InfoItems="立项批复文件" DataColumns="LXPFWJ"  ></DataDetail>
+      <DataDetail InfoItems="开工时间" DataColumns="KGSJ"  ></DataDetail>
+      <DataDetail InfoItems="竣工时间" DataColumns="JGSJ"  ></DataDetail>
+      <DataDetail InfoItems="国家投入总经费" DataColumns="GJTRZJF"  ></DataDetail>
+      <DataDetail InfoItems="图片名称" DataColumns="TPMC"  ></DataDetail>
+      <DataDetail InfoItems="图片路径" DataColumns="TPLJ"  Format="Image" ></DataDetail>
+      <DataDetail InfoItems="拍照时间" DataColumns="PZSJ"  ></DataDetail>
+      <DataDetail InfoItems="图片格式" DataColumns="TPGS"  ></DataDetail>
+    </Fun>
+    <Fun ID="150102" TableName="HPF_BHGC_BHZSHHJZZGC_XMFWT" TableDetailName="HPF_BHGC_BHZSHHJZZGC_XMFWT"   PID="ID" HproseAttribute="保护展示与环境整治工程记录_项目范围图" KeywordFields="TZMC,TZNRLX"  DateField="CTSJ" Remark="保护展示与环境整治工程服务类-保护展示与环境整治工程记录_项目范围图">
+      <DataGrid HeadColumns="项目名称" DataColumns="GCXMID" ></DataGrid>
+      <DataGrid HeadColumns="图纸名称" DataColumns="TZMC" ></DataGrid>
+      <DataGrid HeadColumns="图纸内容类型" DataColumns="TZNRLX" ></DataGrid>
+      <DataGrid HeadColumns="成图时间" DataColumns="CTSJ" ></DataGrid>
+    </Fun>
+    <Fun ID="150103" TableName="HPF_BHGC_XGWD" TableDetailName="HPF_BHGC_XGWD" PID="ID" HproseAttribute="保护展示与环境整治工程记录_相关文档"  KeywordFields="WDMC"  DateField="CJSJ"   Remark="保护展示与环境整治工程服务类-保护展示与环境整治工程记录_相关文档">
+      <DataGrid HeadColumns="项目名称" DataColumns="GCXMID" ></DataGrid>
+      <DataGrid HeadColumns="文档名称" DataColumns="WDMC" ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" ></DataGrid>
+      <DataGrid HeadColumns="数据密级" DataColumns="SJMJ" ></DataGrid>
+    </Fun>
+
+    <Fun ID="1503"  TableName="V_HPF_BHGC_BHZSHHJZZGC_XCZP"  TableDetailName="V_HPF_BHGC_BHZSHHJZZGC_XCZP"  PID="ID" HproseAttribute="保护展示和环境整治工程_现场照片" KeywordFields="TPMC"  DateField="RKSJ"  Remark="保护展示与环境整治工程服务类-现场照片">
+      <DataGrid HeadColumns="拍照时间" DataColumns="PZSJ" ></DataGrid>
+      <DataGrid HeadColumns="上传时间" DataColumns="SCSJ" ></DataGrid>
+      <DataGrid HeadColumns="图片名称" DataColumns="TPMC" ></DataGrid>
+      <DataGrid HeadColumns="图片路径" DataColumns="TPLJ" Format="Image" ></DataGrid>
+      <DataDetail InfoItems="拍照时间" DataColumns="PZSJ"  ></DataDetail>
+      <DataDetail InfoItems="上传时间" DataColumns="SCSJ"  ></DataDetail>
+      <DataDetail InfoItems="图片名称" DataColumns="TPMC"  ></DataDetail>
+      <DataDetail InfoItems="图片路径" DataColumns="TPLJ" Format="Image" ></DataDetail>
+    </Fun>
+    <Fun ID="1502" TableName="HPF_BHGC_BHZSHHJZZGC_XMFWT"  TableDetailName="HPF_BHGC_BHZSHHJZZGC_XMFWT"  PID="ID" HproseAttribute="项目范围图" KeywordFields="TZMC"  DateField="RKSJ" Remark="项目范围图">
+      <DataGrid HeadColumns="序号" DataColumns="ID" ></DataGrid>
+      <DataGrid HeadColumns="图纸名称" DataColumns="TZMC"  ></DataGrid>
+      <DataGrid HeadColumns="图纸内容类型" DataColumns="TZNRLX" ></DataGrid>
+      <DataGrid HeadColumns="图纸格式" DataColumns="TZGS"  ></DataGrid>
+      <DataGrid HeadColumns="比例尺" DataColumns="BLC" ></DataGrid>
+      <DataGrid HeadColumns="测绘人ID" DataColumns="CHRID" ></DataGrid>
+      <DataGrid HeadColumns="成图时间" DataColumns="CTSJ"  ></DataGrid>
+      <DataGrid HeadColumns="数据密级" DataColumns="SJMJ" ></DataGrid>
+      <DataGrid HeadColumns="发布范围" DataColumns="FBFW"  ></DataGrid>
+      <DataGrid HeadColumns="下载次数" DataColumns="XZCS" ></DataGrid>
+      <DataGrid HeadColumns="路径" DataColumns="LJ" ></DataGrid>
+      <DataGrid HeadColumns="入库时间" DataColumns="RKSJ" ></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="ID"  ></DataDetail>
+      <DataDetail InfoItems="图纸名称" DataColumns="TZMC"  ></DataDetail>
+      <DataDetail InfoItems="图纸内容类型" DataColumns="TZNRLX"  ></DataDetail>
+      <DataDetail InfoItems="图纸格式" DataColumns="TZGS"  ></DataDetail>
+      <DataDetail InfoItems="比例尺" DataColumns="BLC"  ></DataDetail>
+      <DataDetail InfoItems="测绘人ID" DataColumns="CHRID"  ></DataDetail>
+      <DataDetail InfoItems="数据密级" DataColumns="SJMJ"  ></DataDetail>
+      <DataDetail InfoItems="发布范围" DataColumns="FBFW"  ></DataDetail>
+      <DataDetail InfoItems="下载次数" DataColumns="XZCS"  ></DataDetail>
+      <DataDetail InfoItems="路径" DataColumns="LJ"  ></DataDetail>
+      <DataDetail InfoItems="入库时间" DataColumns="RKSJ"  ></DataDetail>
+    </Fun>
+  </Node>
+  <Node Title="保护管理规划服务类">
+    <Fun ID="1601"  TableName="HPF_BHGH_BHGLGH"  TableDetailName="HPF_BHGH_BHGLGH"  KeywordFields="MC"  DateField="CJSJ"  PID="ID" HproseAttribute="保护管理规划编制记录" Remark="保护展示与环境整治工程服务类-保护管理规划编制记录">
+      <DataGrid HeadColumns="序号" DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="名称" DataColumns="MC" ></DataGrid>
+      <DataGrid HeadColumns="编制和公布状态" DataColumns="BZHGBZT" ></DataGrid>
+      <DataGrid HeadColumns="规划开始年份" DataColumns="GHKSNF"  ></DataGrid>
+      <DataGrid HeadColumns="规划截止年份" DataColumns="GHJZNF" ></DataGrid>
+      <DataGrid HeadColumns="开始编制日期" DataColumns="KSBZRQ" ></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="ID"  ></DataDetail>
+      <DataDetail InfoItems="名称" DataColumns="MC"  ></DataDetail>
+      <DataDetail InfoItems="编制和公布状态" DataColumns="BZHGBZT"  ></DataDetail>
+      <DataDetail InfoItems="规划开始年份" DataColumns="GHKSNF"  ></DataDetail>
+      <DataDetail InfoItems="规划截止年份" DataColumns="GHJZNF"  ></DataDetail>
+      <DataDetail InfoItems="开始编制日期" DataColumns="GHJZNF"  ></DataDetail>
+      <DataDetail InfoItems="组织编制单位" DataColumns="KSBZRQ"  ></DataDetail>
+      <DataDetail InfoItems="编制单位" DataColumns="BZDW"  ></DataDetail>
+    </Fun>
+    <Fun ID="1602" TableName="V_HPF_BHGH_XXGHZXQKZHPJ" TableDetailName="V_HPF_BHGH_XXGHZXQKZHPJ" KeywordFields="ZHPJ_BM"  DateField="CJSJ"   PID="ID" HproseAttribute="现行规划执行情况记录" Remark="保护展示与环境整治工程服务类-现行规划执行情况记录">
+      <DataGrid HeadColumns="序号" DataColumns="ID"   ></DataGrid>
+      <DataGrid HeadColumns="年份" DataColumns="NF" ></DataGrid>
+      <DataGrid HeadColumns="综合评价" DataColumns="ZHPJ_BM" ></DataGrid>
+      <DataGrid HeadColumns="评价时间" DataColumns="PJSJ"  ></DataGrid>
+      <DataDetail InfoItems="序号" DataColumns="ID"  ></DataDetail>
+      <DataDetail InfoItems="年份" DataColumns="NF"  ></DataDetail>
+      <DataDetail InfoItems="评价时间" DataColumns="PJSJ"  ></DataDetail>
+      <DataDetail InfoItems="综合评价" DataColumns="ZHPJ_BM"  ></DataDetail>
+    </Fun>
+  </Node>
+</XFunConfig>

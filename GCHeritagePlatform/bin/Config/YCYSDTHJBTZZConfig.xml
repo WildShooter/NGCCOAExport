@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<XTZZConfig>
+  <Node Title="">
+    <Fun TableName="">
+      <DataGrid HeadColumns="" DataColumns=""></DataGrid>
+    </Fun>
+  </Node>
+</XTZZConfig>

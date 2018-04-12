@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B4F9C525-5C56-440E-B4C2-972A33D7C8CD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GCHeritagePlatform</RootNamespace>
+    <AssemblyName>GCHeritagePlatform</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Words, Version=16.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>JCBG\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="FrameworkCore">
+      <HintPath>Cbin\FrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="GCHeritagePlatform.Dock, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Cbin\GCHeritagePlatform.Dock.dll</HintPath>
+    </Reference>
+    <Reference Include="GCHeritagePlatform.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Cbin\GCHeritagePlatform.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Hprose">
+      <HintPath>Cbin\Hprose.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Cbin\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>Cbin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MessageCheck">
+      <HintPath>Cbin\MessageCheck.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Nancy, Version=1.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.1.4.3\lib\net40\Nancy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nancy.Hosting.Aspnet, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.Hosting.Aspnet.1.4.1\lib\net40\Nancy.Hosting.Aspnet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nancy.ViewEngines.Razor, Version=1.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.Viewengines.Razor.1.4.3\lib\net40\Nancy.ViewEngines.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cbin\GCHeritagePlatform.Utils.dll" />
+    <Content Include="Core\404.html" />
+    <Content Include="Core\500.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="Front\favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="icon.png" />
+    <Content Include="JCBG\Aspose.Words.dll" />
+    <Content Include="ServiceModule.xml" />
+    <Content Include="Services\BusinessCommon\开发抽取记录.txt" />
+    <Content Include="Services\开发重构记录.txt" />
+    <Content Include="Views\css\style.css" />
+    <Content Include="Views\images\leftico01.png" />
+    <Content Include="Views\images\leftico02.png" />
+    <Content Include="Views\images\leftico03.png" />
+    <Content Include="Views\images\leftico04.png" />
+    <Content Include="Views\images\leftline.gif" />
+    <Content Include="Views\images\leftmenubg.gif" />
+    <Content Include="Views\images\lefttop.gif" />
+    <Content Include="Views\images\list.gif" />
+    <Content Include="Views\images\sj.png" />
+    <Content Include="Views\js\hprose-html5.js" />
+    <Content Include="Views\js\JavaScript.js" />
+    <Content Include="Views\js\jquery.js" />
+    <Content Include="Views\js\test.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseService\BaseService.cs" />
+    <Compile Include="BaseService\IBaseService.cs" />
+    <Compile Include="Core\Bootstrapper.cs" />
+    <Compile Include="Core\ErrorCodeHandler.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\HproseHandler.ashx.cs">
+      <DependentUpon>HproseHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Core\NancyHandler.cs" />
+    <Compile Include="JCBG\WordCode\BusinessWord.cs" />
+    <Compile Include="JCBG\WordCode\DoubleExtensions.cs" />
+    <Compile Include="JCBG\WordCode\ExportWord.cs" />
+    <Compile Include="JCBG\WordCode\StringExtensions.cs" />
+    <Compile Include="JCBG\WordCode\WordCommon.cs" />
+    <Compile Include="Models\CustomAttribute.cs" />
+    <Compile Include="Models\ServiceModuleModel.cs" />
+    <Compile Include="Modules\FileModule.cs" />
+    <Compile Include="Modules\HomeModule.cs" />
+    <Compile Include="Modules\IndexModule.cs" />
+    <Compile Include="Services\BaseCommon.cs" />
+    <Compile Include="Services\BookMarkBase.cs" />
+    <Compile Include="Services\BusinessCommon\BaseBusinessService.cs" />
+    <Compile Include="Services\BusinessCommon\CommonBaseBusiness.cs" />
+    <Compile Include="Services\BusinessCommon\IBaseBusinessService.cs" />
+    <Compile Include="Services\CacheConstant.cs" />
+    <Compile Include="Models\LoginUser.cs" />
+    <Compile Include="Services\JcbgService.cs" />
+    <Compile Include="Services\PersonnelRightsManagement\DepartmentRightsManagementService.cs" />
+    <Compile Include="Services\PersonnelRightsManagement\FuncManageService.cs" />
+    <Compile Include="Services\PersonnelRightsManagement\Interface\IUserRightService.cs" />
+    <Compile Include="Services\PersonnelRightsManagement\Model\FuncTree.cs" />
+    <Compile Include="Services\PersonnelRightsManagement\Model\PRIVS_DATA.cs" />
+    <Compile Include="Services\PersonnelRightsManagement\Model\PRIVS_DATAPRIVS.cs" />
+    <Compile Include="Services\PersonnelRightsManagement\Model\PRIVS_DEPARTMENT.cs" />
+    <Compile Include="Services\PersonnelRightsManagement\Model\PRIVS_FUNC.cs" />
+    <Compile Include="Services\PersonnelRightsManagement\Model\PRIVS_FUNCPRIVS.cs" />
+    <Compile Include="Services\PersonnelRightsManagement\Model\PRIVS_FUNCTYPE.cs" />
+    <Compile Include="Services\PersonnelRightsManagement\Model\PRIVS_LEADER.cs" />
+    <Compile Include="Services\PersonnelRightsManagement\Model\PRIVS_POSITION.cs" />
+    <Compile Include="Services\PersonnelRightsManagement\Model\PRIVS_SYSTEM.cs" />
+    <Compile Include="Services\PersonnelRightsManagement\Model\PRIVS_USER.cs" />
+    <Compile Include="Services\PersonnelRightsManagement\Model\PRIVS_ROLE.cs" />
+    <Compile Include="Services\PersonnelRightsManagement\RoleManagementService.cs" />
+    <Compile Include="Services\PersonnelRightsManagement\SpecialService.cs" />
+    <Compile Include="Services\PersonnelRightsManagement\UseRightService.cs" />
+    <Compile Include="Services\PersonnelRightsManagement\UserRightsManagementService.cs" />
+    <Compile Include="Services\Login\Interface\ILoginService.cs" />
+    <Compile Include="Services\BusinessCommon\ICommonBusiness.cs" />
+    <Compile Include="Services\Login\LoginService.cs" />
+    <Compile Include="Utils\HproseAttExt.cs" />
+    <Compile Include="Utils\RequestCommon.cs" />
+    <Compile Include="Utils\ServiceModuleHelper.cs" />
+    <Compile Include="Utils\SessionHelper.cs" />
+    <Compile Include="Utils\SessionUser.cs" />
+    <Compile Include="Utils\XMLHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\index-old.cshtml" />
+    <Content Include="Handlers\HproseHandler.ashx" />
+    <Content Include="log4net.config" />
+    <Content Include="Views\index.cshtml" />
+    <Content Include="JCBG\WordModel\附件1-发文拟稿.docx" />
+    <Content Include="JCBG\WordModel\附件2-收文登记.docx" />
+    <Content Include="JCBG\WordModel\附件1-合同签订审批表.docx" />
+    <Content Include="JCBG\WordModel\附件2-合同履约完成表.docx" />
+    <Content Include="JCBG\WordModel\附件2-收文登记--带书签.docx" />
+    <Content Include="JCBG\WordModel\附件2-请假条.docx" />
+    <Content Include="JCBG\WordModel\中心信息化导出清单.xlsx" />
+    <Content Include="JCBG\WordModel\附件9-培训申请模版.docx" />
+    <Content Include="JCBG\WordModel\附件6-国家基础地理信息中心在职干部因私事出国%28境%29领用表.docx" />
+    <Content Include="JCBG\WordModel\附件6-国家基础地理信息中心在职干部因私事出国%28境%29领用表and审批表.docx" />
+    <Content Include="JCBG\WordModel\附件7-国家基础地理信息中心涉密干部因私事出国%28境%29领用表.docx" />
+    <Content Include="JCBG\WordModel\附件7-国家基础地理信息中心涉密干部因私事出国%28境%29领用表and保密表and审批表涉密.docx" />
+    <Content Include="JCBG\WordModel\附件7-国家基础地理信息中心涉密干部因私事出国%28境%29领用表and保密表and审批表涉密and审批表非涉密.docx" />
+    <Content Include="JCBG\WordModel\附件7-固定资产借出登记申请表.docx" />
+    <Content Include="JCBG\WordModel\附件6-固定资产调配调拨单.docx" />
+    <Content Include="JCBG\WordModel\附件9-低值易耗品购置申请表.docx" />
+    <Content Include="JCBG\WordModel\附件8-固定资产处置申请表.docx" />
+    <Content Include="JCBG\WordModel\附件5-固定资产管理信息变更表.docx" />
+    <Content Include="JCBG\WordModel\附件18-固定资产验收及入库单（家具）.docx" />
+    <Content Include="JCBG\WordModel\附件19-固定资产验收及入库单（设备）.docx" />
+    <Content Include="JCBG\WordModel\附件3-固定资产验收及入库单（房屋、土地、交通）.docx" />
+    <Content Include="JCBG\WordModel\附件20-培训登记模版（外部）.docx" />
+    <Content Include="JCBG\WordModel\附件19-培训登记模版（内部）.docx" />
+    <None Include="Properties\PublishProfiles\ZxoaExport.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Download\" />
+    <Folder Include="JCBG\WordExport\" />
+    <Folder Include="Services\Login\Model\" />
+    <Folder Include="Views\js\easyui\" />
+    <Folder Include="zh-Hans\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>17952</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:17952/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Nancy.Viewengines.Razor.1.4.3\build\Nancy.ViewEngines.Razor.targets" Condition="Exists('..\packages\Nancy.Viewengines.Razor.1.4.3\build\Nancy.ViewEngines.Razor.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此项目引用这台计算机上缺少的 NuGet 程序包。使用 NuGet 程序包还原可下载这些程序包。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Nancy.Viewengines.Razor.1.4.3\build\Nancy.ViewEngines.Razor.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Nancy.Viewengines.Razor.1.4.3\build\Nancy.ViewEngines.Razor.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

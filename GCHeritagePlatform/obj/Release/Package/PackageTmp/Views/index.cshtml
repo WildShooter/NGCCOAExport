@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase < IDictionary < string, IList<GCHeritagePlatform.Models.HproseAttribute>>>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="keywords" content="国信司南（北京）地理信息技术有限公司，WMTS" />
+<meta name="description" content="成果服务——国信司南！" />
+<title>服务——国信司南</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="js/easyui/themes/default/easyui.css" />
+<link rel="stylesheet" type="text/css" href="js/easyui/themes/icon.css" />
+<script src="js/easyui/jquery.min.js"></script>
+<script src="js/JavaScript.js?r=111111wesfdf1"></script>
+<script  src="js/easyui/jquery.easyui.min.js?r=1"></script>
+<script src="js/hprose-html5.js"></script>
+<style>
+    .panel-tool a {
+display: inline-block;
+width: 16px;
+height: 16px;
+opacity: 0.6;
+filter: alpha(opacity=60);
+margin: 0 0 0 2px;
+vertical-align: top;
+margin-right: 10px;
+}
+</style>
+<script type="text/javascript">
+    function format(txt, compress/*是否为压缩模式*/) {/* 格式化JSON源码(对象转换为JSON文本) */
+        var indentChar = '    ';
+        if (/^\s*$/.test(txt)) {
+            alert('数据为空,无法格式化! ');
+            return;
+        }
+        try { var data = eval('(' + txt + ')'); }
+        catch (e) {
+            alert('数据源语法错误,格式化失败! 错误信息: ' + e.description, 'err');
+            return;
+        };
+        var draw = [], last = false, This = this, line = compress ? '' : '\n', nodeCount = 0, maxDepth = 0;
+
+        var notify = function (name, value, isLast, indent/*缩进*/, formObj) {
+            nodeCount++;/*节点计数*/
+            for (var i = 0, tab = ''; i < indent; i++) tab += indentChar;/* 缩进HTML */
+            tab = compress ? '' : tab;/*压缩模式忽略缩进*/
+            maxDepth = ++indent;/*缩进递增并记录*/
+            if (value && value.constructor == Array) {/*处理数组*/
+                draw.push(tab + (formObj ? ('"' + name + '":') : '') + '[' + line);/*缩进'[' 然后换行*/
+                for (var i = 0; i < value.length; i++)
+                    notify(i, value[i], i == value.length - 1, indent, false);
+                draw.push(tab + ']' + (isLast ? line : (',' + line)));/*缩进']'换行,若非尾元素则添加逗号*/
+            } else if (value && typeof value == 'object') {/*处理对象*/
+                draw.push(tab + (formObj ? ('"' + name + '":') : '') + '{' + line);/*缩进'{' 然后换行*/
+                var len = 0, i = 0;
+                for (var key in value) len++;
+                for (var key in value) notify(key, value[key], ++i == len, indent, true);
+                draw.push(tab + '}' + (isLast ? line : (',' + line)));/*缩进'}'换行,若非尾元素则添加逗号*/
+            } else {
+                if (typeof value == 'string') value = '"' + value + '"';
+                draw.push(tab + (formObj ? ('"' + name + '":') : '') + value + (isLast ? '' : ',') + line);
+            };
+        };
+        var isLast = true, indent = 0;
+        notify('', data, isLast, indent, false);
+        return draw.join('');
+    }
+    $(function () {
+        //$('#mh').click(function () {
+        //    var text = $('#resultId').textbox('getText');
+        //    var text = text.replace("服务成功，结果为：", "");
+        //    $('#resultId').textbox('setText', format(text));
+        //});onResize
+        /*设置折叠面板高度*/
+     debugger 
+        $('#accordionId').accordion({
+            'onBeforeCollapse': function (e, t) {
+
+                alert(e + t);
+            },
+            onBeforeExpand: function () {
+                alert(1);
+
+            }
+        });
+        var panels = $('#accordionId').accordion('panels');
+      //  panels.onre
+        $.each(panels, function () {
+            this.css("height", 200);
+        });
+        $('#accordionId a').on('click', function () {
+            var attrMethod = $(this).attr("method");
+            /*截取方法  eg:bool Logion()=>Logion;*/
+            var arrAttr = attrMethod.split('(');
+            if (arrAttr.length > 1) {
+                var methodReal = (arrAttr[0] + '').split(' ');
+                $('#methodId').textbox('setText', methodReal[methodReal.length - 1])
+            }
+        });
+        //http://localhost:17952/hprose
+        debugger 
+        var locatPath = location.href.replace('#', '').replace('Service', '').replace('service', '');
+        $('#addressId').textbox('setText', locatPath + "hprose");
+    });
+    var isSwitch = false;//按钮开关
+    /*测试服务成功回调函数*/
+    function TestSucess(result) {
+        isSwitch = false;
+        $('#resultId').textbox('setText', "服务成功，结果为：" + format(result));
+    }
+    /*测试服务失败回调函数*/
+    function TestError(name,err) {
+        isSwitch = false;
+        $('#resultId').textbox('setText', "服务错误，错误为：" + err);
+    }
+    /*获取接口参数值数组*/
+    function GetParams() {
+        var params = [];
+        var textboxs = $('.params');
+        $.each(textboxs, function () {
+            debugger
+            var text = $(this).val().toLowerCase();
+            if (text) {
+                if (text.trim() == "null") {
+                    params.push('');
+                } else {
+                    params.push(text);
+                }
+            }
+        });
+        return params;
+    }
+  
+
+    /*提交测试*/
+    function SubmitTest() {
+        var addressId = $.trim($('#addressId').textbox('getText'));
+        if (isSwitch) return;
+        isSwitch = true;
+        var method = $.trim($('#methodId').textbox('getText'));
+      
+        var client = new hprose.HttpClient(addressId, [method]);
+        var params = GetParams();
+        if (params.length == 0) {
+            client[method](TestSucess, TestError);
+        } else if (params.length == 1) {
+           // params[0] = functionTree;
+            client[method](params[0], TestSucess,TestError);
+        } else if (params.length == 2) {
+            client[method](params[0],params[1], TestSucess,TestError);
+        } else if (params.length == 3) {
+            client[method](params[0],params[1], params[2],TestSucess,TestError);
+        } else if (params.length == 4) {
+            client[method](params[0],params[1], params[2],params[3],TestSucess,TestError);
+        } else if (params.length == 5) {
+            client[method](params[0], params[1], params[2], params[3], params[4], TestSucess, TestError);
+        } else if (params.length == 6) {
+            client[method](params[0], params[1], params[2], params[3], params[4], params[5], TestSucess, TestError);
+        } else if (params.length == 7) {
+            client[method](params[0], params[1], params[2], params[3], params[4], params[5], params[6], TestSucess, TestError);
+        } else if (params.length == 8) {
+            client[method](params[0], params[1], params[2], params[3], params[4], params[5], params[6], params[7], TestSucess, TestError);
+        } else if (params.length == 9) {
+            client[method](params[0], params[1], params[2], params[3], params[4], params[5], params[6], params[7], params[8], TestSucess, TestError);
+        } else if (params.length == 10) {
+            client[method](params[0], params[1], params[2], params[3], params[4], params[5], params[6], params[7], params[8], params[9], TestSucess, TestError);
+        } else if (params.length == 11) {
+            client[method](params[0], params[1], params[2], params[3], params[4], params[5], params[6], params[7], params[8], params[9], params[10], TestSucess, TestError);
+        } else if (params.length == 12) {
+            client[method](params[0], params[1], params[2], params[3], params[4], params[5], params[6], params[7], params[8], params[9], params[10], params[11], TestSucess, TestError);
+        }
+
+    }
+   
+    var paramsCount = 6;/*参数默认个数*/
+    /*增加参数*/
+    function AddParamers() {
+        if (paramsCount == 12) {
+            alert('亲，接口参数太长是不是应该从新考虑逻辑！');
+            return;
+        }
+        paramsCount++;
+        var strTemplate=' <tr>'
+        + '<td style="width:80px;margin:10px;pAdding:10px;">参数' + paramsCount + ':</td>'
+        + ' <td><input class="params" style="border: 1px;/* border-color: blue; */background-color: antiquewhite;width:300px;height: 25px;border-radius: 2px;"> </td>'
+        +'</tr>';
+        $('table').append(strTemplate);
+        //$("#table tr:eq(2)").after(trHTML);
+    }
+  
+</script>
+
+</head>
+<body class="easyui-layout">
+        <div data-options="region:'north'" style="height:50px;background:#f0f9fd;"><span style="padding: 5px;font-size:20px;text-align:center" >通用权限成果服务——国信司南（V-1.02）！</span></div>
+        <div data-options="region:'west',split:true" title="服务列表" style="width:800px;">
+            <div class="easyui-accordion" id="accordionId" data-options="multiple:true,fit:true" style="overflow-y: auto;">
+           @{
+                 @foreach (var key in Model.Keys)
+                 {
+                    <div title="@key" data-options="iconCls:'icon-ok'" style="padding:10px;height:200px">
+
+                        @foreach (var service in Model[key])
+                        {
+                            @if (service != null)
+                            {
+                                <li>
+                                    <a method="@service.Method" href="#" > @service.Description  &nbsp; &nbsp;@service.Method </a>
+
+                                </li>
+                            }
+                        }
+                    </div>
+                 }
+        }
+            </div>
+
+        </div>
+        <div data-options="region:'center',title:'测试主体',iconCls:'icon-ok',border:true">
+            <div class="easyui-layout" data-options="fit:true">
+                <div data-options="region:'south',split:true,title:'测试结果'" style="height:480px">
+                
+                    <input class="easyui-textbox" readonly="readonly" id="resultId" name="结果" data-options="multiline:true" style="height:433px;width:100%" />
+                </div>
+                <div data-options="region:'center',title:'测试方法和参数'">
+                    <table>
+                        <tr>
+                            <td style="width:80px;margin:5px;padding:5px;">注:</td>
+                            <td><span style="color:red"> 参数为""，请录入null, 来代表参数为空的情况.</span> </td>
+                        </tr>
+                        <tr>
+                            <td style="width:80px;margin:5px;padding:5px;">hprose地址:</td>
+                            <td><input class="easyui-textbox" id="addressId"  style="width:300px" /> </td>
+                        </tr>
+                        <tr>
+                            <td style="width:80px;margin:5px;padding:5px;">方法名:</td>
+                            <td><input class="easyui-textbox" id="methodId"  value="login"  style="width:300px" /> </td>
+                        </tr>
+                        <tr>
+                            <td style="width:80px;margin:10px;padding:10px;">参数1:</td>
+                            <td><input class="params" style="border: 1px;/* border-color: blue; */background-color: antiquewhite;width:300px;height: 25px;border-radius: 2px;" /> </td>
+                        </tr>
+                        <tr>
+                            <td style="width:80px;margin:10px;padding:10px;">参数2:</td>
+                            <td><input class="params" style="border: 1px;/* border-color: blue; */background-color: antiquewhite;width:300px;height: 25px;border-radius: 2px;"> </td>
+                        </tr>
+                        <tr>
+                            <td style="width:80px;margin:10px;padding:10px;">参数3:</td>
+                            <td><input class="params" style="border: 1px;/* border-color: blue; */background-color: antiquewhite;width:300px;height: 25px;border-radius: 2px;"> </td>
+                        </tr>
+                        <tr>
+                            <td style="width:80px;margin:10px;padding:10px;">参数4:</td>
+                            <td><input class="params" style="border: 1px;/* border-color: blue; */background-color: antiquewhite;width:300px;height: 25px;border-radius: 2px;"> </td>
+                        </tr>
+                        <tr>
+                            <td style="width:80px;margin:10px;padding:10px;">参数5:</td>
+                            <td><input class="params" style="border: 1px;/* border-color: blue; */background-color: antiquewhite;width:300px;height: 25px;border-radius: 2px;"> </td>
+                        </tr>
+                        <tr>
+                            <td style="width:80px;margin:10px;padding:10px;">参数6:</td>
+                            <td><input class="params" style="border: 1px;/* border-color: blue; */background-color: antiquewhite;width:300px;height: 25px;border-radius: 2px;" /> </td>
+                        </tr>
+                       
+                    </table>
+                    <div style="padding-left:30px"  id="tt">
+                        <a href="#" class="easyui-linkbutton" style="margin:20px" data-options="iconCls:'icon-Add'"
+                           onclick="AddParamers()">增加参数</a>
+                        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'"
+                           onclick="SubmitTest()">提交测试</a>
+                    </div>
+                </div>
+            </div>  
+           
+        </div>
+    
+    </body>
+</html>

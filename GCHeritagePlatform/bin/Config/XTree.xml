@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TreeConfig>
+  <Node Id ="1" Name ="申遗承诺">
+    <Node Id ="101" Name ="承诺事项进展" FID="1"  IsLeaf="true"></Node>
+  </Node>
+  <Node Id ="2" Name ="机构与能力建设">
+      <Node Id ="20101" Name ="保护管理机构" FID="2" IsLeaf="true" ></Node>
+      <Node Id ="20102" Name ="监测机构" FID="2" IsLeaf="true"></Node>
+    <Node Id ="202" Name ="专项保护管理法规、规章" FID="2" IsLeaf="true"></Node>
+    <Node Id ="203" Name ="保护管理相关培训记录" FID="2" IsLeaf="true"></Node>
+    <Node Id ="204" Name ="保护管理经费" FID="2"  IsLeaf="true"></Node>
+  </Node>
+  <Node Id ="3" Name ="遗产基础信息">
+    <Node Id ="301" Name ="遗产总图(平面图、立面图)" FID="3" IsLeaf="true"></Node>
+    <Node Id ="302" Name ="遗产要素分布图" FID="3" IsLeaf="true"></Node>
+    <Node Id ="303" Name ="使用功能基准图" FID="3" IsLeaf="true"></Node>
+    <Node Id ="304" Name ="遗产要素单体或局部测绘基准图和标志性影像" FID="3"  IsLeaf="true"></Node>
+  </Node>
+  <Node Id ="4" Name ="总体格局变化">
+    <Node Id ="401" Name ="总体格局变化记录图" FID="4"  IsLeaf="true"></Node>
+    <Node Id ="402" Name ="总体格局变化记录" FID="4"  IsLeaf="true"></Node>
+  </Node>
+  <Node Id ="5" Name ="遗产使用功能变化">
+    <Node Id ="501" Name ="使用功能变化记录图" FID ="5" IsLeaf="true"></Node>
+    <Node Id ="502" Name ="使用功能变化记录" FID ="5" IsLeaf="true"></Node>
+  </Node>
+  <Node Id ="6" Name ="遗产要素单体">
+    <Node Id ="601" Name ="遗产要素单体或局部现状图/影像图/特征值" FID="6" IsLeaf="true"></Node>
+    <Node Id ="602" Name ="遗产要素现状记录" FID="6" IsLeaf="true"></Node>
+  </Node>
+  <Node Id ="7" Name ="本体与载体病害">
+    <Node Id ="701" Name ="病害分布图" FID="7" IsLeaf="true"></Node>
+    <Node Id ="702" Name ="病害调查监测工作情况记录" FID="7" IsLeaf="true"></Node>
+    <Node Id ="703" Name="病害监测数据" FID="7" IsLeaf="true" ></Node>
+    <Node Id="704" Name="病害控制状态评估" FID="7" IsLeaf="true"></Node>
+  </Node>
+  <Node Id="8" Name ="自然环境" >
+    <Node Id="801" Name ="自然环境监测工作情况记录" FID="8" IsLeaf="true"></Node> 
+    <Node Id ="802" Name="自然环境监测数据" FID ="8">
+     
+    </Node>
+    <Node Id ="803" Name ="环境影响评估" FID="8" IsLeaf="true"></Node>
+    <Node Id ="804" Name ="受灾记录" FID ="8"  IsLeaf="true"></Node>
+  </Node>
+  <Node Id ="9" Name ="建设控制" >
+      <Node Id ="90101" Name ="保护区划图" FID="9"  IsLeaf="true"></Node>
+      <Node Id ="90102" Name ="保护区划界线描述与管理规定" FID="9"  IsLeaf="true"></Node>
+      <Node Id ="90201" Name ="新建项目记录" FID ="9"  IsLeaf="true"></Node>
+      <Node Id ="90202" Name ="项目建设位置图" FID="9"  IsLeaf="true"></Node>
+      <Node Id ="90203" Name ="新建项目现场环境照片" FID ="9"  IsLeaf="true"></Node>   
+  </Node>
+  <Node Id="10" Name="社会环境" >
+    <Node Id ="1001" Name ="土地利用现状图" FID ="10" IsLeaf="true"></Node>
+    <Node Id ="1002" Name ="土地利用规划图" FID ="10"  IsLeaf="true"></Node>
+    <Node Id ="1003" Name ="遗产区和缓冲区社会环境年度监测记录" FID="10" IsLeaf="true" ></Node>
+    <Node Id ="1004" Name ="遗产所在地社会环境年度监测记录" FID ="10"  IsLeaf="true"></Node>
+  </Node>
+  <Node Id ="11" Name ="旅游与游客管理" >
+    <Node Id="1101" Name ="日游客容量限制值" FID="11"  IsLeaf="true"></Node>
+    <Node Id="1102" Name ="瞬时游客容量限制值" FID="11"  IsLeaf="true"></Node>
+    <Node Id="1103" Name ="日游客量" FID ="11"  IsLeaf="true"></Node>
+    <Node Id ="1104" Name ="瞬时游客量" FID="11"  IsLeaf="true"></Node>
+    <Node Id ="1105" Name="客流高峰时段现场照片" FID="11"  IsLeaf="true"></Node>
+    <Node Id ="1106" Name="游客管理月度记录" FID ="11"  IsLeaf="true"></Node>
+    <Node Id ="1107" Name ="游客影响评估" FID ="11"  IsLeaf="true"></Node>
+    <Node Id ="1108" Name ="旅游效益年度纪录" FID ="11"  IsLeaf="true"></Node>
+  </Node>
+  <Node Id ="12" Name="日常管理">
+    <Node Id="1201" Name="日常巡查异常记录" FID ="12"  IsLeaf="true"></Node>
+    <Node Id ="1203" Name ="保养与维护工程记录" FID="12"  IsLeaf="true"></Node>
+  </Node>
+  <Node Id ="13" Name="安防消防" >
+    <Node Id="1301" Name ="现有安消防系统硬件设施信息" FID ="13"  IsLeaf="true"></Node>
+    <Node Id="1302" Name ="管理制度和应急预案记录" FID ="13"  IsLeaf="true"></Node>
+    <Node Id ="1303" Name ="安全事故记录" FID="13"  IsLeaf="true"></Node>
+  </Node>
+  <Node Id ="14" Name ="考古发掘" >
+    <Node Id="1405" Name="已发掘面积" FID="14"  IsLeaf="true"></Node>
+    <Node Id="1401" Name="考古报告信息" FID="14" IsLeaf="true"></Node>
+    <Node Id="1402" Name="考古发掘记录" FID="14"  IsLeaf="true"></Node>
+    <Node Id="1404" Name="发掘面积" FID="14"  IsLeaf="true"></Node>
+    <Node Id="1403" Name="现场照片" FID="14"  IsLeaf="true"></Node>
+  </Node>
+  <Node Id="15" Name="保护展示与环境整治工程">
+    <Node Id ="1501" Name="保护展示与环境整治工程记录" FID="15"  IsLeaf="true"></Node>
+    <Node Id="1502" Name="项目范围图" FID="15"   IsLeaf="true"></Node>
+    <Node Id="1503" Name ="现场照片" FID="15"  IsLeaf="true"></Node>
+  </Node>
+  <Node Id ="16" Name ="保护管理规划">
+    <Node Id="1601" Name ="保护管理规划编制记录" FID ="16"  IsLeaf="true"></Node>
+    <Node Id="1602" Name ="现行规划执行情况记录" FID ="16"  IsLeaf="true"></Node>
+  </Node>
+</TreeConfig>

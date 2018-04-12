@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase < IDictionary < string, IList<GCHeritagePlatform.Models.HproseAttribute>>>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="keywords" content="国信司南（北京）地理信息技术有限公司，WMTS" />
+<meta name="description" content="成果服务——国信司南！" />
+<title>服务——国信司南</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="js/easyui/themes/default/easyui.css" />
+<link rel="stylesheet" type="text/css" href="js/easyui/themes/icon.css" />
+<script  src="js/easyui/jquery.min.js"></script>
+<script  src="js/easyui/jquery.easyui.min.js"></script>
+
+<script type="text/javascript">
+$(function(){	
+	//导航切换
+	/*$(".menuson li").click(function(){
+		$(".menuson li.active").removeClass("active")
+		$(this).addClass("active");
+	});*/
+	
+	$('.title').click(function(){
+		var $ul = $(this).next('ul');
+		$('dd').find('ul').slideUp();
+		if($ul.is(':visible')){
+			$(this).next('ul').slideUp();
+		}else{
+			$(this).next('ul').slideDown();
+		}
+	});
+})	
+</script>
+
+
+</head>
+
+<body style="background:#f0f9fd;">
+
+    
+    <dl class="leftmenu">
+        @{
+            var i = 0;
+            var j =0;
+            var imgUrl = "'images/leftico01.png'";
+            @foreach (var key in Model.Keys)
+            {
+                <dd>
+                    <div class="title"><span>
+            @{
+                if (i < 4)
+                {
+                    j = i + 1;
+                    imgUrl = "images/leftico0" + @j + ".png";
+                }
+                else
+                {
+                    imgUrl = "'images/leftico01.png'";
+                }
+                <img src=@imgUrl />
+                i++;
+            }
+                        </span>@key
+                    </div>
+                    <ul class="menuson">
+           @{     
+                     var listService = Model[key];
+                @foreach (var service in listService)
+                {
+                     @if (service != null)
+                     {
+                                <li>
+                                    <cite></cite>@service.Description  &nbsp; &nbsp;@service.Method
+                                    <i></i>
+                                </li>
+                     }
+                }
+               }
+                    </ul>
+                </dd>
+            }
+         }
+    </dl>
+    <div class="rightinfo" >
+     </div>
+</body>
+</html>

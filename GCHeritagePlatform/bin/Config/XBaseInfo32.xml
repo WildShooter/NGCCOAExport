@@ -1,0 +1,868 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--基础数据3大类32项增删查改-->
+<BaseInfoXModel>
+  <Node Title="保护区划图">
+    <Fun ID="20" TableName="HPF_JSKZ_BHQHT" KeyWords="TZMC" >
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="LJ" DataColumns="TZLJ" Remark="图纸路径" Format="Image"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="数据入库时间" BSelect="1"></Data>
+      <Data HeadColumns="WDMC" DataColumns="TZMC" Remark="图纸名称" BSelect="1"></Data>
+      <Data HeadColumns="TZNRLX" DataColumns="TZNRLX" Remark="图纸内容类型"></Data>
+      <Data HeadColumns="CHZRDW" DataColumns="CHZRDW" Remark="测绘责任单位"></Data>
+      <Data HeadColumns="TZGS" DataColumns="TZGS" Remark="图纸格式"></Data>
+      <Data HeadColumns="BLC" DataColumns="BLC" Remark="比例尺"></Data>
+      <Data HeadColumns="CHR" DataColumns="CHR" Remark="测绘人"></Data>
+      <Data HeadColumns="CTSJ" DataColumns="CTSJ" Remark="成图时间"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"  ></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+    <Data HeadColumns="XZCS" DataColumns="XZCS" Remark="下载次数"></Data>
+    </Fun>
+  </Node>
+  <Node Title="病害调查记录">
+    <Fun ID="12" TableName="V_HPF_BTYZTBH_BHDCJCGZQKJLFJ "  KeyWords="WDMC" >
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="LJ" DataColumns="LJ" Remark="路径" Format="Image"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="LYCS" DataColumns="LYCS" Remark="利用次数"></Data>
+      <Data HeadColumns="WDMC" DataColumns="WDMC" Remark="文档名称" BSelect="1"></Data>
+      <Data HeadColumns="WDLX" DataColumns="WDLX" Remark="文档类型"></Data>
+      <Data HeadColumns="WDBB" DataColumns="WDBB" Remark="文档版本"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="文档上传时间" BSelect="1"></Data>
+      <Data HeadColumns="WDCJSJ" DataColumns="WDCJSJ" Remark="文档创建时间"></Data>
+      <Data HeadColumns="WDZZ" DataColumns="WDZZ" Remark="文档作者"></Data>
+      <Data HeadColumns="WDBZDW" DataColumns="WDBZDW" Remark="文档编制单位"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      <Data HeadColumns="BHBH" DataColumns="BHBH" Remark="病害编号"></Data>
+      <Data HeadColumns="BHWZ" DataColumns="BHWZ" Remark="病害位置"></Data>
+      <Data HeadColumns="BHLX" DataColumns="BHLX" Remark="病害类型"></Data>
+      <Data HeadColumns="BHSYT" DataColumns="BHSYT" Remark="病害状态图"></Data>
+      <Data HeadColumns="JLID" DataColumns="JLID" Remark="记录ID"></Data>
+    </Fun>
+  </Node>
+  <Node Title="病害分布图">
+    <Fun ID="11" TableName="HPF_BTYZTBH_BHFBT " KeyWords="TZMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="LJ" DataColumns="TZLJ"   Remark="图纸路径" Format="Image"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="WDMC" DataColumns="TZMC" Remark="图纸名称" BSelect="1"></Data>
+      <Data HeadColumns="TZNRLX" DataColumns="TZNRLX" Remark="图纸内容类型"></Data>
+      <Data HeadColumns="CHZRDW" DataColumns="CHZRDW" Remark="测绘责任单位"></Data>
+      <Data HeadColumns="TZSJL" DataColumns="TZSJL" Remark="图纸数据量"></Data>
+      <Data HeadColumns="TZGS" DataColumns="TZGS" Remark="图纸格式"></Data>
+      <Data HeadColumns="BLC" DataColumns="BLC" Remark="比例尺"></Data>
+      <Data HeadColumns="CHR" DataColumns="CHR" Remark="测绘人"></Data>
+      <Data HeadColumns="CTSJ" DataColumns="CTSJ" Remark="成图时间"></Data>
+      <Data HeadColumns="YLT" DataColumns="YLT" Remark="预览图" Format="Image"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间" ></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      <Data HeadColumns="XZCS" DataColumns="XZCS" Remark="下载次数"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="上传时间" BSelect="1"></Data>
+    </Fun>
+  </Node>
+  <Node Title="大会决议">
+    <Fun ID="2" TableName="HPF_YCJCXX_DHJY "  KeyWords="WDMC" >
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="LJ" DataColumns="LJ" Remark="路径" Format="Image"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="LYCS" DataColumns="LYCS" Remark="利用次数"></Data>
+      <Data HeadColumns="WDMC" DataColumns="WDMC" Remark="文档名称" BSelect="1"></Data>
+      <Data HeadColumns="WDLX" DataColumns="WDLX" Remark="文档类型"></Data>
+      <Data HeadColumns="WDBB" DataColumns="WDBB" Remark="文档版本"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="文档上传时间" BSelect="1"></Data>
+      <Data HeadColumns="WDCJSJ" DataColumns="WDCJSJ" Remark="文档创建时间"></Data>
+      <Data HeadColumns="WDZZ" DataColumns="WDZZ" Remark="文档作者"></Data>
+      <Data HeadColumns="WDBZDW" DataColumns="WDBZDW" Remark="文档编制单位"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      <Data HeadColumns="LX" DataColumns="LX" Remark="类型"></Data>
+      <Data HeadColumns="SJ" DataColumns="SJ" Remark="时间"></Data>
+    </Fun>
+  </Node>
+  <Node Title="定期报告">
+    <Fun ID="4" TableName="HPF_YCJCXX_DQBG "  KeyWords="WDMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="LJ" DataColumns="LJ"  Remark="路径" Format="Image"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="LYCS" DataColumns="LYCS" Remark="利用次数"></Data>
+      <Data HeadColumns="WDMC" DataColumns="WDMC" Remark="文档名称" BSelect="1"></Data>
+      <Data HeadColumns="WDLX" DataColumns="WDLX" Remark="文档类型"></Data>
+      <Data HeadColumns="WDBB" DataColumns="WDBB" Remark="文档版本"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="文档上传时间" BSelect="1"></Data>
+      <Data HeadColumns="WDCJSJ" DataColumns="WDCJSJ" Remark="文档创建时间"></Data>
+      <Data HeadColumns="WDZZ" DataColumns="WDZZ" Remark="文档作者"></Data>
+      <Data HeadColumns="WDBZDW" DataColumns="WDBZDW" Remark="文档编制单位"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      <Data HeadColumns="TJSJ" DataColumns="TJSJ" Remark="提交时间"></Data>
+      <Data HeadColumns="LX" DataColumns="LX" Remark="类型"></Data>
+    </Fun>
+  </Node>
+  <Node Title="考古报告信息">
+    <Fun ID="31" TableName="HPF_KGFJ_KGBG " KeyWords="WDMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="LJ" DataColumns="XGWD"   Remark="路径" Format="Image"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="LYCS" DataColumns="LYCS" Remark="利用次数"></Data>
+      <Data HeadColumns="WDMC" DataColumns="WDMC" Remark="文档名称" BSelect="1"></Data>
+      <Data HeadColumns="WDLX" DataColumns="WDLX" Remark="文档类型"></Data>
+      <Data HeadColumns="WDBB" DataColumns="WDBB" Remark="文档版本"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="文档上传时间" BSelect="1"></Data>
+      <Data HeadColumns="WDCJSJ" DataColumns="WDCJSJ" Remark="文档创建时间"></Data>
+      <Data HeadColumns="WDZZ" DataColumns="WDZZ" Remark="文档作者"></Data>
+      <Data HeadColumns="WDBZDW" DataColumns="WDBZDW" Remark="文档编制单位"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+     
+      <Data HeadColumns="KGBGMC" DataColumns="KGBGMC" Remark="考古报告名称"></Data>
+      <Data HeadColumns="BZDW" DataColumns="BZDW" Remark="编制单位"></Data>
+      <Data HeadColumns="BXRY" DataColumns="BXRY" Remark="编写人员"></Data>
+      <Data HeadColumns="CBZT" DataColumns="CBZT" Remark="出版状态"></Data>
+      <Data HeadColumns="CBSJ" DataColumns="CBSJ" Remark="出版时间"></Data>
+      <Data HeadColumns="CBDW" DataColumns="CBDW" Remark="出版单位"></Data>
+    </Fun>
+  </Node>
+  <Node Title="其他">
+    <Fun ID="32" TableName="HPF_YCJCXX_QT " KeyWords="WDMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="LJ" DataColumns="LJ"  Remark="路径" Format="Image"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="LYCS" DataColumns="LYCS" Remark="利用次数"></Data>
+      <Data HeadColumns="WDMC" DataColumns="WDMC" Remark="文档名称" BSelect="1"></Data>
+      <Data HeadColumns="WDLX" DataColumns="WDLX" Remark="文档类型"></Data>
+      <Data HeadColumns="WDBB" DataColumns="WDBB" Remark="文档版本"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="文档上传时间" BSelect="1"></Data>
+      <Data HeadColumns="WDCJSJ" DataColumns="WDCJSJ" Remark="文档创建时间"></Data>
+      <Data HeadColumns="WDZZ" DataColumns="WDZZ" Remark="文档作者"></Data>
+      <Data HeadColumns="WDBZDW" DataColumns="WDBZDW" Remark="文档编制单位"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+    </Fun>
+  </Node>
+  <Node Title="其他相关规划">
+    <Fun ID="27" TableName="HPF_YCJCXX_QTXGGH "  KeyWords="WDMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="LJ" DataColumns="WDFJ"  Remark="文档附件" Format="Image"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="LYCS" DataColumns="LYCS" Remark="利用次数"></Data>
+      <Data HeadColumns="WDMC" DataColumns="WDMC" Remark="文档名称" BSelect="1"></Data>
+      <Data HeadColumns="WDLX" DataColumns="WDLX" Remark="文档类型"></Data>
+      <Data HeadColumns="WDBB" DataColumns="WDBB" Remark="文档版本"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="文档上传时间" BSelect="1"></Data>
+      <Data HeadColumns="WDCJSJ" DataColumns="WDCJSJ" Remark="文档创建时间"></Data>
+      <Data HeadColumns="WDZZ" DataColumns="WDZZ" Remark="文档作者"></Data>
+      <Data HeadColumns="WDBZDW" DataColumns="WDBZDW" Remark="文档编制单位"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      
+      <Data HeadColumns="LX" DataColumns="LX" Remark="类型"></Data>
+      <Data HeadColumns="GHQXKSNF" DataColumns="GHQXKSNF" Remark="规划期限开始年份"></Data>
+      <Data HeadColumns="GHQXJSNF" DataColumns="GHQXJSNF" Remark="规划期限结束年份"></Data>
+      <Data HeadColumns="MC" DataColumns="MC" Remark="名称"></Data>
+      <Data HeadColumns="ZZBZDW" DataColumns="ZZBZDW" Remark="组织编制单位"></Data>
+      <Data HeadColumns="BZDW" DataColumns="BZDW" Remark="编制单位"></Data>
+  
+    </Fun>
+  </Node>
+  <Node Title="其他照片">
+    <Fun ID="16" TableName="HPF_YCJCXX_QTZP "  KeyWords="TPMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="XZCS" DataColumns="XZCS" Remark="下载次数"></Data>
+      <Data HeadColumns="LJ" DataColumns="LJ" Remark="路径" Format="Image"></Data>
+      <Data HeadColumns="WDMC" DataColumns="TPMC" Remark="图片名称" BSelect="1"></Data>
+      <Data HeadColumns="TPSJL" DataColumns="TPSJL" Remark="图片数据量"></Data>
+      <Data HeadColumns="PSSB" DataColumns="PSSB" Remark="拍摄设备"></Data>
+      <Data HeadColumns="TPGS" DataColumns="TPGS" Remark="图片格式"></Data>
+      <Data HeadColumns="PZSJ" DataColumns="PZSJ" Remark="图片生成时间"></Data>
+      <Data HeadColumns="PZR" DataColumns="PZRID" Remark="拍照人"></Data>
+      <Data HeadColumns="SJCJBH" DataColumns="SJCJBH" Remark="数据采集编号"></Data>
+      <Data HeadColumns="CJDZBXX" DataColumns="CJDZBXX" Remark="采集点坐标信息"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      <Data HeadColumns="TXR" DataColumns="TXRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="TXSJ" Remark="填写时间" ></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="图片上传时间" BSelect="1"></Data>
+    </Fun>
+  </Node>
+  <Node Title="申遗文本">
+    <Fun ID="1" TableName="HPF_YCJCXX_SYWB " KeyWords="WDMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="LJ" DataColumns="LJ"  Remark="路径" Format="Image"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="LYCS" DataColumns="LYCS" Remark="利用次数"></Data>
+      <Data HeadColumns="WDMC" DataColumns="WDMC" Remark="文档名称" BSelect="1"></Data>
+      <Data HeadColumns="WDLX" DataColumns="WDLX" Remark="文档类型"></Data>
+      <Data HeadColumns="WDBB" DataColumns="WDBB" Remark="文档版本"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="文档上传时间" BSelect="1"></Data>
+      <Data HeadColumns="WDCJSJ" DataColumns="WDCJSJ" Remark="文档创建时间"></Data>
+      <Data HeadColumns="WDZZ" DataColumns="WDZZ" Remark="文档作者"></Data>
+      <Data HeadColumns="WDBZDW" DataColumns="WDBZDW" Remark="文档编制单位"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间" ></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+    </Fun>
+  </Node>
+  <Node Title="四有档案">
+    <Fun ID="9" TableName="HPF_YCJCXX_SYDA " KeyWords="WDMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="LJ" DataColumns="LJ"  Remark="路径" Format="Image"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="LYCS" DataColumns="LYCS" Remark="利用次数"></Data>
+      <Data HeadColumns="WDMC" DataColumns="WDMC" Remark="文档名称" BSelect="1"></Data>
+      <Data HeadColumns="WDLX" DataColumns="WDLX" Remark="文档类型"></Data>
+      <Data HeadColumns="WDBB" DataColumns="WDBB" Remark="文档版本"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="文档上传时间" BSelect="1"></Data>
+      <Data HeadColumns="WDCJSJ" DataColumns="WDCJSJ" Remark="文档创建时间"></Data>
+      <Data HeadColumns="WDZZ" DataColumns="WDZZ" Remark="文档作者"></Data>
+      <Data HeadColumns="WDBZDW" DataColumns="WDBZDW" Remark="文档编制单位"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      <Data HeadColumns="LB" DataColumns="LB" Remark="类别"></Data>
+      <Data HeadColumns="DAJLSJ" DataColumns="DAJLSJ" Remark="档案建立时间"></Data>
+      
+    </Fun>
+  </Node>
+  <Node Title="突出普遍价值（SOUV）声明材料">
+    <Fun ID="3" TableName="HPF_YCJCXX_TCPBJJSM " KeyWords="WDMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="LJ" DataColumns="LJ"  Remark="路径" Format="Image"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="LYCS" DataColumns="LYCS" Remark="利用次数"></Data>
+      <Data HeadColumns="WDMC" DataColumns="WDMC" Remark="文档名称" BSelect="1"></Data>
+      <Data HeadColumns="WDLX" DataColumns="WDLX" Remark="文档类型"></Data>
+      <Data HeadColumns="WDBB" DataColumns="WDBB" Remark="文档版本"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="文档上传时间" BSelect="1"></Data>
+      <Data HeadColumns="WDCJSJ" DataColumns="WDCJSJ" Remark="文档创建时间"></Data>
+      <Data HeadColumns="WDZZ" DataColumns="WDZZ" Remark="文档作者"></Data>
+      <Data HeadColumns="WDBZDW" DataColumns="WDBZDW" Remark="文档编制单位"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      <Data HeadColumns="LX" DataColumns="LX" Remark="类型"></Data>
+      <Data HeadColumns="CNSMCLDSJ" DataColumns="CNSMCLDSJ" Remark="采纳声明材料的时间（年份）"></Data>
+    </Fun>
+  </Node>
+  <Node Title="卫星影像或航摄影像">
+    <Fun ID="15" TableName="HPF_YCJCXX_WXYXHHSYX " KeyWords="YXMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="LJ" DataColumns="LJ"  Remark="路径" Format="Image"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="LYCS" DataColumns="LYCS" Remark="利用次数"></Data>
+      <Data HeadColumns="WDMC" DataColumns="YXMC" Remark="影像名称" BSelect="1"></Data>
+      <Data HeadColumns="YXFBL" DataColumns="YXFBL" Remark="影像分辨率"></Data>
+      <Data HeadColumns="YXFW" DataColumns="YXFW" Remark="影像范围"></Data>
+      <Data HeadColumns="YXSJL" DataColumns="YXSJL" Remark="影像数据量"></Data>
+      <Data HeadColumns="YXLX" DataColumns="YXLX" Remark="影像类型"></Data>
+      <Data HeadColumns="YXSCSJ" DataColumns="YXSCSJ" Remark="影像生成时间"></Data>
+      <Data HeadColumns="YXLY" DataColumns="YXLY" Remark="影像来源"></Data>
+      <Data HeadColumns="YXCJDW" DataColumns="YXCJDW" Remark="影像采集单位"></Data>
+      <Data HeadColumns="YXCLDW" DataColumns="YXCLDW" Remark="影像处理单位"></Data>
+      <Data HeadColumns="YXZB" DataColumns="YXZB" Remark="影像坐标信息"></Data>
+      <Data HeadColumns="TXR" DataColumns="TXRID" Remark="填写人"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="TXSJ" Remark="填写时间" BSelect="1"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="YXFW" DataColumns="YXFW" Remark="影像范围"></Data>
+    </Fun>
+  </Node>
+  <Node Title="工程项目">
+    <Fun ID="" TableName="HPF_BHGC_XGWD" KeyWords="WDMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="LYCS" DataColumns="LYCS" Remark="利用次数"></Data>
+      <Data HeadColumns="WDMC" DataColumns="WDMC" Remark="文档名称" BSelect="1"></Data>
+      <Data HeadColumns="WDLX" DataColumns="WDLX" Remark="文档类型"></Data>
+      <Data HeadColumns="WDBB" DataColumns="WDBB" Remark="文档版本"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="文档上传时间" BSelect="1"></Data>
+      <Data HeadColumns="WDCJSJ" DataColumns="WDCJSJ" Remark="文档创建时间"></Data>
+      <Data HeadColumns="WDZZ" DataColumns="WDZZ" Remark="文档作者"></Data>
+      <Data HeadColumns="WDBZDW" DataColumns="WDBZDW" Remark="文档编制单位"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间" ></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      <Data HeadColumns="LJ" DataColumns="LJ" Remark="路径" Format="Image"></Data>
+    </Fun>
+  </Node>
+  <Node Title="现有安消防系统硬件设施信息">
+    <Fun ID="26" TableName="HPF_AFXF_AXFXTYJSS" KeyWords="WDMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="LYCS" DataColumns="LYCS" Remark="利用次数"></Data>
+      <Data HeadColumns="WDMC" DataColumns="WDMC" Remark="文档名称" BSelect="1"></Data>
+      <Data HeadColumns="WDLX" DataColumns="WDLX" Remark="文档类型"></Data>
+      <Data HeadColumns="WDBB" DataColumns="WDBB" Remark="文档版本"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="文档上传时间" BSelect="1"></Data>
+      <Data HeadColumns="WDCJSJ" DataColumns="WDCJSJ" Remark="文档创建时间"></Data>
+      <Data HeadColumns="WDZZ" DataColumns="WDZZ" Remark="文档作者"></Data>
+      <Data HeadColumns="WDBZDW" DataColumns="WDBZDW" Remark="文档编制单位"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      
+      <Data HeadColumns="JCSJ" DataColumns="JCSJ" Remark="建成时间"></Data>
+      <Data HeadColumns="TZJE" DataColumns="TZJE" Remark="投资金额"></Data>
+      <Data HeadColumns="XTGCMS" DataColumns="XTGCMS" Remark="系统构成描述"></Data>
+      <Data HeadColumns="JKTTSL" DataColumns="JKTTSL" Remark="监控探头数量"></Data>
+    </Fun>
+  </Node>
+  <Node Title="遗产使用功能图">
+    <Fun ID="10" TableName="HPF_YCJCXX_SYGNJZT" KeyWords="TZMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="RKSJ" DataColumns="RKSJ" Remark="数据入库时间"></Data>
+      <Data HeadColumns="WDMC" DataColumns="TZMC" Remark="图纸名称" BSelect="1"></Data>
+      <Data HeadColumns="CHZRDW" DataColumns="CHZRDW" Remark="测绘责任单位"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="TZNRLX" DataColumns="TZNRLX" Remark="图纸内容类型"></Data>
+      <Data HeadColumns="TZGS" DataColumns="TZGS" Remark="图纸格式"></Data>
+      <Data HeadColumns="BLC" DataColumns="BLC" Remark="比例尺"></Data>
+      <Data HeadColumns="CHR" DataColumns="CHR" Remark="测绘人"></Data>
+      <Data HeadColumns="CTSJ" DataColumns="CTSJ" Remark="成图时间"></Data>
+      <Data HeadColumns="LJ" DataColumns="TZLJ" Remark="图纸路径" Format="Image"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间" ></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="图片上传时间" BSelect="1"></Data>
+      <Data HeadColumns="XZCS" DataColumns="XZCS" Remark="下载次数"></Data>
+    </Fun>
+  </Node>
+  <Node Title="遗产要素单体或局部的测绘图">
+    <Fun ID="13" TableName="HPF_YCJCXX_YCYSDTHJBCHJZT" KeyWords="TZMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="MJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="RKSJ" DataColumns="RKSJ" Remark="数据入库时间"></Data>
+      <Data HeadColumns="TZNRLX" DataColumns="TZNRLX" Remark="数据入库时间"></Data>
+      <Data HeadColumns="CHZRDW" DataColumns="CHZRDW" Remark="测绘责任单位"></Data>
+      <Data HeadColumns="XZCS" DataColumns="XZCS" Remark="下载次数"></Data>
+      <Data HeadColumns="WDMC" DataColumns="TZMC" Remark="图纸名称" BSelect="1"></Data>
+      <Data HeadColumns="TZLX" DataColumns="TZLX" Remark="图纸类型"></Data>
+      <Data HeadColumns="TZSJL" DataColumns="TZSJL" Remark="图纸数据量"></Data>
+      <Data HeadColumns="TZGS" DataColumns="TZGS" Remark="图纸格式"></Data>
+      <Data HeadColumns="BLC" DataColumns="BLC" Remark="比例尺"></Data>
+      <Data HeadColumns="CHR" DataColumns="CHR" Remark="测绘人"></Data>
+      <Data HeadColumns="CTSJ" DataColumns="TZCJSJ" Remark="成图时间"></Data>
+      <Data HeadColumns="LJ" DataColumns="TZLJ" Remark="图纸路径" Format="Image"></Data>
+      <Data HeadColumns="GLZRDW" DataColumns="GLZRDW" Remark="管理责任单位"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间" ></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="图纸上传时间" BSelect="1"></Data>
+    </Fun>
+  </Node>
+  <Node Title="遗产要素单体或局部照片">
+    <Fun ID="14" TableName="v_HPF_YCYSDT_YCYSDTHJBTP " KeyWords="TPMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="MJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="XZCS" DataColumns="XZCS" Remark="下载次数"></Data>
+      <Data HeadColumns="LJ" DataColumns="TPLJ" Remark="路径" Format="Image"></Data>
+      <Data HeadColumns="WDMC" DataColumns="TPMC" Remark="图片名称" BSelect="1"></Data>
+      <Data HeadColumns="TPSJL" DataColumns="TPSJL" Remark="图片数据量"></Data>
+      <Data HeadColumns="PSSB" DataColumns="PSSB" Remark="拍摄设备"></Data>
+      <Data HeadColumns="SJCJBH" DataColumns="SJCJBH" Remark="数据采集编号"></Data>
+      <Data HeadColumns="CJDZBXX" DataColumns="CJDZBXX" Remark="采集点坐标信息"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"  ></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="文档上传时间" BSelect="1"></Data>
+    </Fun>
+  </Node>
+  <Node Title="遗产要素分布图">
+    <Fun ID="6" TableName="HPF_YCJCXX_YCYSFBT" KeyWords="TZMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="LJ" DataColumns="TZLJ" Remark="图纸路径" Format="Image"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="RKSJ" DataColumns="RKSJ" Remark="数据入库时间"></Data>
+      <Data HeadColumns="WDMC" DataColumns="TZMC" Remark="图纸名称" BSelect="1"></Data>
+      <Data HeadColumns="TZNRLX" DataColumns="TZNRLX" Remark="图纸内容类型"></Data>
+      <Data HeadColumns="CHZRDW" DataColumns="CHZRDW" Remark="测绘责任单位"></Data>
+      <Data HeadColumns="TZGS" DataColumns="TZGS" Remark="图纸格式"></Data>
+      <Data HeadColumns="BLC" DataColumns="BLC" Remark="比例尺"></Data>
+      <Data HeadColumns="CHR" DataColumns="CHR" Remark="测绘人"></Data>
+      <Data HeadColumns="CTSJ" DataColumns="CJSJ" Remark="成图时间"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"  ></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="图片上传时间" BSelect="1"></Data>
+    </Fun>
+  </Node>
+  <Node Title="遗产总图">
+    <Fun ID="5" TableName="HPF_YCJCXX_YCZT" KeyWords="TZMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="LJ" DataColumns="TZLJ" Remark="图纸路径" Format="Image"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="RKSJ" DataColumns="RKSJ" Remark="数据入库时间"></Data>
+      <Data HeadColumns="WDMC" DataColumns="TZMC" Remark="图纸名称" BSelect="1"></Data>
+      <Data HeadColumns="TZNRLX" DataColumns="TZNRLX" Remark="图纸内容类型"></Data>
+      <Data HeadColumns="CHZRDW" DataColumns="CHZRDW" Remark="测绘责任单位"></Data>
+      <Data HeadColumns="TZGS" DataColumns="TZGS" Remark="图纸格式"></Data>
+      <Data HeadColumns="BLC" DataColumns="BLC" Remark="比例尺"></Data>
+      <Data HeadColumns="CHR" DataColumns="CHR" Remark="测绘人"></Data>
+      <Data HeadColumns="CTSJ" DataColumns="CTSJ" Remark="成图时间"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"  ></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+       <Data HeadColumns="XZCS" DataColumns="XZCS" Remark="下载次数"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="图纸上传时间" BSelect="1"></Data>
+    </Fun>
+  </Node>
+  <Node Title="舆图">
+    <Fun ID="29" TableName="HPF_YCJCXX_YTTP " KeyWords="TPMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="XZCS" DataColumns="XZCS" Remark="下载次数"></Data>
+      <Data HeadColumns="LJ" DataColumns="LJ" Remark="路径" Format="Image"></Data>
+      <Data HeadColumns="WDMC" DataColumns="TPMC" Remark="图片名称" BSelect="1"></Data>
+      <Data HeadColumns="TPSJL" DataColumns="TPSJL" Remark="图片数据量"></Data>
+      <Data HeadColumns="PSSB" DataColumns="PSSB" Remark="拍摄设备"></Data>
+      <Data HeadColumns="TPGS" DataColumns="TPGS" Remark="图片格式"></Data>
+      <Data HeadColumns="PZSJ" DataColumns="PZSJ" Remark="图片生成时间"></Data>
+      <Data HeadColumns="PZR" DataColumns="PZRID" Remark="拍照人"></Data>
+      <Data HeadColumns="SJCJBH" DataColumns="SJCJBH" Remark="数据采集编号"></Data>
+      <Data HeadColumns="CJDZBXX" DataColumns="CJDZBXX" Remark="采集点坐标信息"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      <Data HeadColumns="TXR" DataColumns="TXRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="TXSJ" Remark="填写时间" ></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="图片上传时间" BSelect="1"></Data>
+    </Fun>
+  </Node>
+  <Node Title="舆图">
+    <Fun ID="29" TableName="HPF_YCJCXX_YTWD " KeyWords="WDMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="LYCS" DataColumns="LYCS" Remark="利用次数"></Data>
+      <Data HeadColumns="WDMC" DataColumns="WDMC" Remark="文档名称" BSelect="1"></Data>
+      <Data HeadColumns="WDLX" DataColumns="WDLX" Remark="文档类型"></Data>
+      <Data HeadColumns="WDBB" DataColumns="WDBB" Remark="文档版本"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="文档上传时间" BSelect="1"></Data>
+      <Data HeadColumns="WDCJSJ" DataColumns="WDCJSJ" Remark="文档创建时间"></Data>
+      <Data HeadColumns="WDZZ" DataColumns="WDZZ" Remark="文档作者"></Data>
+      <Data HeadColumns="WDBZDW" DataColumns="WDBZDW" Remark="文档编制单位"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      <Data HeadColumns="LJ" DataColumns="LJ" Remark="路径" Format="Image"></Data>
+    </Fun>
+  </Node>
+  <Node Title="志书、史书">
+    <Fun ID="28" TableName="HPF_YCJCXX_ZSSS " KeyWords="WDMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="LYCS" DataColumns="LYCS" Remark="利用次数"></Data>
+      <Data HeadColumns="WDMC" DataColumns="WDMC" Remark="文档名称" BSelect="1"></Data>
+      <Data HeadColumns="WDLX" DataColumns="WDLX" Remark="文档类型"></Data>
+      <Data HeadColumns="WDBB" DataColumns="WDBB" Remark="文档版本"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="文档上传时间" BSelect="1"></Data>
+      <Data HeadColumns="WDCJSJ" DataColumns="WDCJSJ" Remark="文档创建时间"></Data>
+      <Data HeadColumns="WDZZ" DataColumns="WDZZ" Remark="文档作者"></Data>
+      <Data HeadColumns="WDBZDW" DataColumns="WDBZDW" Remark="文档编制单位"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      <Data HeadColumns="LJ" DataColumns="LJ" Remark="路径" Format="Image"></Data>
+    
+  
+    </Fun>
+  </Node>
+  <Node Title="专项保护管理法规、规章">
+    <Fun ID="22" TableName=
+         " 
+         (
+		SELECT
+	d.YCMC,
+	g.`NAME` AS ZT_BM,
+	h.`NAME` AS LX_BM,
+	a.LB,
+	a.WJNR,
+	a.MC,
+	a.GBSJ,
+	a.GBWH,
+	a.SSSJ,
+	a.ZT,
+	i.id,
+	i.WDMC,
+	i.CCLJ,
+	i.CJRID,
+	i.CJSJ,
+	i.DJRID,
+	i.DJSJ,
+	i.FBFW,
+	i.FGID,
+	i.GLYCBTID,
+	i.LYCS,
+	i.RKSJ,
+	i.SCRID,
+	i.SCSJ,
+	i.SFYDJ,
+	i.SHBTGSM,
+	i.SHRID,
+	i.SHSJ,
+	CASE
+WHEN ifnull(i.SHZT ,- 1) >- 1 THEN
+	'0'
+ELSE
+	'1'
+END AS TJZT,
+ CASE
+WHEN ifnull(i.SHZT, - 1) = 2 THEN
+	'2'
+ELSE
+	'1'
+END AS SHZT
+FROM
+	HPF_JGJS_ZXBHGLFGGZ a
+LEFT JOIN HPF_YCJCXX_SJWHYC d ON SUBSTRING(a.GLYCBTID, 1, 5) = d.BM
+LEFT JOIN ysj_domain_enumitem g ON a.ZT = g.`CODE` and g.ENUMID = '1E46BA82-6955-4497-A9F0-10399AEAE2F5'
+LEFT JOIN ysj_domain_enumitem h ON a.LB = h.`CODE` and h.ENUMID = 'EA248F9B-D2E0-47CC-9CDB-E211AAA674E2'
+LEFT JOIN HPF_JGJS_ZXFGXGWD i ON a.ID = i.FGID 
+) z 
+      
+      " KeyWords="WDMC"  >
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID"  data ="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"  data="SJMJ"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"  data ="FBFW"></Data>
+      <Data HeadColumns="LYCS" DataColumns="LYCS" Remark="利用次数" data="LYCS" ></Data>
+      <Data HeadColumns="WDMC" DataColumns="WDMC" Remark="文档名称" data ="WDMC"  BSelect="1"></Data>
+      <Data HeadColumns="WDLX" DataColumns="WDLX" Remark="文档类型" data="WDLX"></Data>
+      <Data HeadColumns="WDBB" DataColumns="WDBB" Remark="文档版本" data="WDBB"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="文档上传时间"  data="RKSJ"  BSelect="1"></Data>
+      <Data HeadColumns="WDZZ" DataColumns="WDZZ" Remark="文档作者" data="WDZZ"></Data>
+      <Data HeadColumns="WDBZDW" DataColumns="WDBZDW" data ="WDBZDW" Remark="文档编制单位"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID"  data="CJRID"   Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" data="CJSJ" Remark="填写时间"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" data="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" data="SHSJ" Remark="审核时间"></Data>
+      <Data HeadColumns="LJ" DataColumns="CCLJ" data="CCLJ" Remark="路径" Format="Image"></Data>
+      
+      <Data HeadColumns="LB" DataColumns="LB" data="LB" Remark="类型"></Data>
+      <Data HeadColumns="MC" DataColumns="MC" data="MC" Remark="名称"></Data>
+      <Data HeadColumns="GBSJ" DataColumns="GBSJ" data="GBSJ" Remark="公布时间"></Data>
+      <Data HeadColumns="GBWH" DataColumns="GBWH" data="GBWH" Remark="公布文号" ></Data>
+      <Data HeadColumns="ZT" DataColumns="ZT"  data ="ZT" Remark="状态"></Data>
+      <Data HeadColumns="SSSJ" DataColumns="SSSJ" data="SSSJ"  Remark="实施时间" ></Data>
+  
+    
+    </Fun>
+  </Node>
+  <Node Title="专著">
+    <Fun ID="30" TableName="HPF_YCJCXX_ZZ " KeyWords="WDMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="LYCS" DataColumns="LYCS" Remark="利用次数"></Data>
+      <Data HeadColumns="WDMC" DataColumns="WDMC" Remark="文档名称" BSelect="1"></Data>
+      <Data HeadColumns="WDLX" DataColumns="WDLX" Remark="文档类型"></Data>
+      <Data HeadColumns="WDBB" DataColumns="WDBB" Remark="文档版本"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="文档上传时间" BSelect="1"></Data>
+      <Data HeadColumns="WDCJSJ" DataColumns="WDCJSJ" Remark="文档创建时间"></Data>
+      <Data HeadColumns="WDZZ" DataColumns="WDZZ" Remark="文档作者"></Data>
+      <Data HeadColumns="WDBZDW" DataColumns="WDBZDW" Remark="文档编制单位"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      <Data HeadColumns="LJ" DataColumns="LJ" Remark="路径" Format="Image"></Data>
+    </Fun>
+  </Node>
+  <Node Title="遗产要素清单">
+    <Fun ID="7" TableName="V_HPF_YCJCXX_YCYS " KeyWords="MC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="YCYSLX" DataColumns="YCYSLXMC" Remark="遗产要素类型" BSelect="1"></Data>
+      <Data HeadColumns="WDMC" DataColumns="MC" Remark="文档名称" BSelect="1" ></Data>
+      <Data HeadColumns="WDSCSJ" DataColumns="RKSJ" Remark="文档上传时间" ></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="MC" DataColumns="MC" Remark="遗产要素名称"></Data>
+      <Data HeadColumns="YCYSMS" DataColumns="YCYSMS" Remark="遗产要素描述"></Data>
+      <Data HeadColumns="YCYSLX" DataColumns="YCYSLX" Remark="遗产要素类型"></Data>
+      <Data HeadColumns="GM" DataColumns="GM" Remark="规模"></Data>
+      <Data HeadColumns="JD" DataColumns="JD" Remark="经度"></Data>
+      <Data HeadColumns="WD" DataColumns="WD" Remark="纬度"></Data>
+      <Data HeadColumns="GC" DataColumns="GC" Remark="高程"></Data>
+      <Data HeadColumns="WBDWMC" DataColumns="WBDWMC" Remark="对应的文保单位"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="上传时间" BSelect="1"></Data>
+      <Data HeadColumns="WBDWMC" DataColumns="WBDWMC" Remark="对应的文保单位"></Data>
+  
+    
+    </Fun>
+  </Node>
+  <Node Title="遗产地和各级文保单位的对应关系" >
+    <Fun ID="8" TableName="HPF_YCJCXX_YCDHGJWBDWDDYGX " KeyWords="WBDWMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="LYCS" DataColumns="LYCS" Remark="利用次数"></Data>
+      <Data HeadColumns="WDMC" DataColumns="WBDWMC" Remark="文物保护单位名称" BSelect="1"></Data>
+      <Data HeadColumns="LX" DataColumns="LX" Remark="文物保护单位类型" BSelect="1"></Data>
+      <Data HeadColumns="BHJB" DataColumns="BHJB" Remark="保护级别" BSelect="1"></Data>
+      <Data HeadColumns="WDLX" DataColumns="WDLX" Remark="文档类型"></Data>
+      <Data HeadColumns="WDBB" DataColumns="WDBB" Remark="文档版本"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="文档上传时间" BSelect="1"></Data>
+      <Data HeadColumns="WDCJSJ" DataColumns="WDCJSJ" Remark="文档创建时间"></Data>
+      <Data HeadColumns="WDZZ" DataColumns="WDZZ" Remark="文档作者"></Data>
+      <Data HeadColumns="WDBZDW" DataColumns="WDBZDW" Remark="文档编制单位"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      <Data HeadColumns="GBPC" DataColumns="GBPC" Remark="公布批次"></Data>
+      <Data HeadColumns="GBWH" DataColumns="GBWH" Remark="公布文号"></Data>
+      <Data HeadColumns="GBSJ" DataColumns="GBSJ" Remark="公布时间"></Data>
+      <Data HeadColumns="DYDYCYS" DataColumns="DYDYCYS" Remark="对应的遗产要素"></Data>
+
+    </Fun>
+  </Node>
+  <Node Title="遗产地管理责任机构信息">
+    <Fun ID="17" TableName="HPF_JGJS_BHGLJG " KeyWords="JGMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="JGMC" DataColumns="JGMC" Remark="机构名称"  BSelect="1"></Data>
+      <Data HeadColumns="SZXZQ" DataColumns="SZXZQ" Remark="所在行政区" BSelect="1"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+
+      <Data HeadColumns="ZZJGDM" DataColumns="ZZJGDM" Remark="组织机构代码"  ></Data>
+      <Data HeadColumns="CDDZR" DataColumns="CDDZR" Remark="承担的责任"  ></Data>
+      <Data HeadColumns="GLQYSM" DataColumns="GLQYSM" Remark="管理区域说明"></Data>
+      <Data HeadColumns="FDDBR" DataColumns="FDDBR" Remark="法定代表人"></Data>
+      <Data HeadColumns="LXRXM" DataColumns="LXRXM" Remark="联系人姓名"></Data>
+      <Data HeadColumns="LXDH" DataColumns="LXDH" Remark="联系电话"></Data>
+
+      <Data HeadColumns="JGCLSJ" DataColumns="JGCLSJ" Remark="机构成立时间"></Data>
+      <Data HeadColumns="SJGLDW" DataColumns="SJGLDW" Remark="上级管理单位"></Data>
+      <Data HeadColumns="GFWZ" DataColumns="GFWZ" Remark="官方网站"></Data>
+      <Data HeadColumns="DZYX" DataColumns="DZYX" Remark="电子邮箱"></Data>
+
+      <Data HeadColumns="JGJB" DataColumns="JGJB" Remark="机构级别"></Data>
+      <Data HeadColumns="BZRS" DataColumns="BZRS" Remark="编制人数"></Data>
+      <Data HeadColumns="GZRYZS" DataColumns="GZRYZS" Remark="工作人员总数"></Data>
+      <Data HeadColumns="ZYJFLY" DataColumns="ZYJFLY" Remark="主要经费来源"></Data>
+      
+    </Fun>
+  </Node>
+  <Node Title="监测机构">
+    <Fun ID="18" TableName="HPF_JGJS_JCJGXX " KeyWords="JCJGMC" >
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="FZR" DataColumns="FZR" Remark="负责人"  BSelect="1"></Data>
+      <Data HeadColumns="LXRXM" DataColumns="LXRXM" Remark="联系人姓名"  BSelect="1"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      
+      <Data HeadColumns="JCJGMC" DataColumns="JCJGMC" Remark="监测机构名称"></Data>
+      <Data HeadColumns="FZRLXDH" DataColumns="FZRLXDH" Remark="负责人联系电话"></Data>
+      <Data HeadColumns="CDDZR" DataColumns="CDDZR" Remark="承担的责任"  ></Data>
+      <Data HeadColumns="LXDH" DataColumns="LXDH" Remark="联系电话" ></Data>
+      <Data HeadColumns="DZYX" DataColumns="DZYX" Remark="电子邮箱"></Data>
+      <Data HeadColumns="JCGZWZ" DataColumns="JCGZWZ" Remark="监测工作网站"></Data>
+      <Data HeadColumns="SJGLDW" DataColumns="SJGLDW" Remark="上级管理单位"></Data>
+      <Data HeadColumns="JGCLRQ" DataColumns="JGCLRQ" Remark="机构成立日期"></Data>
+      <Data HeadColumns="RYZS" DataColumns="RYZS" Remark="人员总数"></Data>
+      
+    </Fun>
+  </Node>
+  <Node Title="保护区划界线描述与管理规定">
+    <Fun ID="21" TableName="v_HPF_JSKZ_BHFWJSKZDD1HPF_JSKZ_YCQHCQ" KeyWords="YCMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="YCQMJ" DataColumns="YCQMJ" Remark="遗产区面积" BSelect="1"></Data>
+      <Data HeadColumns="HCQMJ" DataColumns="HCQMJ" Remark="缓冲区面积" BSelect="1"></Data>
+      <Data HeadColumns="BHFWMJ" DataColumns="BHFWMJ" Remark="保护范围面积" BSelect="1"></Data>
+      <Data HeadColumns="YCMC" DataColumns="YCMC" Remark="遗产名称" BSelect="1"></Data>
+      <Data HeadColumns="WDSCSJ" DataColumns="RKSJ" Remark="上传时间" BSelect="1"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      
+      <Data HeadColumns="YCQJX" DataColumns="YCQJX" Remark="遗产区界线"></Data>
+      <Data HeadColumns="YCQGLGD" DataColumns="YCQGLGD" Remark="遗产区管理规定"  ></Data>
+      <Data HeadColumns="HCQJX" DataColumns="HCQJX" Remark="缓冲区界线"  ></Data>
+      <Data HeadColumns="HCQGLGD" DataColumns="HCQGLGD" Remark="缓冲区管理规定"  ></Data>
+      <Data HeadColumns="BHFWJX" DataColumns="BHFWJX" Remark="保护范围界线" ></Data>
+      <Data HeadColumns="BHFWGLGD" DataColumns="BHFWGLGD" Remark="保护范围管理规定"></Data>
+      <Data HeadColumns="JSKZDDJX" DataColumns="JSKZDDJX" Remark="建设控制地带界线"></Data>
+      <Data HeadColumns="JSKZDDMJ" DataColumns="JSKZDDMJ" Remark="建设控制地带面积"></Data>
+      <Data HeadColumns="JSKZDDGLGD" DataColumns="JSKZDDGLGD" Remark="建设控制地带管理规定"></Data>
+  
+    
+    </Fun>
+  </Node>
+  <Node Title="监测方案">
+    <Fun ID="23" TableName="HPF_YCJCXX_JCFA" KeyWords="WDMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="LYCS" DataColumns="LYCS" Remark="利用次数"></Data>
+      <Data HeadColumns="WDMC" DataColumns="WDMC" Remark="文档名称" BSelect="1"></Data>
+      <Data HeadColumns="WDLX" DataColumns="WDLX" Remark="文档类型"></Data>
+      <Data HeadColumns="WDBB" DataColumns="WDBB" Remark="文档版本"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="文档上传时间" BSelect="1"></Data>
+      <Data HeadColumns="WDCJSJ" DataColumns="WDCJSJ" Remark="文档创建时间"></Data>
+      <Data HeadColumns="WDZZ" DataColumns="WDZZ" Remark="文档作者"></Data>
+      <Data HeadColumns="WDBZDW" DataColumns="WDBZDW" Remark="文档编制单位"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      <Data HeadColumns="FAMC" DataColumns="FAMC" Remark="方案名称"></Data>
+      <Data HeadColumns="BZDW" DataColumns="BZDW" Remark="编制单位"></Data>
+      <Data HeadColumns="PZWH" DataColumns="PZWH" Remark="批准文号"></Data>
+      
+    </Fun>
+  </Node>
+  <Node Title="文物保护维修档案">
+    <Fun ID="25" TableName="HPF_BHGC_XGWD " KeyWords="WDMC" >
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="LYCS" DataColumns="LYCS" Remark="利用次数"></Data>
+      <Data HeadColumns="WDMC" DataColumns="WDMC" Remark="文档名称" BSelect="1"></Data>
+      <Data HeadColumns="WDLX" DataColumns="WDLX" Remark="文档类型"></Data>
+      <Data HeadColumns="WDBB" DataColumns="WDBB" Remark="文档版本"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="文档上传时间" BSelect="1"></Data>
+      <Data HeadColumns="WDCJSJ" DataColumns="WDCJSJ" Remark="文档创建时间"></Data>
+      <Data HeadColumns="WDZZ" DataColumns="WDZZ" Remark="文档作者"></Data>
+      <Data HeadColumns="WDBZDW" DataColumns="WDBZDW" Remark="文档编制单位"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+    </Fun>
+  </Node>
+  <Node Title="文物保护工程方案">
+    <Fun ID="24" TableName="HPF_BHGC "  KeyWords="WDMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="LYCS" DataColumns="LYCS" Remark="利用次数"></Data>
+      <Data HeadColumns="WDMC" DataColumns="WDMC" Remark="文档名称" BSelect="1"></Data>
+      <Data HeadColumns="WDLX" DataColumns="WDLX" Remark="文档类型"></Data>
+      <Data HeadColumns="WDBB" DataColumns="WDBB" Remark="文档版本"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="文档上传时间" BSelect="1"></Data>
+      <Data HeadColumns="WDCJSJ" DataColumns="WDCJSJ" Remark="文档创建时间"></Data>
+      <Data HeadColumns="WDZZ" DataColumns="WDZZ" Remark="文档作者"></Data>
+      <Data HeadColumns="WDBZDW" DataColumns="WDBZDW" Remark="文档编制单位"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      
+  
+  
+    </Fun>
+  </Node>
+<Node Title="保护管理规划">
+    <Fun ID="19" TableName="v_HPF_BHGH_BHGLGH_XGWD "  KeyWords="WDMC">
+      <Data HeadColumns="ID" DataColumns="ID" Remark="编号" BSelect="1"></Data>
+      <Data HeadColumns="GLYCBTID" DataColumns="GLYCBTID" Remark="遗产编码"></Data>
+      <Data HeadColumns="SJMJ" DataColumns="SJMJ" Remark="数据密级"></Data>
+      <Data HeadColumns="FBFW" DataColumns="FBFW" Remark="发布范围"></Data>
+      <Data HeadColumns="WDMC" DataColumns="WDMC" Remark="文档名称" BSelect="1"></Data>
+      <Data HeadColumns="WDLX" DataColumns="WDLX" Remark="文档类型"></Data>
+      <Data HeadColumns="WDBB" DataColumns="WDBB" Remark="文档版本"></Data>
+      <Data HeadColumns="SCSJ" DataColumns="RKSJ" Remark="文档上传时间" BSelect="1"></Data>
+      <Data HeadColumns="WDCJSJ" DataColumns="WDCJSJ" Remark="文档创建时间"></Data>
+      <Data HeadColumns="WDZZ" DataColumns="WDZZ" Remark="文档作者"></Data>
+      <Data HeadColumns="WDBZDW" DataColumns="WDBZDW" Remark="文档编制单位"></Data>
+      <Data HeadColumns="TXR" DataColumns="CJRID" Remark="填写人"></Data>
+      <Data HeadColumns="TXSJ" DataColumns="CJSJ" Remark="填写时间"></Data>
+      <Data HeadColumns="SHR" DataColumns="SHRID" Remark="审核人"></Data>
+      <Data HeadColumns="SHSJ" DataColumns="SHSJ" Remark="审核时间"></Data>
+      
+      <Data HeadColumns="MC" DataColumns="MC" Remark="名称"></Data>
+      <Data HeadColumns="BZHGBZT" DataColumns="BZHGBZT" Remark="编制和公布状态"></Data>
+      <Data HeadColumns="GHQX" DataColumns="GHQX" Remark="规划期限"></Data>
+      <Data HeadColumns="ZZBZDW" DataColumns="ZZBZDW" Remark="组织编制单位"></Data>
+      <Data HeadColumns="BZDW" DataColumns="BZDW" Remark="编制单位"></Data>
+    </Fun>
+  </Node>
+</BaseInfoXModel>

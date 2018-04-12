@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="hprose-html5.js" flashpath="/"></script>
+</head>
+<body>
+<script type="text/javascript">
+    var client = new hprose.HttpClient('http://172.16.100.103/erp/hprose', ['login']);
+    client.login('admin','gxsn20091218',function(result) {
+        alert(result);
+    }, function(name, err) {
+        alert(err);
+    });
+
+    function GetPropertyLowerToUpper(objectCus) {
+        var newObject = {};
+        for (var o in objectCus) {
+            var c = o.toUpperCase();
+            newObject[c] = objectCus[o];
+        }
+        return newObject;
+    }
+</script>
+</body>
+</html>

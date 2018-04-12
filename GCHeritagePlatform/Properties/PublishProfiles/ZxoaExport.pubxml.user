@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>G:\中心OA\发布</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Aspose.Words.dll">
+      <publishTime>11/08/2016 16:42:46</publishTime>
+    </File>
+    <File Include="bin/Cbin/GCHeritagePlatform.Utils.dll">
+      <publishTime>02/27/2017 11:30:57</publishTime>
+    </File>
+    <File Include="bin/FrameworkCore.dll">
+      <publishTime>01/03/2017 11:05:45</publishTime>
+    </File>
+    <File Include="bin/GCHeritagePlatform.dll">
+      <publishTime>04/11/2018 18:46:00</publishTime>
+    </File>
+    <File Include="bin/GCHeritagePlatform.Dock.dll">
+      <publishTime>01/03/2017 11:05:45</publishTime>
+    </File>
+    <File Include="bin/GCHeritagePlatform.pdb">
+      <publishTime>04/11/2018 18:46:00</publishTime>
+    </File>
+    <File Include="bin/GCHeritagePlatform.Utils.dll">
+      <publishTime>02/27/2017 11:30:57</publishTime>
+    </File>
+    <File Include="bin/Hprose.dll">
+      <publishTime>01/03/2017 11:05:50</publishTime>
+    </File>
+    <File Include="bin/ICSharpCode.SharpZipLib.dll">
+      <publishTime>01/03/2017 11:05:45</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>01/03/2017 11:05:48</publishTime>
+    </File>
+    <File Include="bin/MessageCheck.dll">
+      <publishTime>01/03/2017 11:05:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.QualityTools.Testing.Fakes.dll">
+      <publishTime>07/08/2017 16:21:07</publishTime>
+    </File>
+    <File Include="bin/Nancy.dll">
+      <publishTime>01/03/2017 11:06:21</publishTime>
+    </File>
+    <File Include="bin/Nancy.Hosting.Aspnet.dll">
+      <publishTime>01/03/2017 11:06:08</publishTime>
+    </File>
+    <File Include="bin/Nancy.ViewEngines.Razor.dll">
+      <publishTime>01/03/2017 11:06:19</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>01/03/2017 11:06:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>07/10/2012 21:53:02</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/Microsoft.QualityTools.Testing.Fakes.resources.dll">
+      <publishTime>09/22/2017 20:10:04</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Razor.resources.dll">
+      <publishTime>07/10/2012 23:31:36</publishTime>
+    </File>
+    <File Include="Cbin/GCHeritagePlatform.Utils.dll">
+      <publishTime>02/27/2017 11:30:57</publishTime>
+    </File>
+    <File Include="Core/404.html">
+      <publishTime>01/03/2017 11:05:33</publishTime>
+    </File>
+    <File Include="Core/500.html">
+      <publishTime>01/03/2017 11:05:33</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>01/03/2017 11:05:44</publishTime>
+    </File>
+    <File Include="Front/favicon.ico">
+      <publishTime>01/03/2017 11:05:33</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>01/03/2017 11:05:33</publishTime>
+    </File>
+    <File Include="Handlers/HproseHandler.ashx">
+      <publishTime>01/03/2017 11:05:44</publishTime>
+    </File>
+    <File Include="icon.png">
+      <publishTime>01/03/2017 11:05:45</publishTime>
+    </File>
+    <File Include="JCBG/Aspose.Words.dll">
+      <publishTime>11/08/2016 16:42:46</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/中心信息化导出清单.xlsx">
+      <publishTime>01/18/2017 21:53:53</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件1-发文拟稿.docx">
+      <publishTime>04/11/2017 19:17:52</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件1-合同签订审批表.docx">
+      <publishTime>02/27/2017 15:23:57</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件18-固定资产验收及入库单（家具J）.docx">
+      <publishTime>01/03/2017 11:05:05</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件18-固定资产验收及入库单（家具）.docx">
+      <publishTime>03/01/2017 17:06:47</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件19-固定资产验收及入库单（设备）.docx">
+      <publishTime>03/01/2017 17:14:14</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件19-培训登记模版（内部）.docx">
+      <publishTime>03/08/2017 16:21:35</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件2-合同履约完成表.docx">
+      <publishTime>03/02/2017 14:28:56</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件2-收文登记--带书签.docx">
+      <publishTime>02/07/2017 10:33:52</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件2-收文登记.docx">
+      <publishTime>04/25/2017 16:05:14</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件2-请假条.docx">
+      <publishTime>05/11/2017 20:22:09</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件20-培训登记模版（外部）.docx">
+      <publishTime>03/08/2017 16:23:55</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件3-固定资产验收及入库单（房屋、土地、交通）.docx">
+      <publishTime>03/01/2017 18:46:07</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件3-国家基础地理信息中心干部因私事出国%28境%29审批表.docx">
+      <publishTime>01/03/2017 11:05:05</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件5-固定资产管理信息变更表.docx">
+      <publishTime>02/24/2017 12:55:53</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件6-固定资产调配调拨单.docx">
+      <publishTime>02/23/2017 21:22:32</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件6-国家基础地理信息中心在职干部因私事出国%28境%29领用表.docx">
+      <publishTime>06/12/2017 15:37:24</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件6-国家基础地理信息中心在职干部因私事出国%28境%29领用表and审批表.docx">
+      <publishTime>06/12/2017 15:38:08</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件7-固定资产借出登记申请表.docx">
+      <publishTime>05/27/2017 10:11:02</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件7-国家基础地理信息中心涉密干部因私事出国%28境%29领用表.docx">
+      <publishTime>01/03/2017 11:05:05</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件7-国家基础地理信息中心涉密干部因私事出国%28境%29领用表and保密表.docx">
+      <publishTime>02/07/2017 21:22:03</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件7-国家基础地理信息中心涉密干部因私事出国%28境%29领用表and保密表and审批表.docx">
+      <publishTime>02/07/2017 21:28:54</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件7-国家基础地理信息中心涉密干部因私事出国%28境%29领用表and保密表and审批表涉密.docx">
+      <publishTime>06/12/2017 15:39:57</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件7-国家基础地理信息中心涉密干部因私事出国%28境%29领用表and保密表and审批表涉密and审批表非涉密.docx">
+      <publishTime>06/12/2017 15:42:00</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件8-固定资产处置申请表.docx">
+      <publishTime>05/27/2017 10:04:00</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件9-低值易耗品购置申请表.docx">
+      <publishTime>06/19/2017 14:16:16</publishTime>
+    </File>
+    <File Include="JCBG/WordModel/附件9-培训申请模版.docx">
+      <publishTime>03/08/2017 16:25:22</publishTime>
+    </File>
+    <File Include="log4net.config">
+      <publishTime>01/03/2017 11:05:57</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>01/03/2017 11:05:55</publishTime>
+    </File>
+    <File Include="ServiceModule.xml">
+      <publishTime>01/03/2017 11:05:44</publishTime>
+    </File>
+    <File Include="Services/BusinessCommon/开发抽取记录.txt">
+      <publishTime>01/03/2017 11:06:04</publishTime>
+    </File>
+    <File Include="Services/开发重构记录.txt">
+      <publishTime>01/03/2017 11:06:01</publishTime>
+    </File>
+    <File Include="Views/css/style.css">
+      <publishTime>01/03/2017 11:05:33</publishTime>
+    </File>
+    <File Include="Views/images/leftico01.png">
+      <publishTime>01/03/2017 11:05:33</publishTime>
+    </File>
+    <File Include="Views/images/leftico02.png">
+      <publishTime>01/03/2017 11:05:33</publishTime>
+    </File>
+    <File Include="Views/images/leftico03.png">
+      <publishTime>01/03/2017 11:05:33</publishTime>
+    </File>
+    <File Include="Views/images/leftico04.png">
+      <publishTime>01/03/2017 11:05:33</publishTime>
+    </File>
+    <File Include="Views/images/leftline.gif">
+      <publishTime>01/03/2017 11:05:33</publishTime>
+    </File>
+    <File Include="Views/images/leftmenubg.gif">
+      <publishTime>01/03/2017 11:05:33</publishTime>
+    </File>
+    <File Include="Views/images/lefttop.gif">
+      <publishTime>01/03/2017 11:05:33</publishTime>
+    </File>
+    <File Include="Views/images/list.gif">
+      <publishTime>01/03/2017 11:05:33</publishTime>
+    </File>
+    <File Include="Views/images/sj.png">
+      <publishTime>01/03/2017 11:05:33</publishTime>
+    </File>
+    <File Include="Views/index-old.cshtml">
+      <publishTime>01/03/2017 11:05:33</publishTime>
+    </File>
+    <File Include="Views/index.cshtml">
+      <publishTime>01/03/2017 11:05:44</publishTime>
+    </File>
+    <File Include="Views/js/hprose-html5.js">
+      <publishTime>01/03/2017 11:05:33</publishTime>
+    </File>
+    <File Include="Views/js/JavaScript.js">
+      <publishTime>01/03/2017 11:05:33</publishTime>
+    </File>
+    <File Include="Views/js/jquery.js">
+      <publishTime>01/03/2017 11:05:33</publishTime>
+    </File>
+    <File Include="Views/js/test.html">
+      <publishTime>01/03/2017 11:05:33</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/11/2017 19:21:01</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

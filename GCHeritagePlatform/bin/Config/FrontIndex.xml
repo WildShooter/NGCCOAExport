@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--刘晓宇7月11日改-->
+<IndexFunConfig>
+  <Node Title="申遗承诺服务类" >
+    <Fun ID="1" Title="申遗承诺履行情况" DateField="CJSJ" TableName="V_HPF_SYCN_CNSXJZ" Where=" and CNSXID in ( select ID  from HPF_SYCN_CNSX where date_format(RKSJ,'%Y') =date_format(now(),'%Y') and MONTH(RKSJ)  BETWEEN 7
+	AND 12   and  substring(GLYCBTID,1,5) = '@heritageId')">
+      <DataGrid HeadColumns="承诺事项来源" DataColumns="CNSXLY"  ></DataGrid>
+      <DataGrid HeadColumns="承诺事项内容_中文" DataColumns="CNSXNR_ZW" ></DataGrid>
+      <DataGrid HeadColumns="承诺事项内容_英文" DataColumns="CNSXNR_YW" ></DataGrid>
+      <DataGrid HeadColumns="承诺完成时间" DataColumns="CNWCSJ" Format="dateTime"></DataGrid>
+      <DataGrid HeadColumns="目前进展" DataColumns="MQJZ_BM"  ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ"  Format="dateTime"></DataGrid>
+      <DataGrid HeadColumns="进度百分比" DataColumns="JDBFB" ></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="机构与能力建设服务类" >
+    <Fun ID="2" Title="监测机构建设情况" DateField="CJSJ" TableName="HPF_JGJS_JCJGXX"  Where=" and JGCLRQ &lt;= now() and JGCXRQ &gt; NOW() and substring(GLYCBTID,1,5) = '@heritageId'">
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" Format="dateTime"></DataGrid>
+      <DataGrid HeadColumns="监测机构名称" DataColumns="JCJGMC"    ></DataGrid>
+      <DataGrid HeadColumns="负责人" DataColumns="FZR"    ></DataGrid>
+      <DataGrid HeadColumns="负责人联系电话" DataColumns="FZRLXDH"    ></DataGrid>
+      <DataGrid HeadColumns="承担的责任" DataColumns="CDDZR"    ></DataGrid>
+      <DataGrid HeadColumns="联系人姓名" DataColumns="LXRXM"    ></DataGrid>
+      <DataGrid HeadColumns="联系电话" DataColumns="LXDH"    ></DataGrid>
+      <DataGrid HeadColumns="电子邮箱" DataColumns="DZYX"    ></DataGrid>
+      <DataGrid HeadColumns="监测工作网站" DataColumns="JCGZWZ"    ></DataGrid>
+      <DataGrid HeadColumns="上级管理单位" DataColumns="SJGLDW"    ></DataGrid>
+    </Fun>
+    <Fun ID="3" Title="专项保护管理法规、规章" TableName="(SELECT
+	d.YCMC,
+	g.`NAME` AS ZT_BM,
+		h.`NAME` AS LX_BM,
+    a.ID ,
+	a.LB,
+  a.WJNR,
+	a.MC,
+	a.GBSJ,
+	a.GBWH,
+	a.SSSJ,
+	a.ZT,
+	i.CCLJ,
+			i.CJRID,
+			i.CJSJ,
+			i.DJRID,
+			i.DJSJ,
+			i.FBFW,
+			i.FGID,
+			i.GLYCBTID,
+			i.LYCS,
+			i.RKSJ,
+			i.SCRID,
+			i.SCSJ,
+			i.SFYDJ,
+			i.SHBTGSM,
+			i.SHRID,
+			i.SHSJ
+FROM
+	HPF_JGJS_ZXBHGLFGGZ a
+LEFT JOIN (
+	SELECT
+		b.BM,
+		b.YCMC
+	FROM
+		HPF_YCJCXX_SJWHYC b
+
+) d ON SUBSTRING(a.GLYCBTID, 1, 5) = d.BM
+LEFT JOIN (
+	SELECT
+		f.`NAME`,
+		f.`CODE`,
+		'1' AS type
+	FROM
+		ysj_domain_enumitem f
+	WHERE
+		f.ENUMID = '1E46BA82-6955-4497-A9F0-10399AEAE2F5'
+) g ON a.ZT = g.`CODE`
+LEFT JOIN (
+	SELECT
+		f.`NAME`,
+		f.`CODE`,
+		'2' AS type
+	FROM
+		ysj_domain_enumitem f
+	WHERE
+		f.ENUMID = 'EA248F9B-D2E0-47CC-9CDB-E211AAA674E2'
+) h ON a.LB = h.`CODE`
+LEFT JOIN HPF_JGJS_ZXFGXGWD i ON a.ID = i.FGID )z"  DateField="z.GBSJ"  Where=" and z.GBSJ &lt;= NOW() and   substring(z.GLYCBTID,1,5) = '@heritageId'">
+      <DataGrid HeadColumns="类别" DataColumns="z.LB"></DataGrid>
+      <DataGrid HeadColumns="名称" DataColumns="z.MC"></DataGrid>
+      <DataGrid HeadColumns="公布时间" DataColumns="z.GBSJ" Format="dateTime1"></DataGrid>
+      <DataGrid HeadColumns="公布文号" DataColumns="z.GBWH"></DataGrid>
+      <DataGrid HeadColumns="实施时间" DataColumns="z.SSSJ" Format="dateTime1"></DataGrid>
+      <DataGrid HeadColumns="状态" DataColumns="z.ZT"></DataGrid>
+      <DataGrid HeadColumns="文件内容" DataColumns="z.WJNR"></DataGrid>
+    </Fun>
+    <Fun ID="4" Title="保护管理相关培训总人次数" DateField="PXKSSJ" TableName="HPF_JGJS_BHGLXGPXJL"  Where=" and date_format(PXKSSJ,'%Y') = date_format(now(),'%Y')    and substring(GLYCBTID,1,5) ='@heritageId'">
+      <DataGrid HeadColumns="组织培训单位" DataColumns="ZZPXDW"></DataGrid>
+      <DataGrid HeadColumns="培训项目名称" DataColumns="PXXMMC"></DataGrid>
+      <DataGrid HeadColumns="培训项目说明" DataColumns="PXXMSM"></DataGrid>
+      <DataGrid HeadColumns="培训开始时间" DataColumns="PXKSSJ" Format="dateTime"></DataGrid>
+      <DataGrid HeadColumns="培训截止时间" DataColumns="PXJZSJ" Format="dateTime"></DataGrid>
+      <DataGrid HeadColumns="培训时长"     DataColumns="PXSC"></DataGrid>
+      <DataGrid HeadColumns="受训人员数量" DataColumns="SXRYSL"></DataGrid>
+      <DataGrid HeadColumns="培训地点"     DataColumns="PXDD"></DataGrid>
+      <DataGrid HeadColumns="培训支出经费" DataColumns="PXZCJF"></DataGrid>
+      <DataGrid HeadColumns="备注说明"     DataColumns="BZSM"></DataGrid>
+    </Fun>
+    <Fun ID="5" Title="保护管理培训支出经费" TableName="V_HPF_JGJS_BHGLJF" DateField="JFHQSJ"  Where=" and  date_format(JFHQSJ,'%Y')  = date_format(now(),'%Y') and substring(GLYCBTID,1,5) ='@heritageId'">
+      <DataGrid HeadColumns="保护管理单位" DataColumns="BHGLDW"    ></DataGrid>
+      <DataGrid HeadColumns="年份" DataColumns="BHGLJFLX"    ></DataGrid>
+      <DataGrid HeadColumns="保护管理经费" DataColumns="SHSJ"    ></DataGrid>
+      <DataGrid HeadColumns="经费获取时间" DataColumns="JFHQSJ"   Format="dateTime" ></DataGrid>
+      <DataGrid HeadColumns="经费来源说明" DataColumns="BHGLJF"    ></DataGrid>
+      <DataGrid HeadColumns="保护管理经费类型" DataColumns="BHGLJFLX_BM"    ></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="遗产基础信息服务类" >
+    <Fun ID="6" Title="基础信息完善程度" DateField="CJSJ" TableName="V_HPF_YCJCXX_YCZT"  Where=" and date_format(RKSJ,'%Y') = date_format(now(),'%Y') and  substring(GLYCBTID,1,5) = '@heritageId'">
+      <DataGrid HeadColumns="遗产总图URL" DataColumns="YCZTURL"  ></DataGrid>
+      <DataGrid HeadColumns="基础信息完善程度" DataColumns="JCXXWSCD_BM"  ></DataGrid>
+      <DataGrid HeadColumns="创建人ID" DataColumns="CJRID"  ></DataGrid>
+      <DataGrid HeadColumns="版本" DataColumns="BB"  ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" Format="dateTime" ></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="总体格局变化服务类" >
+    <Fun ID="7" Title="遗产总体格局变化" DateField="CTSJ" TableName="HPF_GJBH_ZTGJBHTJBHJL" Where=" and RKSJ between DATE_SUB(CURDATE(), INTERVAL 2 YEAR) and @timeNow and  substring(GLYCBTID,1,5) = '@heritageId'">
+      <DataGrid HeadColumns="总体格局变化图URL" DataColumns="ZTGJBHTURL"  ></DataGrid>
+      <DataGrid HeadColumns="评估" DataColumns="PG" ></DataGrid>
+      <DataGrid HeadColumns="情况说明" DataColumns="QKSM" ></DataGrid>
+      <DataGrid HeadColumns="成图时间" DataColumns="CTSJ" Format="dateTime" ></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="遗产使用功能变化服务类" >
+    <Fun ID="8" Title="遗产使用功能变化"  DateField="CTSJ" TableName="V_HPF_SYGN_SYGNBHTJBHJL"  Where=" and date_format(RKSJ,'%Y') = date_format(now(),'%Y') and substring(GLYCBTID,1,5) = '@heritageId'">
+      <DataGrid HeadColumns="名称" DataColumns="MC" ></DataGrid>
+      <DataGrid HeadColumns="图纸格式" DataColumns="TZGS_BM" ></DataGrid>
+      <DataGrid HeadColumns="成图时间" DataColumns="CTSJ" Format="dateTime"></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="遗产要素单体服务类" >
+    <Fun ID="9" Title="代表性遗产要素保存状态" DateField="TZCJSJ"  TableName="V_HPF_YCYSDT_YCYSDTHJBXZT" Where=" and substring(GLYCBTID,1,5) = '@heritageId'">
+      <DataGrid HeadColumns="关联遗产本体ID" DataColumns="GLYCBTID"  ></DataGrid>
+      <DataGrid HeadColumns="图纸路径" DataColumns="TZLJ" ></DataGrid>
+      <DataGrid HeadColumns="图纸名称" DataColumns="TZMC"  ></DataGrid>
+      <DataGrid HeadColumns="图纸类型" DataColumns="TZLX_BM"  ></DataGrid>
+      <DataGrid HeadColumns="图纸采集时间" DataColumns="TZCJSJ" Format="dateTime"></DataGrid>
+      <DataGrid HeadColumns="图纸数据量" DataColumns="TZSJL" ></DataGrid>
+      <DataGrid HeadColumns="预览图" DataColumns="YLT" ></DataGrid>
+      <DataGrid HeadColumns="评估" DataColumns="PG" ></DataGrid>
+      <DataGrid HeadColumns="情况说明" DataColumns="QKSM" ></DataGrid>
+      <DataGrid HeadColumns="遗产要素保存状态" DataColumns="YCYSBCZT_BM" ></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="本体与载体病害服务类" >
+    <Fun ID="10" Title="病害调查分布图" DateField="CTSJ" TableName="HPF_BTYZTBH_BHFBT" Where=" and date_format(RKSJ,'%Y') = date_format(now(),'%Y') and substring(GLYCBTID,1,5) = '@heritageId'">
+      <DataGrid HeadColumns="图纸编号"      DataColumns="TZBH"></DataGrid>
+      <DataGrid HeadColumns="名称"          DataColumns="MC" ></DataGrid>
+      <DataGrid HeadColumns="是否立面图"      DataColumns="SFLMT"></DataGrid>
+      <DataGrid HeadColumns="图纸数据量"      DataColumns="TZSJL"></DataGrid>
+      <DataGrid HeadColumns="图纸格式"      DataColumns="TZGS"></DataGrid>
+      <DataGrid HeadColumns="成图时间"      DataColumns="CTSJ" Format="dateTime"></DataGrid>
+    </Fun>
+    <Fun ID="11" Title="新发病害"   DateField="RKSJ"  TableName="HPF_BTYZTBH_BHJLB" Where=" and date_format(RKSJ,'%Y-%m') = date_format(now(),'%Y-%m') and substring(GLYCBTID,1,5) = '@heritageId'">
+      <DataGrid HeadColumns="病害编号"      DataColumns="BHBH"></DataGrid>
+      <DataGrid HeadColumns="病害位置"          DataColumns="BHWZ" ></DataGrid>
+      <DataGrid HeadColumns="病害经度"      DataColumns="BHJD"></DataGrid>
+      <DataGrid HeadColumns="病害纬度"      DataColumns="BHWD"></DataGrid>
+      <DataGrid HeadColumns="病害示意图"      DataColumns="BHSYT"></DataGrid>
+      <DataGrid HeadColumns="病害存在状态"      DataColumns="BHCZZT"></DataGrid>
+      <DataGrid HeadColumns="病害类型"      DataColumns="BHLX"></DataGrid>
+      <DataGrid HeadColumns="版本号"      DataColumns="BBH"></DataGrid>
+      <DataGrid HeadColumns="入库时间"      DataColumns="RKSJ"></DataGrid>
+    </Fun>
+    <Fun ID="12" Title="病害总数" DateField="RKSJ" TableName="HPF_BTYZTBH_BHJLB" Where=" and RKSJ &lt;= NOW() and substring(GLYCBTID,1,5) = '@heritageId'">
+      <DataGrid HeadColumns="病害编号"      DataColumns="BHBH"></DataGrid>
+      <DataGrid HeadColumns="病害位置"          DataColumns="BHWZ" ></DataGrid>
+      <DataGrid HeadColumns="病害经度"      DataColumns="BHJD"></DataGrid>
+      <DataGrid HeadColumns="病害纬度"      DataColumns="BHWD"></DataGrid>
+      <DataGrid HeadColumns="病害示意图"      DataColumns="BHSYT"></DataGrid>
+      <DataGrid HeadColumns="病害存在状态"      DataColumns="BHCZZT"></DataGrid>
+      <DataGrid HeadColumns="病害类型"      DataColumns="BHLX"></DataGrid>
+      <DataGrid HeadColumns="版本号"      DataColumns="BBH"></DataGrid>
+    </Fun>
+    <Fun ID="13" DateField="CJSJ"  Title="恶化病害数量" TableName="v_HPF_BTYZTBH_BHKZZTPG" Where=" and date_format(RKSJ,'%Y') = date_format(now(),'%Y') and substring(GLYCBTID,1,5) = '@heritageId' and BHKZZTPG = 3">
+      <DataGrid HeadColumns="序号" DataColumns="ID" ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ"  Format="dateTime"></DataGrid>
+      <DataGrid HeadColumns="病害控制状态评估" DataColumns="BHKZZTPGNAME" ></DataGrid>
+    </Fun>
+    <Fun ID="14"  DateField="CJSJ" Title="病害控制情况" TableName="v_HPF_BTYZTBH_BHKZZTPG" Where=" and BHDID is not null and GLYCBTID = '@heritageId'">
+      <DataGrid HeadColumns="序号" DataColumns="ID" ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ"  Format="dateTime"></DataGrid>
+      <DataGrid HeadColumns="病害控制状态评估" DataColumns="BHKZZTPGNAME" ></DataGrid>
+    </Fun>
+    <Fun ID="15" Title="正在监测的病害数量" DateField="JCKSSJ" TableName="v_HPF_BTYZTBH_BHDCJCGZQKJLB" Where=" and JCKSSJ &lt;=@timeNow AND JCJSSJ &gt; @timeNow and substring(GLYCBTID,1,5) = '@heritageId' ">
+      <DataGrid HeadColumns="病害编号"      DataColumns="BHBH"></DataGrid>
+      <DataGrid HeadColumns="病害类型"      DataColumns="BHLX"></DataGrid>
+      <DataGrid HeadColumns="病害经度"          DataColumns="BHJD" ></DataGrid>
+      <DataGrid HeadColumns="病害纬度"      DataColumns="BHWD"></DataGrid>
+      <DataGrid HeadColumns="监测周期"      DataColumns="JCZQ"></DataGrid>
+      <DataGrid HeadColumns="病害位置"      DataColumns="BHWZ"></DataGrid>
+      <DataGrid HeadColumns="监测方法"      DataColumns="JCFF"></DataGrid>
+      <DataGrid HeadColumns="实施机构"          DataColumns="SSJG" ></DataGrid>
+      <DataGrid HeadColumns="监测起始时间"      DataColumns="JCKSSJ" Format="dateTime"></DataGrid>
+      <DataGrid HeadColumns="监测结束时间"      DataColumns="JCJSSJ" Format="dateTime"></DataGrid>
+      <DataGrid HeadColumns="监测数据可使用范围"  DataColumns="JCSJKSYFW"></DataGrid>
+      <DataGrid HeadColumns="监测记录保存地点"      DataColumns="JCJLBCDD"></DataGrid>
+      <DataGrid HeadColumns="监测记录保存时间"  DataColumns="JCJLBCSJ" Format="dateTime"></DataGrid>
+      <DataGrid HeadColumns="预览图"      DataColumns="BHSYT"></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="自然环境服务类">
+    <Fun ID="16" Title="正在进行的环境监测数量" DateField="JCQSSJ" TableName="HPF_ZRHJ_ZRHJJCGZQKJL" Where=" and JCQSSJ &lt;=@timeNow AND JCJSSJ &gt; @timeNow and substring(GLYCBTID,1,5) = '@heritageId' ">
+      <DataGrid HeadColumns="自然环境监测项目内容" DataColumns="ZRHJJCXMNR"  ></DataGrid>
+      <DataGrid HeadColumns="监测对象类型" DataColumns="JCDXLX" ></DataGrid>
+      <DataGrid HeadColumns="监测起始时间" DataColumns="JCQSSJ" Format="dateTime"></DataGrid>
+      <DataGrid HeadColumns="监测结束时间" DataColumns="JCJSSJ" Format="dateTime" ></DataGrid>
+      <DataGrid HeadColumns="监测方法" DataColumns="JCFF" ></DataGrid>
+      <DataGrid HeadColumns="数据采集点编号" DataColumns="SJCJDBH" ></DataGrid>
+      <DataGrid HeadColumns="监测周期" DataColumns="JCZQ" ></DataGrid>
+      <DataGrid HeadColumns="实施机构" DataColumns="SSJG" ></DataGrid>
+      <DataGrid HeadColumns="监测数据可使用范围" DataColumns="JCSJKSYFW" ></DataGrid>
+      <DataGrid HeadColumns="监测记录保存地点" DataColumns="JCJLBCDD"  ></DataGrid>
+      <DataGrid HeadColumns="监测记录保存时间" DataColumns="JCJLBCSJ" Format="dateTime" ></DataGrid>
+    </Fun>
+    <Fun ID="17" Title="对自然环境因素负面影响的控制情况" DateField="CJSJ" TableName="V_HPF_ZRHJ_HJYXPG" Where=" and substring(GLYCBTID,1,5) = '@heritageId'">
+      <DataGrid HeadColumns="评估" DataColumns="PG_BM" ></DataGrid>
+      <DataGrid HeadColumns="遗产地ID" DataColumns="GLYCBTID" ></DataGrid>
+      <DataGrid HeadColumns="评估说明" DataColumns="PGSM" ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" Format="dateTime"></DataGrid>
+    </Fun>
+    <Fun ID="18" Title="受灾次数" TableName="V_HPF_ZRHJ_ZRZHSZJL" DateField="FSSJ"  Where=" and date_format(FSSJ,'%Y') = date_format(now(),'%Y') and substring(GLYCBTID,1,5) = '@heritageId'">
+      <DataGrid HeadColumns="发生时间" DataColumns="FSSJ"  Format="dateTime"></DataGrid>
+      <DataGrid HeadColumns="受灾类型" DataColumns="SZLX" ></DataGrid>
+      <DataGrid HeadColumns="文物灾损程度" DataColumns="WWZSCD_BM"  ></DataGrid>
+      <DataGrid HeadColumns="受灾情况描述" DataColumns="SZQKMS" ></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="建设控制服务类">
+    <Fun ID="19" Title="新建项目总占地面积" DateField="KGRQ" TableName="HPF_XJXM_XJXMJL" Where=" and  KGRQ between DATE_SUB(NOW(),INTERVAL 3 MONTH) and NOW() and substring(GLYCBTID,1,5) = '@heritageId'">
+      <DataGrid HeadColumns="项目编号" DataColumns="XJXMBH"  ></DataGrid>
+      <DataGrid HeadColumns="项目名称" DataColumns="XMMC" ></DataGrid>
+      <DataGrid HeadColumns="建设地点" DataColumns="WZSM" ></DataGrid>
+      <DataGrid HeadColumns="开工时间" DataColumns="KGRQ" Format="dateTime" ></DataGrid>
+      <DataGrid HeadColumns="竣工时间" DataColumns="JGSJ" Format="dateTime" ></DataGrid>
+    </Fun>
+    <Fun ID="20" Title="新建项目数量" TableName="HPF_XJXM_XJXMJL" DateField="KGRQ"  Where="   and KGRQ BETWEEN DATE_SUB(NOW(),INTERVAL 3 MONTH) AND NOW()  and substring(GLYCBTID,1,5) = '@heritageId'">
+      <DataGrid HeadColumns="项目编号" DataColumns="XJXMBH"  ></DataGrid>
+      <DataGrid HeadColumns="项目名称" DataColumns="XMMC" ></DataGrid>
+      <DataGrid HeadColumns="建设地点" DataColumns="WZSM" ></DataGrid>
+      <DataGrid HeadColumns="开工时间" DataColumns="KGRQ"  Format="dateTime"></DataGrid>
+      <DataGrid HeadColumns="竣工时间" DataColumns="JGSJ" Format="dateTime"></DataGrid>
+    </Fun>
+    <Fun ID="21" Title="新建项目建设控制情况" DateField="CJSJ"  TableName="HPF_XJXM_JGXXJYXZTPG" Where=" and date_format(CJSJ,'%Y-%m') = date_format(now(),'%Y-%m') and substring(GLYCBTID,1,5) = '@heritageId'">
+      <DataGrid HeadColumns="是否正常竣工" DataColumns="SFZCJG"  ></DataGrid>
+      <DataGrid HeadColumns="进展描述" DataColumns="ZTMS" ></DataGrid>
+      <DataGrid HeadColumns="评估" DataColumns="PG" ></DataGrid>
+      <DataGrid HeadColumns="备注" DataColumns="BZ"  ></DataGrid>
+      <DataGrid HeadColumns="不符合方案方面" DataColumns="BFHFAFM" ></DataGrid>
+      <DataGrid HeadColumns="新建项目建设控制情况" DataColumns="XJXMJSKZQK" ></DataGrid>
+      <DataGrid HeadColumns="实际竣工时间" DataColumns="SJJGSJ" Format="dateTime" ></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="社会环境">
+    <Fun ID="22" Title="土地利用性质" TableName="V_HPF_SHHJ_TDLYXZT" DateField="CJSJ"  Where=" and  date_format(RKSJ,'%Y') = date_format(now(),'%Y') and substring(GLYCBTID,1,5) = '@heritageId'">
+      <DataGrid HeadColumns="土地利用现状图URL" DataColumns="TDLYXZTURL" ></DataGrid>
+      <DataGrid HeadColumns="图纸路径" DataColumns="TZLJ" ></DataGrid>
+      <DataGrid HeadColumns="图纸名称" DataColumns="TZMC" ></DataGrid>
+      <DataGrid HeadColumns="图纸类型" DataColumns="TZLX_BM"  ></DataGrid>
+      <DataGrid HeadColumns="图纸数据量" DataColumns="TZSJL"  ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ"  Format="dateTime"></DataGrid>
+    </Fun>
+    <Fun ID="23" Title="遗产区人口密度适宜度"  DateField="CJSJ" TableName="HPF_SHHJ_YCQHHCQSHHJNDJCJL" Where=" and substring(GLYCBTID,1,5) =  '@heritageId'">
+      <DataGrid HeadColumns="资源开采点数量" DataColumns="ZYKCDSL" ></DataGrid>
+      <DataGrid HeadColumns="负面影响范围" DataColumns="FMYXFW" ></DataGrid>
+      <DataGrid HeadColumns="人口疏散需求" DataColumns="RKSSXQ" ></DataGrid>
+      <DataGrid HeadColumns="严重污染工业企业数量" DataColumns="YZWRGYQYSL" ></DataGrid>
+      <DataGrid HeadColumns="列入名录时的遗产区人口数量" DataColumns="LRMLSDYCQRKSL"  ></DataGrid>
+      <DataGrid HeadColumns="关联遗产本体ID" DataColumns="GLYCBTID"  ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" Format="dateTime" ></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="旅游与游客管理">
+    <Fun ID="24" Title="瞬时游客量是否超载" DateField="JCSJ"  TableName="(HPF_LYYYKGL_SSYKL s LEFT JOIN HPF_LYYYKGL_SSYKLXZZ m ON s.LYJDID = m.LYJDID LEFT JOIN HPF_LYYYKGL_LYJD a on s.LYJDID = a.ID)"  Where=" and s.YKL &gt; m.SSYKLXZZ AND s.JCSJ = m.JCSJ = @timeNow  and substring(a.GLYCBTID,1,5) = '@heritageId'">
+      <DataGrid HeadColumns="旅游景点名称" DataColumns="LYJDMC" ></DataGrid>
+      <DataGrid HeadColumns="监测时间" DataColumns="JCSJ" Format="dateTime"></DataGrid>
+      <DataGrid HeadColumns="在园人数（人）" DataColumns="YKL" ></DataGrid>
+    </Fun>
+    <Fun ID="25" Title="上月游客量超载天数" DateField="RKSJ" TableName="(HPF_LYYYKGL_RYKL s LEFT JOIN HPF_LYYYKGL_RYKLXZZ m ON s.LYJDID = m.LYJDID LEFT JOIN HPF_LYYYKGL_LYJD a on s.LYJDID = a.ID )"  Where=" and s.YKL > m.RYKLXZZ AND date_format(JCRQ,'%Y-%m') = date_format(now(),'%Y-%m') AND s.JCRQ = m.JCRQ and substring(a.GLYCBTID,1,5) ='@heritageId'">
+      <DataGrid HeadColumns="旅游景点名称" DataColumns="LYJDMC" ></DataGrid>
+      <DataGrid HeadColumns="监测日期" DataColumns="JCRQ" Format="date"></DataGrid>
+      <DataGrid HeadColumns="游客量" DataColumns="YKL" ></DataGrid>
+    </Fun>
+    <Fun ID="26" Title="游客负面影响" DateField="CJSJ" TableName="V_HPF_LYYYKGL_YKYXPGJL" Where=" and date_format(RKSJ,'%Y-%m') = date_format(now(),'%Y-%m')   and substring(GLYCBTID,1,5) ='@heritageId'">
+      <DataGrid HeadColumns="年份" DataColumns="NF" ></DataGrid>
+      <DataGrid HeadColumns="月份" DataColumns="YF" ></DataGrid>
+      <DataGrid HeadColumns="评估" DataColumns="PG_BM" ></DataGrid>
+      <DataGrid HeadColumns="评估说明" DataColumns="PGSM" ></DataGrid>
+      <DataGrid HeadColumns="创建时间" DataColumns="CJSJ" Format="dateTime"></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="日常管理">
+    <Fun ID="27" Title="日常巡查异常次数" DateField="XCRQ"  TableName="V_HPF_RCXC_RCXCYCJL" Where=" and  date_format(RKSJ,'%Y-%m') = date_format(now(),'%Y-%m')  and substring(GLYCBTID,1,5) ='@heritageId'">
+      <DataGrid HeadColumns="巡查日期" DataColumns="XCRQ" Format="date"></DataGrid>
+      <DataGrid HeadColumns="异常事件" DataColumns="YCSJ" ></DataGrid>
+      <DataGrid HeadColumns="发生位置" DataColumns="FSWZ" ></DataGrid>
+      <DataGrid HeadColumns="经度" DataColumns="JD" ></DataGrid>
+      <DataGrid HeadColumns="纬度" DataColumns="WD" ></DataGrid>
+      <DataGrid HeadColumns="巡查员" DataColumns="XCY" ></DataGrid>
+      <DataGrid HeadColumns="评估" DataColumns="PG" ></DataGrid>
+    </Fun>
+    <Fun ID="28" Title="保养与维护工程次数" DateField="RKSJ" TableName="(HPF_BHGC_BYWHJL a left join HPF_BHGC b on a.GCXMID=b.ID)"  Where=" and date_format(RKSJ,'%Y-%m') = date_format(now(),'%Y-%m') and substring(GLYCBTID,1,5) ='@heritageId'">
+      <DataGrid HeadColumns="保养与维护日期" DataColumns="BYYWHRQ" Format="date"></DataGrid>
+      <DataGrid HeadColumns="保养与维护对象" DataColumns="BYYWHDX" ></DataGrid>
+      <DataGrid HeadColumns="实施者" DataColumns="SSZ" ></DataGrid>
+      <DataGrid HeadColumns="年份" DataColumns="NF" ></DataGrid>
+      <DataGrid HeadColumns="月份" DataColumns="YF" ></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="安防消防 ">
+    <Fun ID="29" Title="实时监测点数量 " DateField="JCSJ" TableName="HPF_AFXF_AXFXTYJSS" Where=" and substring(GLYCBTID,1,5) ='@heritageId'">
+      <DataGrid HeadColumns="建成时间" DataColumns="JCSJ" Format="dateTime"></DataGrid>
+      <DataGrid HeadColumns="消防系统名称" DataColumns="XFXTMC" ></DataGrid>
+      <DataGrid HeadColumns="用途分类" DataColumns="YTFL" ></DataGrid>
+      <DataGrid HeadColumns="投资金额" DataColumns="TZJE" ></DataGrid>
+      <DataGrid HeadColumns="系统构成描述" DataColumns="XTGCMS" ></DataGrid>
+      <DataGrid HeadColumns="监控探头数量" DataColumns="JKTTSL"  ></DataGrid>
+    </Fun>
+    <Fun ID="30" Title="安全事故发生次数 " DateField="FSSJ" TableName="HPF_AFXF_AQSGJL" Where=" and date_format(FSSJ,'%Y') = date_format(now(),'%Y') and substring(GLYCBTID,1,5) ='@heritageId'">
+      <DataGrid HeadColumns="事故发生时间" DataColumns="FSSJ" Format="dateTime"></DataGrid>
+      <DataGrid HeadColumns="事故类型" DataColumns="SGLX" ></DataGrid>
+      <DataGrid HeadColumns="级别" DataColumns="JB" ></DataGrid>
+      <DataGrid HeadColumns="损失" DataColumns="SS" ></DataGrid>
+      <DataGrid HeadColumns="处理情况" DataColumns="CLQK" ></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="考古发掘">
+    <Fun ID="31" Title="已发掘面积" DateField="KSSJ" TableName="V_SUMFJMJ"  Where=" and substring(GLYCBTID,1,5) ='@heritageId'">
+      <DataGrid HeadColumns="项目名称" DataColumns="XMMC" ></DataGrid>
+      <DataGrid HeadColumns="已发掘面积" DataColumns="YFJMJ" ></DataGrid>
+      <DataGrid HeadColumns="开始时间" DataColumns="KSSJ" Format="dateTime" ></DataGrid>
+    </Fun>
+    <Fun ID="32" Title="考古报告" TableName="HPF_KGFJ_KGBG" DateField="CBSJ"  Where=" and CBSJ &lt; @timeNow and substring(GLYCBTID,1,5) ='@heritageId'">
+      <DataGrid HeadColumns="考古报告名称" DataColumns="KGBGMC" ></DataGrid>
+      <DataGrid HeadColumns="编制单位" DataColumns="BZDW" ></DataGrid>
+      <DataGrid HeadColumns="编制人员" DataColumns="BXRY" ></DataGrid>
+      <DataGrid HeadColumns="出版状态" DataColumns="CBZT" ></DataGrid>
+      <DataGrid HeadColumns="出版时间" DataColumns="CBSJ" Format="dateTime"></DataGrid>
+    </Fun>
+    <Fun ID="33" Title="正在进行的考古发掘工作" DateField="KSSJ"  TableName=" HPF_KGFJ_KGFJJL  "  Where=" and  KSSJ &lt; @timeNow and  JSSJ &gt; @timeNow and substring( GLYCBTID,1,5) ='@heritageId'">
+      <DataGrid HeadColumns="项目名称" DataColumns="XMMC" ></DataGrid>
+      <DataGrid HeadColumns="第几次发掘" DataColumns="DJCFJ" ></DataGrid>
+      <DataGrid HeadColumns="文物部门批准文号" DataColumns="WWBMPZWH" ></DataGrid>
+      <DataGrid HeadColumns="批准发掘面积" DataColumns="PZFJMJ" ></DataGrid>
+      <DataGrid HeadColumns="开始时间" DataColumns="KSSJ" Format="dateTime"></DataGrid>
+      <DataGrid HeadColumns="结束时间" DataColumns="JSSJ" Format="dateTime"></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="保护展示与环境整治工程服务类">
+    <Fun ID="34"  Title="正在进行的保护与现场展示工程" DateField="KGSJ" TableName="HPF_BHGC"  Where=" and KGSJ &lt; @timeNow and JGSJ &gt; @timeNow and GCFL = '2' and substring(GLYCBTID,1,5) ='@heritageId'">
+      <DataGrid HeadColumns="项目名称" DataColumns="GCMC" ></DataGrid>
+      <DataGrid HeadColumns="工程分类" DataColumns="GCFL"  ></DataGrid>
+      <DataGrid HeadColumns="中央财政经费" DataColumns="BHGCGJBZJF"  ></DataGrid>
+      <DataGrid HeadColumns="开工时间" DataColumns="KGSJ" Format="dateTime"></DataGrid>
+      <DataGrid HeadColumns="竣工时间" DataColumns="JGSJ" Format="dateTime"></DataGrid>
+    </Fun>
+    <Fun ID="35"  Title="正在进行的环境整治工程"  DateField="KGSJ"  TableName="HPF_BHGC"  Where=" and KGSJ &lt; @timeNow and JGSJ &gt; @timeNow and GCFL = '3' and substring(GLYCBTID,1,5) ='@heritageId'">
+      <DataGrid HeadColumns="项目名称" DataColumns="GCMC" ></DataGrid>
+      <DataGrid HeadColumns="工程分类" DataColumns="GCFL"  ></DataGrid>
+      <DataGrid HeadColumns="中央财政经费" DataColumns="BHGCGJBZJF"  ></DataGrid>
+      <DataGrid HeadColumns="开工时间" DataColumns="KGSJ" Format="dateTime"></DataGrid>
+      <DataGrid HeadColumns="竣工时间" DataColumns="JGSJ" Format="dateTime"></DataGrid>
+    </Fun>
+  </Node>
+  <Node Title="保护管理规划服务类">
+    <Fun ID="36" Title="保护管理规划" DateField="RKSJ" TableName="HPF_BHGH_BHGLGH"  Where="    and substring(GLYCBTID,1,5) ='@heritageId'">
+      <DataGrid HeadColumns="名称" DataColumns="MC" ></DataGrid>
+      <DataGrid HeadColumns="编制和公布状态" DataColumns="BZHGBZT" ></DataGrid>
+      <DataGrid HeadColumns="规划开始年份" DataColumns="GHKSNF"  Format="year"></DataGrid>
+      <DataGrid HeadColumns="规划截止年份" DataColumns="GHJZNF" Format="year"></DataGrid>
+      <DataGrid HeadColumns="开始编制日期" DataColumns="KSBZRQ" Format="date"></DataGrid>
+    </Fun>
+    <Fun ID="37" Title="保护管理规划执行情况" DateField="PJSJ"  TableName="V_HPF_BHGH_XXGHZXQKZHPJ" Where=" and date_format(RKSJ,'%Y') = date_format(RKSJ,'%Y')  and substring(GLYCBTID,1,5) ='@heritageId'">
+      <DataGrid HeadColumns="年份" DataColumns="NF" Format="year"></DataGrid>
+      <DataGrid HeadColumns="综合评价" DataColumns="ZHPJ_BM" ></DataGrid>
+      <DataGrid HeadColumns="评价时间" DataColumns="PJSJ"  Format="dateTime"></DataGrid>
+    </Fun>
+  </Node>
+</IndexFunConfig>
