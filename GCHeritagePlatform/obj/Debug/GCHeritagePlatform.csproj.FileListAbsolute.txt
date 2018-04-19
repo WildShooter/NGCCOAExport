@@ -21,5 +21,4 @@ G:\中心OA\Code\Service\GCHeritagePlatform\GCHeritagePlatform\bin\Newtonsoft.Js
 G:\中心OA\Code\Service\GCHeritagePlatform\GCHeritagePlatform\bin\zh-Hans\Microsoft.QualityTools.Testing.Fakes.resources.dll
 G:\中心OA\Code\Service\GCHeritagePlatform\GCHeritagePlatform\obj\Debug\GCHeritagePlatform.dll
 G:\中心OA\Code\Service\GCHeritagePlatform\GCHeritagePlatform\obj\Debug\GCHeritagePlatform.pdb
-G:\中心OA\Code\Service\GCHeritagePlatform\GCHeritagePlatform\obj\Debug\GCHeritagePlatform.csprojResolveAssemblyReference.cache
 G:\中心OA\Code\Service\GCHeritagePlatform\GCHeritagePlatform\obj\Debug\GCHeritagePlatform.csproj.CoreCompileInputs.cache
